@@ -114,8 +114,8 @@ body {
 }
 
 .sparkle-top {
-  top: -30px;
-  left: 42%;
+  top: -25px;
+  right: -20px;
   width: 65px;
   height: auto;
 }

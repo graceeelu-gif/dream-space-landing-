@@ -111,24 +111,22 @@ body {
 .sparkle {
   position: absolute;
   z-index: 10;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
 }
 
 .sparkle-top {
-  top: -35px;
-  left: 45%;
-  width: 70px;
+  top: -30px;
+  left: 42%;
+  width: 65px;
   height: auto;
 }
 
 .cloud {
   position: absolute;
-  bottom: -25px;
-  right: -20px;
-  width: 120px;
+  bottom: -30px;
+  right: -15px;
+  width: 110px;
   height: auto;
   z-index: 10;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
 }
 
 /* Responsive Design */

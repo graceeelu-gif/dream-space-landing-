@@ -114,16 +114,16 @@ body {
 }
 
 .sparkle-top {
-  top: -50px;
-  left: -50px;
+  top: -80px;
+  left: -80px;
   width: 180px;
   height: auto;
 }
 
 .cloud {
   position: absolute;
-  bottom: -75px;
-  right: -70px;
+  bottom: -120px;
+  right: -115px;
   width: 270px;
   height: auto;
   z-index: 10;
@@ -324,14 +324,14 @@ body {
   }
 
   .sparkle-top {
-    top: -35px;
-    left: -35px;
+    top: -55px;
+    left: -55px;
     width: 135px;
   }
 
   .cloud {
-    bottom: -55px;
-    right: -50px;
+    bottom: -90px;
+    right: -80px;
     width: 210px;
   }
 

@@ -546,6 +546,7 @@ body {
 
   .cta-content {
     max-width: 100%;
+    order: 2;
   }
 
   .cta-title {
@@ -554,7 +555,8 @@ body {
 
   .cta-visual {
     max-width: 100%;
-    margin-top: 40px;
+    margin-bottom: 40px;
+    order: 1;
   }
 
   .cta-visual-image {

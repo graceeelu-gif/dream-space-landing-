@@ -232,7 +232,7 @@ body {
 
 .feature-icon-container {
   width: 100%;
-  height: 180px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,8 +245,9 @@ body {
 }
 
 .feature-icon-large {
-  width: 180px;
+  width: 220px;
   height: auto;
+  object-fit: contain;
 }
 
 .feature-title {
@@ -384,6 +385,6 @@ body {
   }
 
   .feature-icon-large {
-    width: 150px;
+    width: 180px;
   }
 }

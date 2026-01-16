@@ -306,10 +306,10 @@ body {
 }
 
 .faq-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
-  font-size: 52px;
-  line-height: 1.1;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 1.15;
   color: #A896FF;
   font-style: italic;
   margin-bottom: 40px;
@@ -476,7 +476,7 @@ body {
   }
 
   .faq-title {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 30px;
   }
 

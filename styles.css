@@ -160,19 +160,37 @@ body {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
-.showcase-slide {
+.showcase-slide-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
-.showcase-slide.active {
+.showcase-slide-wrapper.active {
   opacity: 1;
+}
+
+.showcase-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #A896FF;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 50px;
 }
 
 /* How It Works Section */

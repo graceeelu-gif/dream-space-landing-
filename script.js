@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize showcase carousel (with slight delay offset for visual interest)
   setTimeout(() => {
-    createCarousel('.showcase-slide');
+    createCarousel('.showcase-slide-wrapper');
   }, 1000);
 });

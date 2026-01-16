@@ -122,8 +122,8 @@ body {
 
 .cloud {
   position: absolute;
-  bottom: -60px;
-  right: -55px;
+  bottom: -75px;
+  right: -70px;
   width: 180px;
   height: auto;
   z-index: 10;
@@ -330,8 +330,8 @@ body {
   }
 
   .cloud {
-    bottom: -45px;
-    right: -40px;
+    bottom: -55px;
+    right: -50px;
     width: 140px;
   }
 

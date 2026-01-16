@@ -349,67 +349,16 @@ body {
 
 .cta-visual {
   flex: 1;
-  position: relative;
   max-width: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cta-swirl {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 300px;
-  height: 300px;
-  border: 3px solid rgba(168, 150, 255, 0.3);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  transform: rotate(-30deg);
-}
-
-.cta-swirl::before {
-  content: '';
-  position: absolute;
-  top: -15px;
-  right: -15px;
+.cta-visual-image {
   width: 100%;
-  height: 100%;
-  border: 3px solid rgba(168, 150, 255, 0.2);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-}
-
-.cta-image-wrapper {
-  width: 380px;
-  height: 450px;
-  border-radius: 200px 200px 200px 200px / 250px 250px 200px 200px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-}
-
-.cta-room-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.cta-cloud {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
+  max-width: 480px;
   height: auto;
-  z-index: 3;
-}
-
-.cta-heart {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  width: 140px;
-  height: auto;
-  z-index: 3;
 }
 
 /* FAQ Section */
@@ -608,22 +557,8 @@ body {
     margin-top: 40px;
   }
 
-  .cta-image-wrapper {
-    width: 280px;
-    height: 340px;
-  }
-
-  .cta-cloud {
-    width: 100px;
-  }
-
-  .cta-heart {
-    width: 100px;
-  }
-
-  .cta-swirl {
-    width: 200px;
-    height: 200px;
+  .cta-visual-image {
+    max-width: 320px;
   }
 
   .faq {

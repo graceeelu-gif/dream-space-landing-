@@ -212,8 +212,9 @@ body {
   background: #FFFFFF;
   border-radius: 20px;
   padding: 30px;
+  padding-bottom: 80px;
   position: relative;
-  min-height: 380px;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -521,6 +522,7 @@ body {
   .feature-card {
     min-height: auto;
     padding: 24px;
+    padding-bottom: 80px;
   }
 
   .feature-icon-container {

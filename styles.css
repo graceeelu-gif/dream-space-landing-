@@ -244,6 +244,11 @@ body {
   height: auto;
 }
 
+.feature-icon-large {
+  width: 180px;
+  height: auto;
+}
+
 .feature-title {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
@@ -376,5 +381,9 @@ body {
 
   .feature-icon {
     width: 100px;
+  }
+
+  .feature-icon-large {
+    width: 150px;
   }
 }

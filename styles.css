@@ -6,7 +6,8 @@
 
 body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #F5F5F5;
+  background: linear-gradient(135deg, #E8EDFF 0%, #F5E6FF 50%, #FFF5F5 100%);
+  background-attachment: fixed;
   color: #2D3436;
   min-height: 100vh;
 }
@@ -210,7 +211,6 @@ body {
   padding: 80px 80px 100px;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: #F5F5F5;
 }
 
 .how-it-works-header {
@@ -323,7 +323,6 @@ body {
   padding: 100px 80px;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: #F5F5F5;
 }
 
 .cta-container {
@@ -397,7 +396,6 @@ body {
   padding: 80px 80px 100px;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: #F5F5F5;
 }
 
 .faq-container {

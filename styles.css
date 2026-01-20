@@ -6,28 +6,59 @@
 
 body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  background:
-    linear-gradient(180deg,
-      rgba(200, 220, 255, 0.4) 0%,
-      rgba(220, 230, 255, 0.3) 20%,
-      rgba(240, 245, 255, 0.2) 40%,
-      rgba(255, 240, 250, 0.2) 60%,
-      rgba(230, 240, 255, 0.3) 80%,
-      rgba(200, 225, 255, 0.4) 100%
-    ),
-    url('images/dreamy-sky-bg.png');
-  background-size: cover, cover;
-  background-position: center, center;
-  background-attachment: scroll, scroll;
-  background-repeat: no-repeat, no-repeat;
+  background: #FFFFFF;
   color: #2D3436;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Better background handling for desktop */
-@media (min-width: 769px) {
-  body {
-    background-attachment: fixed, fixed;
+/* Squiggle decorations */
+.squiggle-decor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.squiggle-1 {
+  top: 8%;
+  right: -30px;
+  width: 180px;
+  transform: rotate(15deg);
+}
+
+.squiggle-2 {
+  top: 40%;
+  left: -60px;
+  width: 160px;
+  transform: rotate(-30deg) scaleX(-1);
+}
+
+.squiggle-3 {
+  top: 65%;
+  right: -40px;
+  width: 140px;
+  transform: rotate(45deg);
+}
+
+.squiggle-4 {
+  bottom: 25%;
+  left: -50px;
+  width: 170px;
+  transform: rotate(-15deg);
+}
+
+.squiggle-5 {
+  bottom: 8%;
+  right: -20px;
+  width: 150px;
+  transform: rotate(25deg) scaleX(-1);
+}
+
+/* Hide squiggles on mobile */
+@media (max-width: 768px) {
+  .squiggle-decor {
+    display: none;
   }
 }
 
@@ -161,39 +192,6 @@ body {
   z-index: 10;
 }
 
-/* Floating cloud decorations throughout the page */
-.floating-cloud {
-  position: absolute;
-  width: 200px;
-  height: auto;
-  opacity: 0.7;
-  z-index: 1;
-  pointer-events: none;
-  display: none;
-}
-
-/* Only show floating clouds on larger screens */
-@media (min-width: 1024px) {
-  .floating-cloud {
-    display: block;
-  }
-}
-
-.cloud-left {
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.cloud-right {
-  right: -60px;
-  top: 30%;
-}
-
-.cloud-left-bottom {
-  left: -80px;
-  bottom: 20%;
-}
 
 /* Showcase Section */
 .showcase {

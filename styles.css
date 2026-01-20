@@ -60,9 +60,13 @@ body {
   font-size: 17px;
   line-height: 1.7;
   color: #1a1a1a;
-  margin-bottom: 50px;
+  margin-bottom: 16px;
   max-width: 480px;
   font-weight: 400;
+}
+
+.hero-description:last-of-type {
+  margin-bottom: 40px;
 }
 
 .cta-button {

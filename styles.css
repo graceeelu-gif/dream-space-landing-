@@ -6,11 +6,29 @@
 
 body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: url('images/dreamy-sky-bg.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+  background:
+    linear-gradient(180deg,
+      rgba(200, 220, 255, 0.4) 0%,
+      rgba(220, 230, 255, 0.3) 20%,
+      rgba(240, 245, 255, 0.2) 40%,
+      rgba(255, 240, 250, 0.2) 60%,
+      rgba(230, 240, 255, 0.3) 80%,
+      rgba(200, 225, 255, 0.4) 100%
+    ),
+    url('images/dreamy-sky-bg.png');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat, no-repeat;
   color: #2D3436;
   min-height: 100vh;
+}
+
+/* Better background handling for desktop */
+@media (min-width: 769px) {
+  body {
+    background-attachment: fixed, fixed;
+  }
 }
 
 /* Hero Section */
@@ -151,6 +169,14 @@ body {
   opacity: 0.7;
   z-index: 1;
   pointer-events: none;
+  display: none;
+}
+
+/* Only show floating clouds on larger screens */
+@media (min-width: 1024px) {
+  .floating-cloud {
+    display: block;
+  }
 }
 
 .cloud-left {

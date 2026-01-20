@@ -12,56 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Squiggle decorations */
-.squiggle-decor {
-  position: fixed;
-  pointer-events: none;
-  z-index: 100;
-  opacity: 0.7;
-}
-
-.squiggle-1 {
-  top: 5%;
-  right: 20px;
-  width: 150px;
-  transform: rotate(15deg);
-}
-
-.squiggle-2 {
-  top: 35%;
-  left: 20px;
-  width: 140px;
-  transform: rotate(-30deg) scaleX(-1);
-}
-
-.squiggle-3 {
-  top: 55%;
-  right: 30px;
-  width: 120px;
-  transform: rotate(45deg);
-}
-
-.squiggle-4 {
-  bottom: 30%;
-  left: 30px;
-  width: 130px;
-  transform: rotate(-15deg);
-}
-
-.squiggle-5 {
-  bottom: 5%;
-  right: 40px;
-  width: 140px;
-  transform: rotate(25deg) scaleX(-1);
-}
-
-/* Hide squiggles on mobile */
-@media (max-width: 768px) {
-  .squiggle-decor {
-    display: none;
-  }
-}
-
 /* Hero Section */
 .hero {
   display: flex;

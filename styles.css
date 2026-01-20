@@ -547,6 +547,10 @@ body {
     font-size: 36px;
   }
 
+  .hero-subheadline {
+    white-space: nowrap;
+  }
+
   .hero-description {
     max-width: 100%;
   }

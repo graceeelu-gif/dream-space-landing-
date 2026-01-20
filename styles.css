@@ -6,7 +6,8 @@
 
 body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(135deg, #E8EDFF 0%, #F5E6FF 50%, #FFF5F5 100%);
+  background: url('images/dreamy-sky-bg.png') no-repeat center center;
+  background-size: cover;
   background-attachment: fixed;
   color: #2D3436;
   min-height: 100vh;
@@ -142,12 +143,40 @@ body {
   z-index: 10;
 }
 
+/* Floating cloud decorations throughout the page */
+.floating-cloud {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  opacity: 0.7;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-left {
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cloud-right {
+  right: -60px;
+  top: 30%;
+}
+
+.cloud-left-bottom {
+  left: -80px;
+  bottom: 20%;
+}
+
 /* Showcase Section */
 .showcase {
   padding: 80px 80px 100px;
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .showcase-title {
@@ -211,6 +240,8 @@ body {
   padding: 80px 80px 100px;
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .how-it-works-header {
@@ -323,6 +354,8 @@ body {
   padding: 100px 80px;
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta-container {

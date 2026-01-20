@@ -47,6 +47,14 @@ body {
   letter-spacing: -0.5px;
 }
 
+.hero-subheadline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
 .hero-description {
   font-family: 'DM Sans', sans-serif;
   font-size: 17px;

@@ -401,11 +401,11 @@ body {
 /* Interior Styles Section */
 .styles-section {
   background-color: #FFFFFF;
-  padding: 100px 80px;
+  padding: 80px 80px 100px;
 }
 
 .styles-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
@@ -437,58 +437,49 @@ body {
 .styles-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 28px;
   margin-bottom: 50px;
 }
 
 .style-card {
-  background-color: #FFFFFF;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid #E5E7EB;
-  transition: all 0.3s ease;
   text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.style-card:hover {
-  border-color: #A896FF;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(168, 150, 255, 0.15);
-}
-
-.style-image-wrapper {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
 }
 
 .style-image {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
 .style-card:hover .style-image {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .style-info {
-  padding: 20px;
+  padding: 16px 4px 0;
 }
 
 .style-name {
   font-family: 'DM Sans', sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   color: #1a1a1a;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.style-emoji {
+  font-size: 16px;
 }
 
 .style-description {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #666;
 }
 
@@ -759,19 +750,23 @@ body {
 
   .styles-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 20px;
   }
 
   .style-info {
-    padding: 16px;
+    padding: 12px 2px 0;
   }
 
   .style-name {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .style-emoji {
+    font-size: 14px;
   }
 
   .style-description {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .styles-cta-button {

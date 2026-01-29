@@ -1185,6 +1185,7 @@ body {
   .style-steps {
     flex-direction: column;
     gap: 40px;
+    align-items: center;
   }
 
   .style-about {

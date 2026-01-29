@@ -42,7 +42,7 @@
       </div>
       <h1 class="style-hero-title">Japandi</h1>
       <p class="style-hero-description">Japanese minimalism meets Scandinavian warmth. A harmonious blend of natural materials and muted earth tones.</p>
-      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="style-cta-button">
+      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="style-cta-button" id="cta-button" data-style="japandi">
         Transform Your Space
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -150,5 +150,11 @@
       </a>
     </div>
   </section>
+
+  <script>
+    document.getElementById('cta-button').addEventListener('click', function(e) {
+      localStorage.setItem('preselectedStyle', this.dataset.style);
+    });
+  </script>
 </body>
 </html>

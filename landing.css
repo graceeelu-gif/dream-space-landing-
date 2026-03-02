@@ -67,6 +67,28 @@
   display: block;
 }
 
+/* Hero Carousel */
+.lp-hero-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.lp-hero-carousel .carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lp-hero-carousel .carousel-image.active {
+  opacity: 1;
+}
+
 .lp-style-badge {
   position: absolute;
   bottom: 16px;

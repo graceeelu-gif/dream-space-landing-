@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dream Space Tool - AI Interior Design</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Dream Space by Housing Info — Recreate the Homes You Love</title>
+  <meta name="description" content="Upload a photo of your room and instantly visualize it in the design aesthetics Housing Info studies across thousands of beautiful interiors.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="primary.css">
   <!-- PostHog Analytics -->
   <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init rs ls yi ns us ts ss capture Hi calculateEventProperties vs register register_once register_for_session unregister unregister_for_session gs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fs ds createPersonProfile ps Qr opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing hs debug O cs getPageViewId captureTraceFeedback captureTraceMetric Kr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -19,252 +20,388 @@
   </script>
 </head>
 <body>
-  <!-- Hero Section -->
+
+  <!-- ============ 0. NAVBAR ============ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__wordmark">Housing Info</a>
+      <div class="nav__links" id="navLinks">
+        <a href="#how-it-works" class="nav__link">How it works</a>
+        <a href="#examples" class="nav__link">Examples</a>
+        <a href="#what-you-get" class="nav__link">What you get</a>
+      </div>
+      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="nav__cta">Transform my room</a>
+      <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="nav__mobile" id="navMobile">
+      <a href="#how-it-works" class="nav__mobile-link">How it works</a>
+      <a href="#examples" class="nav__mobile-link">Examples</a>
+      <a href="#what-you-get" class="nav__mobile-link">What you get</a>
+      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="nav__mobile-cta">Transform my room</a>
+    </div>
+  </nav>
+
+  <!-- ============ 1. HERO ============ -->
   <section class="hero">
-    <div class="hero-content">
-      <p class="brand-label">DREAM SPACE TOOL</p>
-      <h1 class="hero-title">Bring Your Dream Home Vision to Life in 60 seconds or less</h1>
-      <p class="hero-subheadline">You don't need to be a professional designer.</p>
-      <p class="hero-description">
-        With our design tool, you can upload a photo of your space and see it instantly transformed into your dream style.
-      </p>
-      <p class="hero-description">
-        Get a clear room analysis, tailored style tips, and curated products at your fingertips.
-      </p>
-      <p class="hero-description">
-        Plus, you can chat with our expert design agent 24/7 for personalized advice.
-      </p>
-      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="cta-button">Get Started Now</a>
-    </div>
-
-    <div class="hero-image-container">
-      <!-- 3D Sparkles decoration -->
-      <img src="images/sparkle-icon.png" alt="sparkle" class="sparkle sparkle-top">
-
-      <!-- Cycling images container -->
-      <div class="image-carousel">
-        <img src="images/room1.jpg" alt="Original room" class="carousel-image active">
-        <img src="images/room2.jpg" alt="Mid-century modern transformation" class="carousel-image">
-        <img src="images/room3.jpg" alt="Parisian style living room" class="carousel-image">
-        <img src="images/room4.jpg" alt="Dreamy lavender room" class="carousel-image">
-        <img src="images/room5.jpg" alt="Retro mid-century design" class="carousel-image">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="hero__eyebrow">FROM HOUSING INFO</p>
+        <h1 class="hero__title">Recreate the Homes You Love on Housing Info</h1>
+        <p class="hero__sub">Upload a photo of your room and instantly visualize it in the same design aesthetics we study across thousands of beautiful interiors.</p>
+        <ul class="hero__bullets">
+          <li>Instant style visualization</li>
+          <li>Personalized room analysis</li>
+          <li>Curated design guidance + picks</li>
+        </ul>
+        <div class="hero__actions">
+          <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary">Transform my room</a>
+          <a href="#examples" class="hero__secondary">See examples</a>
+        </div>
       </div>
-
-      <!-- 3D Cloud decoration -->
-      <img src="images/cloud-icon.png" alt="cloud" class="cloud">
-    </div>
-  </section>
-
-  <!-- Showcase Section -->
-  <section class="showcase">
-    <h2 class="showcase-title">Real Spaces Transformed Using Our Tool</h2>
-    <div class="showcase-image-container">
-      <div class="showcase-carousel">
-        <div class="showcase-slide-wrapper active">
-          <img src="images/showcase1.png" alt="Staircase original" class="showcase-slide" loading="lazy">
-          <span class="showcase-label">Before</span>
-        </div>
-        <div class="showcase-slide-wrapper">
-          <img src="images/showcase2.jpg" alt="Staircase transformed" class="showcase-slide" loading="lazy">
-          <span class="showcase-label">After</span>
-        </div>
-        <div class="showcase-slide-wrapper">
-          <img src="images/showcase3.webp" alt="Living room original" class="showcase-slide" loading="lazy">
-          <span class="showcase-label">Before</span>
-        </div>
-        <div class="showcase-slide-wrapper">
-          <img src="images/showcase4.jpg" alt="Living room transformed" class="showcase-slide" loading="lazy">
-          <span class="showcase-label">After</span>
-        </div>
-        <div class="showcase-slide-wrapper">
-          <img src="images/showcase5.jpg" alt="Large living room original" class="showcase-slide" loading="lazy">
-          <span class="showcase-label">Before</span>
-        </div>
-        <div class="showcase-slide-wrapper">
-          <img src="images/showcase6.jpg" alt="Large living room transformed" class="showcase-slide" loading="lazy">
-          <span class="showcase-label">After</span>
+      <div class="hero__bridge">
+        <div class="bridge">
+          <div class="bridge__card">
+            <div class="bridge__img-wrap">
+              <img src="images/room3.jpg" alt="Inspiration home" loading="eager">
+              <!-- Design study callout -->
+              <div class="callout callout--top-right">
+                <span class="callout__line"></span>
+                <span class="callout__label">Contrast</span>
+              </div>
+            </div>
+            <span class="bridge__label">Inspiration</span>
+          </div>
+          <div class="bridge__arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="bridge__card">
+            <div class="bridge__img-wrap">
+              <img src="images/showcase3.webp" alt="Your room" loading="eager">
+            </div>
+            <span class="bridge__label">Your room</span>
+          </div>
+          <div class="bridge__arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="bridge__card bridge__card--accent">
+            <div class="bridge__img-wrap">
+              <img src="images/showcase4.jpg" alt="Your transformation" loading="eager">
+              <div class="callout callout--bottom-left">
+                <span class="callout__line"></span>
+                <span class="callout__label">Layering</span>
+              </div>
+            </div>
+            <span class="bridge__label">Your transformation</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How It Works Section -->
-  <section class="how-it-works">
-    <div class="how-it-works-header">
-      <img src="images/wand-icon.png" alt="wand" class="how-cloud">
-      <h2 class="how-title">How Our Tool Works</h2>
-    </div>
-
-    <div class="features-grid">
-      <!-- Card 1: Upload -->
-      <div class="feature-card">
-        <div class="feature-icon-container">
-          <img src="images/frame-icon.png" alt="Upload" class="feature-icon-large" loading="lazy">
+  <!-- ============ 2. TRUST / AUTHORITY ============ -->
+  <section class="authority">
+    <div class="container">
+      <h2 class="section-title">From the team behind Housing Info</h2>
+      <p class="section-body authority__body">Housing Info is followed by millions for one reason: taste. We feature and analyze beautiful interiors every day&mdash;now you can apply those same insights to your own space.</p>
+      <div class="authority__stats">
+        <div class="authority__stat">
+          <span class="authority__stat-num">2M+</span>
+          <span class="authority__stat-label">followers</span>
         </div>
-        <h3 class="feature-title">Upload room photo</h3>
-        <p class="feature-description">Take a photo of your room or upload any existing image from your camera roll to get started.</p>
-        <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="feature-arrow">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+        <div class="authority__stat-divider"></div>
+        <div class="authority__stat">
+          <span class="authority__stat-num">20M+</span>
+          <span class="authority__stat-label">monthly reach</span>
+        </div>
+        <div class="authority__stat-divider"></div>
+        <div class="authority__stat">
+          <span class="authority__stat-num">1000s</span>
+          <span class="authority__stat-label">of homes studied</span>
+        </div>
       </div>
-
-      <!-- Card 2: Visualize -->
-      <div class="feature-card">
-        <div class="feature-icon-container">
-          <img src="images/palette-icon.png" alt="Visualize" class="feature-icon-large" loading="lazy">
-        </div>
-        <h3 class="feature-title">Visualize your style</h3>
-        <p class="feature-description">Instantly transform and see your room in your dream style. Choose from our existing styles or dream up your own.</p>
-        <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="feature-arrow">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 3: Get Plan -->
-      <div class="feature-card">
-        <div class="feature-icon-container">
-          <img src="images/lightbulb-icon.png" alt="Plan" class="feature-icon-large" loading="lazy">
-        </div>
-        <h3 class="feature-title">Get your personalized plan + design expert</h3>
-        <p class="feature-description">Receive personal style tips and product picks tailored to your specific room, and chat with our design agent 24/7.</p>
-        <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="feature-arrow">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+      <div class="authority__thumbs">
+        <div class="authority__thumb"><img src="images/carousel-1.jpg" alt="Featured home 1" loading="lazy"></div>
+        <div class="authority__thumb"><img src="images/carousel-5.jpg" alt="Featured home 2" loading="lazy"></div>
+        <div class="authority__thumb"><img src="images/carousel-9.jpg" alt="Featured home 3" loading="lazy"></div>
       </div>
     </div>
   </section>
 
-  <!-- Interior Styles Section -->
-  <section class="styles-section" id="styles">
-    <div class="styles-container">
-      <h2 class="styles-title">Choose from 20+ styles</h2>
-      <p class="styles-subtitle">From Modern Classic to Midcentury Modern, visualize your space in your dream style.</p>
-      <p class="styles-subtitle">Just pick a style and our tool transforms your space with one click.</p>
-      <p class="styles-note">All styles included! Try as many as you want, and get started with one of our style presets.</p>
-
-      <div class="styles-grid">
-        <!-- Modern Classic -->
-        <a href="styles/modern-classic.html" class="style-card">
-          <img src="images/modern-classic-card.jpg" alt="Modern Classic" class="style-image" loading="lazy">
-          <div class="style-info">
-            <h3 class="style-name"><span class="style-emoji">✨</span> Modern Classic</h3>
-            <p class="style-description">Timeless elegance with clean lines and neutral palettes</p>
+  <!-- ============ 3. INSIGHT ============ -->
+  <section class="insight">
+    <div class="container">
+      <h2 class="section-title">We study beautiful homes so you don't have to</h2>
+      <p class="section-body">Great rooms aren't accidental. They're built from repeatable design patterns. Dream Space translates those patterns into a plan for your room.</p>
+      <div class="insight__cards">
+        <div class="insight__card">
+          <div class="insight__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.2"/><circle cx="16" cy="16" r="6" fill="currentColor" opacity=".15"/><line x1="16" y1="2" x2="16" y2="10" stroke="currentColor" stroke-width="1.2"/><line x1="16" y1="22" x2="16" y2="30" stroke="currentColor" stroke-width="1.2"/></svg>
           </div>
-        </a>
-
-        <!-- Japandi -->
-        <a href="styles/japandi.html" class="style-card">
-          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=65" alt="Japandi" class="style-image" loading="lazy">
-          <div class="style-info">
-            <h3 class="style-name"><span class="style-emoji">🍂</span> Japandi</h3>
-            <p class="style-description">Japanese minimalism meets Scandinavian warmth</p>
-          </div>
-        </a>
-
-        <!-- French Modern -->
-        <a href="styles/french-modern.html" class="style-card">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=65" alt="French Modern" class="style-image" loading="lazy">
-          <div class="style-info">
-            <h3 class="style-name"><span class="style-emoji">🗼</span> French Modern</h3>
-            <p class="style-description">Parisian chic with ornate details and elegance</p>
-          </div>
-        </a>
-
-        <!-- Scandinavian -->
-        <a href="styles/scandinavian.html" class="style-card">
-          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=65" alt="Scandinavian" class="style-image" loading="lazy">
-          <div class="style-info">
-            <h3 class="style-name"><span class="style-emoji">🌿</span> Scandinavian</h3>
-            <p class="style-description">Light, airy spaces with cozy hygge elements</p>
-          </div>
-        </a>
-
-        <!-- Industrial Chic -->
-        <a href="styles/industrial.html" class="style-card">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=65" alt="Industrial Chic" class="style-image" loading="lazy">
-          <div class="style-info">
-            <h3 class="style-name"><span class="style-emoji">🏭</span> Industrial Chic</h3>
-            <p class="style-description">Raw urban aesthetic with exposed materials</p>
-          </div>
-        </a>
-
-        <!-- Coastal -->
-        <a href="styles/coastal.html" class="style-card">
-          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=65" alt="Coastal" class="style-image" loading="lazy">
-          <div class="style-info">
-            <h3 class="style-name"><span class="style-emoji">🌊</span> Coastal</h3>
-            <p class="style-description">Breezy, relaxed vibes with ocean-inspired colors</p>
-          </div>
-        </a>
-
-        <!-- Mid-Century Modern -->
-        <a href="styles/mid-century.html" class="style-card">
-          <img src="https://images.unsplash.com/photo-1556702571-3e11dd2b1a92?w=600&q=65" alt="Mid-Century Modern" class="style-image" loading="lazy">
-          <div class="style-info">
-            <h3 class="style-name"><span class="style-emoji">🪑</span> Mid-Century Modern</h3>
-            <p class="style-description">Retro 1950s-60s style with organic shapes</p>
-          </div>
-        </a>
-
-        <!-- Bohemian -->
-        <a href="styles/bohemian.html" class="style-card">
-          <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=600&q=65" alt="Bohemian" class="style-image" loading="lazy">
-          <div class="style-info">
-            <h3 class="style-name"><span class="style-emoji">🌸</span> Bohemian</h3>
-            <p class="style-description">Eclectic layers with global influences</p>
-          </div>
-        </a>
-      </div>
-
-      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="styles-cta-button">Explore Styles Now</a>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq">
-    <div class="faq-container">
-      <div class="faq-left">
-        <h2 class="faq-title">Common questions, answered</h2>
-        <img src="images/heart-chat-icon.png" alt="Chat" class="faq-icon">
-      </div>
-      <div class="faq-right">
-        <div class="faq-card faq-card-blue">
-          <h3 class="faq-question">Is this like hiring an interior designer?</h3>
-          <p class="faq-answer">Not exactly — we're not here to replace an interior designer. Think of it as a fast, affordable starting point that supports your design journey. You'll get a styled transformation, room-specific tips, and curated product picks you can act on right away.</p>
+          <h3 class="insight__card-title">Contrast</h3>
+          <p class="insight__card-body">Mixing light and dark, rough and smooth, to create depth and visual interest.</p>
         </div>
-        <div class="faq-card faq-card-purple">
-          <h3 class="faq-question">What if I don't love my results? Can I redo it?</h3>
-          <p class="faq-answer">Yes absolutely. You can always regenerate your room with a different style, tweak your prompt, or upload a clearer photo for a stronger result. If you'd like extra help, email grace@housing.info and we'll guide you.</p>
+        <div class="insight__card">
+          <div class="insight__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="4" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="7" y="15" width="18" height="4" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="10" y="22" width="12" height="4" rx="2" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <h3 class="insight__card-title">Layering</h3>
+          <p class="insight__card-body">Building dimension through textiles, materials, and thoughtful stacking of elements.</p>
         </div>
-        <div class="faq-card faq-card-beige">
-          <h3 class="faq-question">Can I save or download my results?</h3>
-          <p class="faq-answer">Yes, you can save your image generations directly to your camera roll and view all your past generations when you sign up for an account.</p>
+        <div class="insight__card">
+          <div class="insight__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="3" y="14" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="19" y="4" width="10" height="24" rx="2" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <h3 class="insight__card-title">Scale</h3>
+          <p class="insight__card-body">Choosing furniture and decor proportions that feel balanced within the space.</p>
+        </div>
+        <div class="insight__card">
+          <div class="insight__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="14" r="6" stroke="currentColor" stroke-width="1.2"/><line x1="16" y1="20" x2="16" y2="30" stroke="currentColor" stroke-width="1.2"/><line x1="10" y1="22" x2="16" y2="28" stroke="currentColor" stroke-width="1.2"/><line x1="22" y1="22" x2="16" y2="28" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <h3 class="insight__card-title">Lighting</h3>
+          <p class="insight__card-body">Using natural and ambient light to set mood and highlight key areas of a room.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-container">
-      <div class="cta-content">
-        <h2 class="cta-title">Ready to bring your dream space to life?</h2>
-        <p class="cta-description">Be among the first to explore our personal design tool that turns inspiration into reality.</p>
-        <p class="cta-description">Unlock instant access to the tool, exclusive early-user perks, and priority support as we shape the next generation of home design together.</p>
-        <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="cta-button-large">Start Designing Now 🪄</a>
+  <!-- ============ 4. HOW IT WORKS ============ -->
+  <section class="steps" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">See your room transformed in 3 steps</h2>
+      <div class="steps__grid">
+        <div class="steps__item">
+          <span class="steps__num">1</span>
+          <h3 class="steps__item-title">Upload your room photo</h3>
+          <p class="steps__item-body">Take a photo of any room you'd like to restyle. Any angle works.</p>
+        </div>
+        <div class="steps__item">
+          <span class="steps__num">2</span>
+          <h3 class="steps__item-title">Choose a style</h3>
+          <p class="steps__item-body">Pick from curated design aesthetics&mdash;Modern Classic, Japandi, French Natural, and more.</p>
+        </div>
+        <div class="steps__item">
+          <span class="steps__num">3</span>
+          <h3 class="steps__item-title">Get your transformation + breakdown</h3>
+          <p class="steps__item-body">Receive a styled image of your room, plus a detailed design guide you can follow.</p>
+        </div>
       </div>
-      <div class="cta-visual">
-        <img src="images/cta-visual.png" alt="Dream room with decorations" class="cta-visual-image" loading="lazy">
+      <!-- Preview mock -->
+      <div class="steps__preview">
+        <div class="steps__preview-frame">
+          <img src="images/showcase4.jpg" alt="Transformation preview" loading="lazy">
+        </div>
       </div>
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <!-- ============ 5. EXAMPLES ============ -->
+  <section class="examples" id="examples">
+    <div class="container">
+      <h2 class="section-title">Real spaces transformed</h2>
+      <div class="examples__grid">
+        <!-- Example 1 -->
+        <div class="examples__card">
+          <div class="examples__images">
+            <div class="examples__img-before"><img src="images/showcase1.png" alt="Before" loading="lazy"><span class="examples__badge">Before</span></div>
+            <div class="examples__img-after"><img src="images/showcase2.jpg" alt="After" loading="lazy"><span class="examples__badge">After</span></div>
+          </div>
+          <div class="examples__meta">
+            <span class="examples__tag">Modern Classic</span>
+            <p class="examples__outcome">Warmer tones, cleaner lines, elevated finish</p>
+          </div>
+        </div>
+        <!-- Example 2 -->
+        <div class="examples__card">
+          <div class="examples__images">
+            <div class="examples__img-before"><img src="images/showcase3.webp" alt="Before" loading="lazy"><span class="examples__badge">Before</span></div>
+            <div class="examples__img-after"><img src="images/showcase4.jpg" alt="After" loading="lazy"><span class="examples__badge">After</span></div>
+          </div>
+          <div class="examples__meta">
+            <span class="examples__tag">Japandi</span>
+            <p class="examples__outcome">Brighter, calmer, more layered</p>
+          </div>
+        </div>
+        <!-- Example 3 -->
+        <div class="examples__card">
+          <div class="examples__images">
+            <div class="examples__img-before"><img src="images/showcase5.jpg" alt="Before" loading="lazy"><span class="examples__badge">Before</span></div>
+            <div class="examples__img-after"><img src="images/showcase6.jpg" alt="After" loading="lazy"><span class="examples__badge">After</span></div>
+          </div>
+          <div class="examples__meta">
+            <span class="examples__tag">French Natural</span>
+            <p class="examples__outcome">Softer palette, richer textures, balanced scale</p>
+          </div>
+        </div>
+        <!-- Example 4 -->
+        <div class="examples__card">
+          <div class="examples__images">
+            <div class="examples__img-before"><img src="images/room1.jpg" alt="Before" loading="lazy"><span class="examples__badge">Before</span></div>
+            <div class="examples__img-after"><img src="images/room2.jpg" alt="After" loading="lazy"><span class="examples__badge">After</span></div>
+          </div>
+          <div class="examples__meta">
+            <span class="examples__tag">Mid-Century Modern</span>
+            <p class="examples__outcome">Retro warmth, organic shapes, bold accents</p>
+          </div>
+        </div>
+        <!-- Example 5 -->
+        <div class="examples__card">
+          <div class="examples__images">
+            <div class="examples__img-before"><img src="images/room1.jpg" alt="Before" loading="lazy"><span class="examples__badge">Before</span></div>
+            <div class="examples__img-after"><img src="images/room4.jpg" alt="After" loading="lazy"><span class="examples__badge">After</span></div>
+          </div>
+          <div class="examples__meta">
+            <span class="examples__tag">Coastal</span>
+            <p class="examples__outcome">Airy, light-filled, relaxed elegance</p>
+          </div>
+        </div>
+        <!-- Example 6 -->
+        <div class="examples__card">
+          <div class="examples__images">
+            <div class="examples__img-before"><img src="images/room1.jpg" alt="Before" loading="lazy"><span class="examples__badge">Before</span></div>
+            <div class="examples__img-after"><img src="images/room5.jpg" alt="After" loading="lazy"><span class="examples__badge">After</span></div>
+          </div>
+          <div class="examples__meta">
+            <span class="examples__tag">Scandinavian</span>
+            <p class="examples__outcome">Minimal, cozy, natural materials</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. WHAT YOU GET ============ -->
+  <section class="value" id="what-you-get">
+    <div class="container value__grid">
+      <div class="value__report">
+        <div class="value__report-card">
+          <span class="value__report-label">Your Room Breakdown</span>
+          <div class="value__report-row">
+            <span class="value__report-dot value__report-dot--green"></span>
+            <span>Natural light is your biggest asset&mdash;lean into it</span>
+          </div>
+          <div class="value__report-row">
+            <span class="value__report-dot value__report-dot--amber"></span>
+            <span>Rug scale is too small for the seating area</span>
+          </div>
+          <div class="value__report-row">
+            <span class="value__report-dot value__report-dot--red"></span>
+            <span>Overhead lighting feels flat&mdash;add layered lamps</span>
+          </div>
+          <div class="value__report-row">
+            <span class="value__report-dot value__report-dot--green"></span>
+            <span>Sofa placement creates good flow</span>
+          </div>
+        </div>
+      </div>
+      <div class="value__text">
+        <h2 class="section-title section-title--left">More than a visualization</h2>
+        <ul class="value__list">
+          <li>A styled transformation of your room</li>
+          <li>Room analysis (what's working / what's off)</li>
+          <li>Step-by-step style guidance</li>
+          <li>Curated product direction</li>
+          <li>A clear plan you can actually follow</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. PAIN / SOLUTION ============ -->
+  <section class="pain">
+    <div class="container">
+      <h2 class="section-title">Why inspiration photos are hard to recreate</h2>
+      <p class="section-body">Inspo doesn't show scale, layout decisions, or layering. Dream Space bridges the gap between what you save and what you can do in your own room.</p>
+      <div class="pain__diagram">
+        <div class="pain__step">
+          <span class="pain__step-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="22" rx="4" stroke="currentColor" stroke-width="1.2"/><path d="M8 18l4-5 3 3 5-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="pain__step-text">Saved inspo</span>
+        </div>
+        <div class="pain__arrow">
+          <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pain__step pain__step--problem">
+          <span class="pain__step-icon">?</span>
+          <span class="pain__step-text">Confusion</span>
+        </div>
+        <div class="pain__arrow">
+          <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pain__step pain__step--solution">
+          <span class="pain__step-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 14l5 5 9-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="pain__step-text">Plan + transformation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. FINAL CTA ============ -->
+  <section class="final-cta">
+    <div class="container final-cta__inner">
+      <h2 class="final-cta__title">See your room as your dream home</h2>
+      <p class="final-cta__sub">Upload a photo. Choose a style. Get a clear direction in minutes.</p>
+      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary btn--large">Transform my room</a>
+      <p class="final-cta__reassurance">Works for living rooms, bedrooms, kitchens, and more. No design experience needed.</p>
+    </div>
+  </section>
+
+  <!-- ============ 9. FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="mailto:grace@housing.info">Contact</a>
+      </div>
+      <p class="footer__copy">&copy; Housing Info</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav background
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+
+    // Mobile hamburger
+    const hamburger = document.getElementById('navHamburger');
+    const mobileMenu = document.getElementById('navMobile');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('nav__mobile--open');
+      hamburger.classList.toggle('nav__hamburger--open', open);
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav__mobile-link, .nav__mobile-cta').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('nav__mobile--open');
+        hamburger.classList.remove('nav__hamburger--open');
+      });
+    });
+
+    // Subtle fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.hero__text, .hero__bridge, .authority__stats, .authority__thumbs, .insight__cards, .steps__grid, .steps__preview, .examples__card, .value__grid, .pain__diagram, .final-cta__inner').forEach(el => {
+      el.classList.add('fade-target');
+      observer.observe(el);
+    });
+  </script>
+
 </body>
 </html>

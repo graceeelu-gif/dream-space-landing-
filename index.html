@@ -108,8 +108,10 @@
           <span class="authority__stat-label">of homes studied</span>
         </div>
       </div>
+      <p class="authority__trending-label" id="trendingLabel">Trending homes this month</p>
       <div class="authority__slider">
-        <div class="authority__slider-track">
+        <div class="authority__slider-track" id="sliderTrack">
+          <!-- Populated dynamically from Instagram API; local fallbacks below -->
           <div class="authority__thumb"><img src="images/carousel-1.jpg" alt="Featured home 1" loading="lazy"></div>
           <div class="authority__thumb"><img src="images/carousel-2.jpg" alt="Featured home 2" loading="lazy"></div>
           <div class="authority__thumb"><img src="images/carousel-3.jpg" alt="Featured home 3" loading="lazy"></div>
@@ -456,6 +458,40 @@
       el.classList.add('fade-target');
       observer.observe(el);
     });
+
+    // Dynamic trending carousel — fetches most viral posts from the last 30 days
+    (function() {
+      const track = document.getElementById('sliderTrack');
+      if (!track) return;
+
+      fetch('/api/trending')
+        .then(r => r.json())
+        .then(data => {
+          if (!data.posts || data.posts.length === 0) return; // keep local fallback
+
+          // Build new slider content from trending posts
+          const thumbsHTML = data.posts.map((post, i) =>
+            '<a href="' + post.permalink + '" target="_blank" rel="noopener" class="authority__thumb authority__thumb--link">' +
+              '<img src="' + post.imageUrl + '" alt="Trending home ' + (i + 1) + '" loading="lazy">' +
+              '<span class="authority__thumb-likes">' + formatNum(post.likes) + '</span>' +
+            '</a>'
+          ).join('');
+
+          // Duplicate for seamless loop
+          track.innerHTML = thumbsHTML + thumbsHTML;
+
+          // Restart animation
+          track.style.animation = 'none';
+          track.offsetHeight; // trigger reflow
+          track.style.animation = '';
+        })
+        .catch(() => {}); // silently keep local fallback
+
+      function formatNum(n) {
+        if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+        return String(n);
+      }
+    })();
   </script>
 
 </body>

@@ -481,6 +481,56 @@ body {
 .psticky .btn { width: 100%; }
 
 /* ============================================================
+   HERO CAROUSEL
+   ============================================================ */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel__track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+}
+.carousel__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 4px);
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.carousel__slide--active {
+  opacity: 1;
+}
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 0 4px;
+}
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--hairline);
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s, transform .2s;
+}
+.carousel__dot--active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+.carousel__dot:hover {
+  background: var(--accent-dark);
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {

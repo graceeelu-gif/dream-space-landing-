@@ -1,0 +1,512 @@
+/* ============================================================
+   POST-SPECIFIC LANDING PAGE
+   Matches primary.css design system (Fraunces + Inter, warm neutrals)
+   ============================================================ */
+
+:root {
+  --bg: #FBF7F2;
+  --surface: #FFFFFF;
+  --surface2: #F3EEE7;
+  --text: #1F2328;
+  --muted: #5B6168;
+  --hairline: rgba(31,35,40,0.10);
+  --accent: #C8A45D;
+  --accent-dark: #9B7B3E;
+  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --max-w: 1160px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* --- Utilities --- */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.section-body {
+  text-align: center;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 48px;
+  font-size: 17px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background .2s, transform .15s;
+}
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 32px;
+}
+.btn--primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn--large { padding: 18px 44px; font-size: 17px; }
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  padding: 12px 28px;
+}
+.btn--outline:hover { background: var(--accent); color: #fff; }
+
+/* Fade-in */
+.fade-target { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.fade-target.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.pnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: background .3s, box-shadow .3s;
+}
+.pnav--scrolled {
+  background: rgba(251,247,242,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--hairline);
+}
+.pnav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+}
+.pnav__wordmark {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+}
+.pnav__cta {
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: background .2s;
+}
+.pnav__cta:hover { background: var(--accent-dark); }
+
+/* ============================================================
+   1. HERO
+   ============================================================ */
+.phero {
+  padding: 130px 0 80px;
+}
+.phero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.phero__eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.phero__title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.14;
+  margin-bottom: 18px;
+}
+.phero__sub {
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 28px;
+  max-width: 460px;
+}
+.phero__proof {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.phero__proof-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: .6;
+}
+.phero__actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.phero__price {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.phero__image {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 6px;
+  background: var(--surface);
+  box-shadow: 0 8px 40px rgba(0,0,0,.06);
+}
+.phero__image img {
+  border-radius: calc(var(--radius) - 4px);
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+/* ============================================================
+   2. WHY THIS LOOK WORKS
+   ============================================================ */
+.pstyle {
+  padding: 80px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+.pstyle__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.pstyle__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.pstyle__heading {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.pstyle__body {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.pstyle__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pstyle__bullets li {
+  padding-left: 22px;
+  position: relative;
+  font-size: 16px;
+}
+.pstyle__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 10px;
+  width: 10px; height: 1px;
+  background: var(--accent);
+}
+
+/* ============================================================
+   3. HOW IT WORKS
+   ============================================================ */
+.psteps {
+  padding: 96px 0;
+}
+.psteps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+.psteps__item { text-align: center; padding: 0 8px; }
+.psteps__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.psteps__item-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.psteps__item-body { font-size: 15px; color: var(--muted); }
+.psteps__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* ============================================================
+   4. BEFORE / AFTER
+   ============================================================ */
+.pba {
+  padding: 96px 0;
+  background: var(--surface2);
+}
+.pba__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+.pba__card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.pba__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.pba__img {
+  position: relative;
+  overflow: hidden;
+}
+.pba__img img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.pba__badge {
+  position: absolute;
+  bottom: 8px; left: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(4px);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.pba__caption {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ============================================================
+   5. WHAT YOU GET
+   ============================================================ */
+.pvalue {
+  padding: 96px 0;
+}
+.pvalue__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.pvalue__card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+}
+.pvalue__icon {
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.pvalue__card-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.pvalue__card-body {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   6. FAQ
+   ============================================================ */
+.pfaq {
+  padding: 96px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+.pfaq__list {
+  max-width: 720px;
+  margin: 48px auto 0;
+}
+.pfaq__item {
+  border-bottom: 1px solid var(--hairline);
+}
+.pfaq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.pfaq__question:hover { color: var(--accent-dark); }
+.pfaq__icon {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  transition: transform .25s;
+}
+.pfaq__item.open .pfaq__icon { transform: rotate(45deg); }
+.pfaq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease, padding .3s ease;
+}
+.pfaq__item.open .pfaq__answer {
+  max-height: 300px;
+}
+.pfaq__answer-inner {
+  padding: 0 0 20px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   7. FINAL CTA
+   ============================================================ */
+.pfinal {
+  padding: 96px 0;
+  background: var(--surface2);
+}
+.pfinal__inner { text-align: center; }
+.pfinal__title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+.pfinal__sub {
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 36px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pfinal__note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ============================================================
+   8. FOOTER
+   ============================================================ */
+.pfooter {
+  padding: 40px 0;
+  border-top: 1px solid var(--hairline);
+}
+.pfooter__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pfooter__links { display: flex; gap: 24px; }
+.pfooter__links a { font-size: 13px; color: var(--muted); transition: color .2s; }
+.pfooter__links a:hover { color: var(--text); }
+.pfooter__copy { font-size: 13px; color: var(--muted); }
+
+/* ============================================================
+   STICKY MOBILE CTA
+   ============================================================ */
+.psticky {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 99;
+  background: rgba(251,247,242,.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--hairline);
+  padding: 12px 20px;
+  text-align: center;
+}
+.psticky .btn { width: 100%; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .phero { padding: 110px 0 64px; }
+  .phero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .phero__title { font-size: 34px; }
+
+  .psteps__grid { grid-template-columns: 1fr; gap: 40px; }
+
+  .pba__grid { grid-template-columns: 1fr; }
+
+  .pvalue__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .pfinal__title { font-size: 32px; }
+
+  .pfooter__inner { flex-direction: column; gap: 12px; }
+
+  .psticky { display: block; }
+  body { padding-bottom: 72px; }
+}
+
+@media (max-width: 560px) {
+  .container { padding: 0 20px; }
+  .pnav__inner { padding: 16px 20px; }
+  .phero__title { font-size: 28px; }
+  .section-title { font-size: 26px; }
+  .pvalue__grid { grid-template-columns: 1fr; }
+  .pfinal__title { font-size: 28px; }
+}

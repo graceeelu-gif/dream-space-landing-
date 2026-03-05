@@ -529,24 +529,38 @@ body {
   border-radius: var(--radius);
   overflow: hidden;
 }
-.examples__images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.examples__img-before,
-.examples__img-after {
+
+/* Before/After Slider */
+.examples__slider {
   position: relative;
   overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.examples__img-before img,
-.examples__img-after img {
+.examples__after {
+  display: block;
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 4/3;
   object-fit: cover;
 }
-.examples__badge {
+.examples__before-clip {
   position: absolute;
-  bottom: 8px; left: 8px;
+  top: 0; left: 0; bottom: 0;
+  overflow: hidden;
+}
+.examples__before {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  /* Match the width of the full container so alignment is perfect */
+  width: auto;
+  min-width: 0;
+}
+/* Labels */
+.examples__label {
+  position: absolute;
+  bottom: 10px;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: .8px;
@@ -555,6 +569,42 @@ body {
   backdrop-filter: blur(4px);
   padding: 3px 10px;
   border-radius: 20px;
+  pointer-events: none;
+  z-index: 3;
+}
+.examples__label--before { left: 10px; }
+.examples__label--after { right: 10px; }
+
+/* Handle */
+.examples__handle {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 2px;
+  z-index: 5;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.examples__handle-line {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,.25);
+}
+.examples__handle-knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .examples__meta {
   padding: 16px 20px;

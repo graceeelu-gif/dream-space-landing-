@@ -61,41 +61,27 @@
           <a href="#examples" class="hero__secondary">See examples</a>
         </div>
       </div>
-      <div class="hero__bridge">
-        <div class="bridge">
-          <div class="bridge__card">
-            <div class="bridge__img-wrap">
-              <img src="images/room3.jpg" alt="Inspiration home" loading="eager">
-              <!-- Design study callout -->
-              <div class="callout callout--top-right">
-                <span class="callout__line"></span>
-                <span class="callout__label">Contrast</span>
-              </div>
+      <div class="hero__visual">
+        <div class="hero__frame">
+          <div class="hero__showcase" id="heroShowcase">
+            <!-- Pair 1: Living room -->
+            <div class="hero__pair active">
+              <img src="images/showcase3.webp" alt="Before — living room" class="hero__img hero__img--before">
+              <img src="images/showcase4.jpg" alt="After — living room" class="hero__img hero__img--after">
             </div>
-            <span class="bridge__label">Inspiration</span>
-          </div>
-          <div class="bridge__arrow">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="bridge__card">
-            <div class="bridge__img-wrap">
-              <img src="images/showcase3.webp" alt="Your room" loading="eager">
+            <!-- Pair 2: Staircase -->
+            <div class="hero__pair">
+              <img src="images/showcase1.png" alt="Before — staircase" class="hero__img hero__img--before">
+              <img src="images/showcase2.jpg" alt="After — staircase" class="hero__img hero__img--after">
             </div>
-            <span class="bridge__label">Your room</span>
-          </div>
-          <div class="bridge__arrow">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="bridge__card bridge__card--accent">
-            <div class="bridge__img-wrap">
-              <img src="images/showcase4.jpg" alt="Your transformation" loading="eager">
-              <div class="callout callout--bottom-left">
-                <span class="callout__line"></span>
-                <span class="callout__label">Layering</span>
-              </div>
+            <!-- Pair 3: Large living room -->
+            <div class="hero__pair">
+              <img src="images/showcase5.jpg" alt="Before — large living room" class="hero__img hero__img--before">
+              <img src="images/showcase6.jpg" alt="After — large living room" class="hero__img hero__img--after">
             </div>
-            <span class="bridge__label">Your transformation</span>
           </div>
+          <!-- Badge -->
+          <div class="hero__badge" id="heroBadge">Before</div>
         </div>
       </div>
     </div>
@@ -413,6 +399,49 @@
       });
     });
 
+    // Hero before/after animation
+    (function() {
+      const pairs = document.querySelectorAll('.hero__pair');
+      const badge = document.getElementById('heroBadge');
+      if (!pairs.length) return;
+
+      let current = 0;
+      let showingAfter = false;
+
+      // Timing: show "before" for 2s, crossfade to "after" (1s), hold "after" for 2.5s,
+      // then fade to next pair's "before"
+      function showBefore() {
+        showingAfter = false;
+        badge.textContent = 'Before';
+        pairs[current].classList.remove('show-after');
+        // After 2s, transition to "after"
+        setTimeout(showAfter, 2000);
+      }
+
+      function showAfter() {
+        showingAfter = true;
+        badge.textContent = 'After';
+        pairs[current].classList.add('show-after');
+        // Hold "after" for 2.5s, then go to next pair
+        setTimeout(nextPair, 2500);
+      }
+
+      function nextPair() {
+        // Fade out current pair
+        pairs[current].classList.remove('active', 'show-after');
+        // Move to next
+        current = (current + 1) % pairs.length;
+        // Activate next pair (starts on "before")
+        pairs[current].classList.add('active');
+        pairs[current].classList.remove('show-after');
+        // Small delay then start the cycle
+        setTimeout(showBefore, 400);
+      }
+
+      // Start
+      showBefore();
+    })();
+
     // Subtle fade-in on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -423,7 +452,7 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.hero__text, .hero__bridge, .authority__stats, .authority__thumbs, .insight__cards, .steps__grid, .steps__preview, .examples__card, .value__grid, .pain__diagram, .final-cta__inner').forEach(el => {
+    document.querySelectorAll('.hero__text, .hero__visual, .authority__stats, .authority__slider, .insight__cards, .steps__grid, .steps__preview, .examples__card, .value__grid, .pain__diagram, .final-cta__inner').forEach(el => {
       el.classList.add('fade-target');
       observer.observe(el);
     });

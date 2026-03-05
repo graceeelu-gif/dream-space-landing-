@@ -329,6 +329,125 @@ body {
   font-style: italic;
 }
 
+/* Before/After interactive slider */
+.ba-slider {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.ba-slider__wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+.ba-slider__after {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.ba-slider__before-clip {
+  position: absolute;
+  top: 0; left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.ba-slider__before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Make the before image the same size as the container, not the clip */
+}
+.ba-slider__handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.ba-slider__line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  transform: translateX(-50%);
+}
+.ba-slider__knob {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--accent);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  z-index: 4;
+  flex-shrink: 0;
+}
+.ba-slider__label {
+  position: absolute;
+  top: 12px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity .2s;
+}
+.ba-slider__label--before {
+  left: 12px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+}
+.ba-slider__label--after {
+  right: 12px;
+  background: var(--accent);
+  color: white;
+}
+.ba-slider__hint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  z-index: 5;
+  pointer-events: none;
+  transition: opacity .3s;
+}
+.ba-slider__hint svg {
+  animation: ba-nudge 1.5s ease-in-out infinite;
+}
+@keyframes ba-nudge {
+  0%, 100% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+}
+.ba-slider.interacted .ba-slider__hint {
+  opacity: 0;
+}
+
 /* ============================================================
    5. WHAT YOU GET
    ============================================================ */

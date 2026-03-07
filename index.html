@@ -30,7 +30,7 @@
         <a href="#examples" class="nav__link">Examples</a>
         <a href="#what-you-get" class="nav__link">What you get</a>
       </div>
-      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="nav__cta">Transform my room</a>
+      <a href="#pricing" class="nav__cta" onclick="posthog.capture('cta_click', {location: 'nav', action: 'scroll_to_pricing'})">See plans</a>
       <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -40,7 +40,7 @@
       <a href="#how-it-works" class="nav__mobile-link">How it works</a>
       <a href="#examples" class="nav__mobile-link">Examples</a>
       <a href="#what-you-get" class="nav__mobile-link">What you get</a>
-      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="nav__mobile-cta">Transform my room</a>
+      <a href="#pricing" class="nav__mobile-cta">See plans</a>
     </div>
   </nav>
 
@@ -57,7 +57,7 @@
           <li>Curated design guidance + picks</li>
         </ul>
         <div class="hero__actions">
-          <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary">Transform my room</a>
+          <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {location: 'hero', action: 'scroll_to_pricing'})">See plans & pricing</a>
           <a href="#examples" class="hero__secondary">See examples</a>
         </div>
       </div>
@@ -192,16 +192,8 @@
           <p class="steps__item-body">Receive a styled image of your room, plus a detailed design guide you can follow.</p>
         </div>
       </div>
-      <!-- Product demo video -->
-      <div class="steps__preview">
-        <div class="steps__video-frame">
-          <div class="steps__video-placeholder" id="demoVideo">
-            <div class="steps__video-play">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="white" stroke-width="2"/><path d="M20 16l12 8-12 8V16z" fill="white"/></svg>
-            </div>
-            <span class="steps__video-label">Product demo coming soon</span>
-          </div>
-        </div>
+      <div class="steps__cta">
+        <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {location: 'steps', action: 'scroll_to_pricing'})">Choose your package</a>
       </div>
     </div>
   </section>
@@ -378,45 +370,153 @@
     </div>
   </section>
 
-  <!-- ============ 7. PAIN / SOLUTION ============ -->
-  <section class="pain">
+  <!-- ============ 7. PRICING ============ -->
+  <section class="pricing" id="pricing">
     <div class="container">
-      <h2 class="section-title">Why inspiration photos are hard to recreate</h2>
-      <p class="section-body">Inspo doesn't show scale, layout decisions, or layering. Dream Space bridges the gap between what you save and what you can do in your own room.</p>
-      <div class="pain__diagram">
-        <div class="pain__step">
-          <span class="pain__step-icon">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="22" rx="4" stroke="currentColor" stroke-width="1.2"/><path d="M8 18l4-5 3 3 5-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span class="pain__step-text">Saved inspo</span>
+      <h2 class="section-title">Choose your room transformation</h2>
+      <p class="section-body">Every package includes a personalized design plan you can actually follow. Pick the one that fits your project.</p>
+      <div class="pricing__grid">
+        <!-- Single Room -->
+        <div class="pricing__card">
+          <div class="pricing__card-inner">
+            <span class="pricing__name">Single Room</span>
+            <p class="pricing__desc">Perfect for trying one room or refreshing a single space.</p>
+            <div class="pricing__price">
+              <span class="pricing__amount">$29</span>
+              <span class="pricing__period">one-time</span>
+            </div>
+            <ul class="pricing__features">
+              <li>1 room transformation</li>
+              <li>Personalized style direction</li>
+              <li>Room analysis & design notes</li>
+              <li>Step-by-step recommendations</li>
+              <li>Curated product guidance</li>
+            </ul>
+            <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {location: 'pricing', plan: 'single'})">Get started</a>
+          </div>
         </div>
-        <div class="pain__arrow">
-          <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="pain__step pain__step--problem">
-          <span class="pain__step-icon">?</span>
-          <span class="pain__step-text">Confusion</span>
-        </div>
-        <div class="pain__arrow">
-          <svg width="32" height="16" viewBox="0 0 32 16" fill="none"><path d="M0 8h28m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="pain__step pain__step--solution">
-          <span class="pain__step-icon">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 14l5 5 9-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span class="pain__step-text">Plan + transformation</span>
+        <!-- Full Home — Recommended -->
+        <div class="pricing__card pricing__card--featured">
+          <span class="pricing__badge">Most popular</span>
+          <div class="pricing__card-inner">
+            <span class="pricing__name">Full Home</span>
+            <p class="pricing__desc">For when you want to transform multiple rooms and see the full vision.</p>
+            <div class="pricing__price">
+              <span class="pricing__amount">$69</span>
+              <span class="pricing__period">one-time</span>
+            </div>
+            <ul class="pricing__features">
+              <li>3 room transformations</li>
+              <li>Personalized style direction</li>
+              <li>Room analysis & design notes</li>
+              <li>Step-by-step recommendations</li>
+              <li>Curated product guidance</li>
+              <li>Mix & match any styles</li>
+            </ul>
+            <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {location: 'pricing', plan: 'full_home'})">Get started</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 8. FINAL CTA ============ -->
+  <!-- ============ 8. WHAT HAPPENS NEXT ============ -->
+  <section class="next-steps">
+    <div class="container">
+      <h2 class="section-title">What happens after you purchase</h2>
+      <div class="next-steps__grid">
+        <div class="next-steps__item">
+          <span class="next-steps__num">1</span>
+          <h3 class="next-steps__title">Upload your room</h3>
+          <p class="next-steps__body">Take a photo of any room you want transformed. Any angle works.</p>
+        </div>
+        <div class="next-steps__arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="next-steps__item">
+          <span class="next-steps__num">2</span>
+          <h3 class="next-steps__title">Choose your dream style</h3>
+          <p class="next-steps__body">Pick from curated aesthetics like Modern Classic, Coastal, Japandi, and more.</p>
+        </div>
+        <div class="next-steps__arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="next-steps__item">
+          <span class="next-steps__num">3</span>
+          <h3 class="next-steps__title">Receive your transformation</h3>
+          <p class="next-steps__body">Get a styled image of your room plus a full design plan in about 60 seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. FAQ ============ -->
+  <section class="faq">
+    <div class="container">
+      <h2 class="section-title">Common questions</h2>
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            What exactly do I receive?
+            <svg class="faq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq__answer"><p class="faq__answer-inner">You receive a personalized styled image of your room in your chosen aesthetic, a detailed room analysis, step-by-step style direction, and curated product suggestions you can shop. Everything is viewable, savable, and downloadable instantly.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            How long does it take?
+            <svg class="faq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq__answer"><p class="faq__answer-inner">Your transformation and design plan are generated in about 60 seconds. You can view, save, and download everything right away.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            Is this for one room or my whole home?
+            <svg class="faq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq__answer"><p class="faq__answer-inner">That's up to you. The Single Room plan covers one room transformation. The Full Home plan gives you three, so you can transform your living room, bedroom, kitchen, or any combination.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            Can I choose the style?
+            <svg class="faq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq__answer"><p class="faq__answer-inner">Yes! You pick from curated design aesthetics like Modern Classic, Japandi, Coastal, French Natural, and more. With the Full Home plan, you can try different styles for each room.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            Do I get product recommendations?
+            <svg class="faq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq__answer"><p class="faq__answer-inner">Yes. Every transformation includes curated product guidance to help you bring the look to life, from furniture and lighting to textiles and accents.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            Is this a subscription?
+            <svg class="faq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq__answer"><p class="faq__answer-inner">No. Both plans are a one-time purchase. You pay once, get your transformations, and keep everything forever. No recurring charges.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" onclick="this.parentElement.classList.toggle('open')">
+            What if I'm not happy with the result?
+            <svg class="faq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq__answer"><p class="faq__answer-inner">You can regenerate with a different style or adjust your preferences. If you need extra help, email grace@housing.info and we'll work with you personally.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. FINAL CTA ============ -->
   <section class="final-cta">
     <div class="container final-cta__inner">
-      <h2 class="final-cta__title">See your room as your dream home</h2>
-      <p class="final-cta__sub">Upload a photo. Choose a style. Get a clear direction in minutes.</p>
-      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary btn--large">Transform my room</a>
-      <p class="final-cta__reassurance">Works for living rooms, bedrooms, kitchens, and more. No design experience needed.</p>
+      <h2 class="final-cta__title">Stop saving inspiration. Start bringing it to life.</h2>
+      <p class="final-cta__sub">You've found looks you love. Now see exactly how they translate to your own space.</p>
+      <div class="final-cta__buttons">
+        <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {location: 'final'})">Transform my room</a>
+      </div>
+      <p class="final-cta__reassurance">One-time purchase. Works for living rooms, bedrooms, kitchens, and more.</p>
     </div>
   </section>
 
@@ -551,7 +651,7 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.hero__text, .hero__visual, .authority__stats, .authority__slider, .insight__cards, .steps__grid, .steps__preview, .examples__card, .value__grid, .pain__diagram, .final-cta__inner').forEach(el => {
+    document.querySelectorAll('.hero__text, .hero__visual, .authority__stats, .authority__slider, .insight__cards, .steps__grid, .examples__card, .value__grid, .pricing__grid, .next-steps__grid, .faq__list, .final-cta__inner').forEach(el => {
       el.classList.add('fade-target');
       observer.observe(el);
     });

@@ -26,7 +26,7 @@
   <nav class="pnav" id="pnav">
     <div class="pnav__inner">
       <a href="../index.html" class="pnav__wordmark">Housing Info</a>
-      <a href="https://housing-info.vercel.app/try/natural-modern-classic" class="pnav__cta" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'nav'})">Try this style</a>
+      <a href="#pricing" class="pnav__cta" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'nav'})">See plans</a>
     </div>
   </nav>
 
@@ -42,7 +42,8 @@
           Trusted by 2M+ design lovers
         </p>
         <div class="phero__actions">
-          <a href="https://housing-info.vercel.app/try/natural-modern-classic" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'hero'})">Try Natural Modern Classic in my room</a>
+          <a href="#pricing" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'hero'})">See plans & pricing</a>
+          <a href="#how-it-works" class="phero__secondary">How it works</a>
         </div>
       </div>
       <div class="phero__image">
@@ -86,7 +87,7 @@
   </section>
 
   <!-- ============ 3. HOW IT WORKS ============ -->
-  <section class="psteps">
+  <section class="psteps" id="how-it-works">
     <div class="container">
       <h2 class="section-title">How it works</h2>
       <div class="psteps__grid">
@@ -107,7 +108,7 @@
         </div>
       </div>
       <div class="psteps__cta">
-        <a href="https://housing-info.vercel.app/try/natural-modern-classic" class="btn btn--primary" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'steps'})">Try this style in my room</a>
+        <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'steps'})">Choose your package</a>
       </div>
     </div>
   </section>
@@ -205,71 +206,144 @@
     </div>
   </section>
 
-  <!-- ============ 6. FAQ ============ -->
+  <!-- ============ 6. PRICING ============ -->
+  <section class="ppricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Choose your room transformation</h2>
+      <p class="section-body">Every package includes a personalized design plan you can actually follow.</p>
+      <div class="ppricing__grid">
+        <!-- Single Room -->
+        <div class="ppricing__card">
+          <div class="ppricing__card-inner">
+            <span class="ppricing__name">Single Room</span>
+            <p class="ppricing__desc">Perfect for trying one room or refreshing a single space.</p>
+            <div class="ppricing__price">
+              <span class="ppricing__amount">$29</span>
+              <span class="ppricing__period">one-time</span>
+            </div>
+            <ul class="ppricing__features">
+              <li>1 room transformation</li>
+              <li>Personalized style direction</li>
+              <li>Room analysis & design notes</li>
+              <li>Step-by-step recommendations</li>
+              <li>Curated product guidance</li>
+            </ul>
+            <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'pricing', plan: 'single'})">Get started</a>
+          </div>
+        </div>
+        <!-- Full Home — Recommended -->
+        <div class="ppricing__card ppricing__card--featured">
+          <span class="ppricing__badge">Most popular</span>
+          <div class="ppricing__card-inner">
+            <span class="ppricing__name">Full Home</span>
+            <p class="ppricing__desc">Transform multiple rooms and see the full vision for your home.</p>
+            <div class="ppricing__price">
+              <span class="ppricing__amount">$69</span>
+              <span class="ppricing__period">one-time</span>
+            </div>
+            <ul class="ppricing__features">
+              <li>3 room transformations</li>
+              <li>Personalized style direction</li>
+              <li>Room analysis & design notes</li>
+              <li>Step-by-step recommendations</li>
+              <li>Curated product guidance</li>
+              <li>Mix & match any styles</li>
+            </ul>
+            <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'pricing', plan: 'full_home'})">Get started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. WHAT HAPPENS NEXT ============ -->
+  <section class="pnext">
+    <div class="container">
+      <h2 class="section-title">What happens after you purchase</h2>
+      <div class="pnext__grid">
+        <div class="pnext__item">
+          <span class="pnext__num">1</span>
+          <h3 class="pnext__title">Upload your room</h3>
+          <p class="pnext__body">Take a photo of any room you want transformed.</p>
+        </div>
+        <div class="pnext__arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pnext__item">
+          <span class="pnext__num">2</span>
+          <h3 class="pnext__title">We apply the style</h3>
+          <p class="pnext__body">Your room gets transformed in the Natural Modern Classic aesthetic.</p>
+        </div>
+        <div class="pnext__arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pnext__item">
+          <span class="pnext__num">3</span>
+          <h3 class="pnext__title">Receive your plan</h3>
+          <p class="pnext__body">Get a styled image plus a full design guide in about 60 seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. FAQ ============ -->
   <section class="pfaq">
     <div class="container">
       <h2 class="section-title">Common questions</h2>
       <div class="pfaq__list">
         <div class="pfaq__item">
           <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            What kind of photo should I upload?
+            What exactly do I receive?
             <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">Any clear photo of your room works. Try to capture as much of the room as possible from one angle. Natural lighting helps, but it doesn't need to be perfect.</p></div>
+          <div class="pfaq__answer"><p class="pfaq__answer-inner">A personalized styled image of your room, a detailed room analysis, step-by-step style direction, and curated product suggestions. Everything is viewable, savable, and downloadable instantly.</p></div>
         </div>
         <div class="pfaq__item">
           <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            Does it work for small rooms or rentals?
+            How long does it take?
             <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">Absolutely. The tool adapts the style to your room's actual size and layout. It works for any space, including apartments, rentals, and small rooms.</p></div>
+          <div class="pfaq__answer"><p class="pfaq__answer-inner">Your transformation and design plan are generated in about 60 seconds. You can view, save, and download everything right away.</p></div>
         </div>
         <div class="pfaq__item">
           <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            How fast do I get results?
+            Is this for one room?
             <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">Your transformation and design plan are generated in about 60 seconds. You'll be able to view, save, and download everything right away.</p></div>
+          <div class="pfaq__answer"><p class="pfaq__answer-inner">The Single Room plan covers one room. The Full Home plan gives you three transformations, so you can do your living room, bedroom, and kitchen (or any combination you like).</p></div>
         </div>
         <div class="pfaq__item">
           <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            Can I try multiple styles?
+            Can I choose a different style?
             <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">Yes! You can transform the same room in as many styles as you like. Try Natural Modern Classic, then Coastal Retreat, then Vintage Charm and compare.</p></div>
+          <div class="pfaq__answer"><p class="pfaq__answer-inner">Yes! You can pick from multiple curated aesthetics. With the Full Home plan, you can try different styles for each room.</p></div>
         </div>
         <div class="pfaq__item">
           <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            What if my room is messy?
+            Is this a subscription?
             <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">No worries. The tool focuses on your room's layout and structure. A little clutter won't affect the quality of your transformation.</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            Is this the exact style from the post?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">We translate the key design patterns from the post into your room. The result captures the same aesthetic direction, adapted to your space's unique layout and features.</p></div>
+          <div class="pfaq__answer"><p class="pfaq__answer-inner">No. Both plans are a one-time purchase. You pay once and keep everything forever. No recurring charges.</p></div>
         </div>
         <div class="pfaq__item">
           <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
             What if I'm not happy with the result?
             <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">You can regenerate with a different style or tweak your prompt. If you need extra help, email grace@housing.info and we'll work with you.</p></div>
+          <div class="pfaq__answer"><p class="pfaq__answer-inner">You can regenerate with a different style or adjust your preferences. If you need extra help, email grace@housing.info and we'll work with you personally.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 7. FINAL CTA ============ -->
+  <!-- ============ 9. FINAL CTA ============ -->
   <section class="pfinal">
     <div class="container pfinal__inner">
       <h2 class="pfinal__title">Stop saving inspiration. Start bringing it to life.</h2>
       <p class="pfinal__sub">You've found a look you love. Now see exactly how it translates to your own space.</p>
-      <a href="https://housing-info.vercel.app/try/natural-modern-classic" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'final'})">Try Natural Modern Classic in my room</a>
-      <p class="pfinal__note">Works for living rooms, bedrooms, kitchens, and more.</p>
+      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'final'})">Transform my room</a>
+      <p class="pfinal__note">One-time purchase. Works for living rooms, bedrooms, kitchens, and more.</p>
     </div>
   </section>
 
@@ -287,7 +361,7 @@
 
   <!-- ============ STICKY MOBILE CTA ============ -->
   <div class="psticky" id="psticky">
-    <a href="https://housing-info.vercel.app/try/natural-modern-classic" class="btn btn--primary" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'sticky'})">Try this style in my room</a>
+    <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'sticky'})">See plans & pricing</a>
   </div>
 
   <script>
@@ -320,7 +394,7 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.phero__text, .phero__image, .pstyle__inner, .psteps__grid, .pba__grid, .pvalue__grid, .pfaq__list, .pfinal__inner').forEach(el => {
+    document.querySelectorAll('.phero__text, .phero__image, .pstyle__inner, .psteps__grid, .pba__grid, .pvalue__grid, .ppricing__grid, .pnext__grid, .pfaq__list, .pfinal__inner').forEach(el => {
       el.classList.add('fade-target');
       observer.observe(el);
     });

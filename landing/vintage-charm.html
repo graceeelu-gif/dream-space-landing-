@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create This Vintage Charm Look in Your Room | Housing Info</title>
+  <title>Create This Vintage Charm Look in Your Room | Dream Space Tool</title>
   <meta name="description" content="See how your room would look with this Modern Classic x Vintage Charm style. Upload a photo and get an AI-powered transformation in seconds.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../landing.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../post-landing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- PostHog Analytics -->
   <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init rs ls yi ns us ts ss capture Hi calculateEventProperties vs register register_once register_for_session unregister unregister_for_session gs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fs ds createPersonProfile ps Qr opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing hs debug O cs getPageViewId captureTraceFeedback captureTraceMetric Kr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -21,378 +22,283 @@
 </head>
 <body>
 
-  <!-- ============ NAV ============ -->
-  <nav class="pnav" id="pnav">
-    <div class="pnav__inner">
-      <a href="../index.html" class="pnav__wordmark">Housing Info</a>
-      <a href="#pricing" class="pnav__cta" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'nav'})">Try this style</a>
-    </div>
-  </nav>
+  <!-- Minimal Header -->
+  <header class="lp-header">
+    <a href="../index.html" class="lp-logo">
+      <span class="lp-logo-text">DREAM SPACE TOOL</span>
+    </a>
+    <a href="#pricing" class="lp-header-cta">Get Started</a>
+  </header>
 
-  <!-- ============ 1. HERO WITH CAROUSEL ============ -->
-  <section class="phero">
-    <div class="container phero__grid">
-      <div class="phero__text">
-        <p class="phero__eyebrow">AS SEEN ON HOUSING INFO</p>
-        <h1 class="phero__title">Want to bring this look into your own space?</h1>
-        <p class="phero__sub">Upload a photo of your room and see it transformed in the Vintage Charm style. Get a full design breakdown, style direction, and a clear plan you can follow.</p>
-        <p class="phero__proof">
-          <span class="phero__proof-dot"></span>
-          Trusted by 2M+ design lovers
-        </p>
-        <div class="phero__actions">
-          <a href="#pricing" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'hero'})">Try Vintage Charm in my room</a>
-          <a href="#examples" class="phero__secondary">See examples</a>
+  <!-- Hero Section -->
+  <section class="lp-hero">
+    <div class="lp-hero-image-col">
+      <div class="lp-hero-image-wrap">
+        <div class="lp-hero-carousel">
+          <img src="../images/carousel-1.jpg" alt="Room transformation - slide 1" class="carousel-image active">
+          <img src="../images/carousel-2.jpg" alt="Room transformation - slide 2" class="carousel-image">
+          <img src="../images/carousel-3.jpg" alt="Room transformation - slide 3" class="carousel-image">
+          <img src="../images/carousel-4.jpg" alt="Room transformation - slide 4" class="carousel-image">
+          <img src="../images/carousel-5.jpg" alt="Room transformation - slide 5" class="carousel-image">
+          <img src="../images/carousel-6.jpg" alt="Room transformation - slide 6" class="carousel-image">
+          <img src="../images/carousel-7.jpg" alt="Room transformation - slide 7" class="carousel-image">
+          <img src="../images/carousel-8.jpg" alt="Room transformation - slide 8" class="carousel-image">
+          <img src="../images/carousel-9.jpg" alt="Room transformation - slide 9" class="carousel-image">
+          <img src="../images/carousel-10.jpg" alt="Room transformation - slide 10" class="carousel-image">
+          <img src="../images/carousel-11.jpg" alt="Room transformation - slide 11" class="carousel-image">
+          <img src="../images/carousel-12.jpg" alt="Room transformation - slide 12" class="carousel-image">
+
         </div>
       </div>
-      <div class="phero__image">
-        <div class="carousel" id="heroCarousel">
-          <div class="carousel__track">
-            <img src="../images/carousel-1.jpg" alt="Room transformation - slide 1" class="carousel__slide carousel__slide--active" loading="eager">
-            <img src="../images/carousel-2.jpg" alt="Room transformation - slide 2" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-3.jpg" alt="Room transformation - slide 3" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-4.jpg" alt="Room transformation - slide 4" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-5.jpg" alt="Room transformation - slide 5" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-6.jpg" alt="Room transformation - slide 6" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-7.jpg" alt="Room transformation - slide 7" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-8.jpg" alt="Room transformation - slide 8" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-9.jpg" alt="Room transformation - slide 9" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-10.jpg" alt="Room transformation - slide 10" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-11.jpg" alt="Room transformation - slide 11" class="carousel__slide" loading="lazy">
-            <img src="../images/carousel-12.jpg" alt="Room transformation - slide 12" class="carousel__slide" loading="lazy">
+    </div>
+    <div class="lp-hero-content-col">
+      <h1 class="lp-hero-title">Want to bring this look into your own space?</h1>
+      <p class="lp-hero-subtitle">Upload a photo of your space and instantly visualize how it could transform into the home of your dreams.</p>
+      <a href="#pricing" class="lp-cta-button lp-cta-large">Try it with your room</a>
+    </div>
+  </section>
+
+  <!-- Tagline -->
+  <section class="lp-tagline">
+    <p class="lp-tagline-text">See your room transformed in the exact style of this home.</p>
+  </section>
+
+  <!-- How It Works -->
+  <section class="lp-how-it-works">
+    <h2 class="lp-section-title">How it works</h2>
+    <p class="lp-section-subtitle">Three simple steps to transform any room</p>
+    <div class="lp-steps">
+      <div class="lp-step">
+        <div class="lp-step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A896FF" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+          </svg>
+        </div>
+        <span class="lp-step-label">Step 1</span>
+        <h3 class="lp-step-title">Upload your room</h3>
+        <p class="lp-step-desc">Take a photo of any room you want to restyle. Works with any angle or space.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A896FF" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
+          </svg>
+        </div>
+        <span class="lp-step-label">Step 2</span>
+        <h3 class="lp-step-title">Apply this style</h3>
+        <p class="lp-step-desc">See your room reimagined with the look and feel of this home inspiration.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A896FF" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/>
+          </svg>
+        </div>
+        <span class="lp-step-label">Step 3</span>
+        <h3 class="lp-step-title">Get your transformation</h3>
+        <p class="lp-step-desc">Get a transformed image, personalized tips, and product recs to achieve this style.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Receive -->
+  <section class="lp-outputs">
+    <h2 class="lp-section-title">What you'll receive</h2>
+    <p class="lp-section-subtitle">Everything you need to bring the look to life</p>
+    <div class="lp-outputs-grid">
+      <div class="lp-output-card">
+        <div class="lp-output-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A896FF" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/>
+          </svg>
+        </div>
+        <h3 class="lp-output-title">Transformed Room</h3>
+        <p class="lp-output-desc">A realistic image mockup of your actual room restyled in this look.</p>
+      </div>
+      <div class="lp-output-card">
+        <div class="lp-output-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A896FF" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z"/>
+          </svg>
+        </div>
+        <h3 class="lp-output-title">Style Direction</h3>
+        <p class="lp-output-desc">A personalized room analysis with clear steps to achieve this style.</p>
+      </div>
+      <div class="lp-output-card">
+        <div class="lp-output-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A896FF" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+          </svg>
+        </div>
+        <h3 class="lp-output-title">Product Suggestions</h3>
+        <p class="lp-output-desc">Curated furniture and decor links to shop and bring the look to life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Styles Gallery -->
+  <section class="lp-gallery">
+    <h2 class="lp-section-title">More styles to explore</h2>
+    <p class="lp-section-subtitle">Choose from different styles and see your space reimagined in each one.</p>
+    <div class="lp-gallery-grid">
+      <a href="https://www.instagram.com/p/DUOkH8Nkgxq/" target="_blank" rel="noopener noreferrer" class="lp-gallery-item">
+        <img src="../images/style-traditional.jpg" alt="Traditional room style" loading="lazy">
+        <span class="lp-gallery-label">Traditional</span>
+      </a>
+      <a href="https://www.instagram.com/p/DUOTrQLCaAy/" target="_blank" rel="noopener noreferrer" class="lp-gallery-item">
+        <img src="../images/style-modern.jpg" alt="Modern room style" loading="lazy">
+        <span class="lp-gallery-label">Modern</span>
+      </a>
+      <a href="https://www.instagram.com/p/DUL1anRD_RE/" target="_blank" rel="noopener noreferrer" class="lp-gallery-item">
+        <img src="../images/style-coastal.jpg" alt="Coastal room style" loading="lazy">
+        <span class="lp-gallery-label">Coastal</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="lp-trust">
+    <div class="lp-stars">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="#F59E0B"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    </div>
+    <p class="lp-trust-text">Loved by millions of home design enthusiasts</p>
+    <a href="https://www.instagram.com/p/DVOpYs_lApQ/?hl=en&img_index=1" target="_blank" rel="noopener noreferrer" class="lp-instagram-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      See the original post on Instagram
+    </a>
+  </section>
+
+  <section class="lp-pricing" id="pricing">
+    <h2 class="lp-section-title">Choose your room transformation</h2>
+    <p class="lp-section-subtitle">Every package includes a personalized design plan you can actually follow.</p>
+    <div class="lp-pricing-grid">
+      <div class="lp-pricing-card">
+        <div class="lp-pricing-inner">
+          <span class="lp-pricing-name">Single Room</span>
+          <p class="lp-pricing-desc">Perfect for trying one room or refreshing a single space.</p>
+          <div class="lp-pricing-price">
+            <span class="lp-pricing-amount">$9.99</span>
+            <span class="lp-pricing-period">one-time</span>
           </div>
-          <div class="carousel__dots" id="carouselDots"></div>
+          <ul class="lp-pricing-features">
+            <li>1 room transformation</li>
+            <li>Personalized style direction</li>
+            <li>Room analysis & design notes</li>
+            <li>Step-by-step recommendations</li>
+            <li>Curated product guidance</li>
+          </ul>
+          <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="lp-pricing-cta lp-pricing-cta--outline" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'pricing', plan: 'single'})">Get started</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ 2. WHY THIS LOOK WORKS ============ -->
-  <section class="pstyle">
-    <div class="container">
-      <div class="pstyle__inner">
-        <span class="pstyle__tag">Vintage Charm Style</span>
-        <h2 class="pstyle__heading">Why this look works</h2>
-        <p class="pstyle__body">This room captures the essence of Vintage Charm design: timeless, collected, and full of character. Here's what makes it feel so intentional.</p>
-        <ul class="pstyle__bullets">
-          <li>Warm, collected pieces that tell a story</li>
-          <li>Rich textures and layered patterns throughout</li>
-          <li>Classic architectural details with a modern sensibility</li>
-          <li>Warm wood tones and brass or antique metal accents</li>
-          <li>Thoughtful mix of old and new that feels curated, not cluttered</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 3. HOW IT WORKS ============ -->
-  <section class="psteps" id="how-it-works">
-    <div class="container">
-      <h2 class="section-title">How it works</h2>
-      <div class="psteps__grid">
-        <div class="psteps__item">
-          <span class="psteps__num">1</span>
-          <h3 class="psteps__item-title">Upload your room photo</h3>
-          <p class="psteps__item-body">Snap a photo of any room you want to restyle. Any angle works.</p>
-        </div>
-        <div class="psteps__item">
-          <span class="psteps__num">2</span>
-          <h3 class="psteps__item-title">Apply Vintage Charm</h3>
-          <p class="psteps__item-body">We'll apply the exact style from this post to your room's unique layout.</p>
-        </div>
-        <div class="psteps__item">
-          <span class="psteps__num">3</span>
-          <h3 class="psteps__item-title">Get your transformation + plan</h3>
-          <p class="psteps__item-body">Receive a styled image and a step-by-step design guide you can follow.</p>
-        </div>
-      </div>
-      <div class="psteps__cta">
-        <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'steps'})">Try this style in my room</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 4. WHAT YOU GET ============ -->
-  <section class="pvalue">
-    <div class="container">
-      <h2 class="section-title">What you'll get</h2>
-      <div class="pvalue__grid">
-        <div class="pvalue__card">
-          <div class="pvalue__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="3" y="3" width="26" height="26" rx="4" stroke="currentColor" stroke-width="1.2"/><path d="M8 22l5-6 4 4 7-9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="lp-pricing-card lp-pricing-card--featured">
+        <span class="lp-pricing-badge">Most popular</span>
+        <div class="lp-pricing-inner">
+          <span class="lp-pricing-name">Full Home</span>
+          <p class="lp-pricing-desc">Transform multiple rooms and see the full vision for your home.</p>
+          <div class="lp-pricing-price">
+            <span class="lp-pricing-amount">$29.99</span>
+            <span class="lp-pricing-period">one-time</span>
           </div>
-          <h3 class="pvalue__card-title">Visual transformation</h3>
-          <p class="pvalue__card-body">A personalized styled image of your actual room in this exact aesthetic.</p>
-        </div>
-        <div class="pvalue__card">
-          <div class="pvalue__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.2"/><path d="M16 10v6l4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-          </div>
-          <h3 class="pvalue__card-title">Room analysis</h3>
-          <p class="pvalue__card-body">What's working in your space and what to change, with clear next steps.</p>
-        </div>
-        <div class="pvalue__card">
-          <div class="pvalue__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 26V8a2 2 0 012-2h16a2 2 0 012 2v18l-5-3-5 3-5-3-5 3z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><line x1="11" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.2"/><line x1="11" y1="17" x2="18" y2="17" stroke="currentColor" stroke-width="1.2"/></svg>
-          </div>
-          <h3 class="pvalue__card-title">Style direction</h3>
-          <p class="pvalue__card-body">Key design moves, material suggestions, and a step-by-step plan.</p>
-        </div>
-        <div class="pvalue__card">
-          <div class="pvalue__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="18" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="4" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="18" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/></svg>
-          </div>
-          <h3 class="pvalue__card-title">Product suggestions</h3>
-          <p class="pvalue__card-body">Curated picks to help you bring this look to life in your own space.</p>
+          <ul class="lp-pricing-features">
+            <li>5 room transformations</li>
+            <li>Personalized style direction</li>
+            <li>Room analysis & design notes</li>
+            <li>Step-by-step recommendations</li>
+            <li>Curated product guidance</li>
+            <li>Mix & match any styles</li>
+          </ul>
+          <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="lp-pricing-cta lp-pricing-cta--primary" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'pricing', plan: 'full_home'})">Get started</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 5. PRICING ============ -->
-  <section class="ppricing" id="pricing">
-    <div class="container">
-      <h2 class="section-title">Choose your room transformation</h2>
-      <p class="section-body">Every package includes a personalized design plan you can actually follow.</p>
-      <div class="ppricing__grid">
-        <!-- Single Room -->
-        <div class="ppricing__card">
-          <div class="ppricing__card-inner">
-            <span class="ppricing__name">Single Room</span>
-            <p class="ppricing__desc">Perfect for trying one room or refreshing a single space.</p>
-            <div class="ppricing__price">
-              <span class="ppricing__amount">$9.99</span>
-              <span class="ppricing__period">one-time</span>
-            </div>
-            <ul class="ppricing__features">
-              <li>1 room transformation</li>
-              <li>Personalized style direction</li>
-              <li>Room analysis & design notes</li>
-              <li>Step-by-step recommendations</li>
-              <li>Curated product guidance</li>
-            </ul>
-            <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'pricing', plan: 'single'})">Get started</a>
-          </div>
-        </div>
-        <!-- Full Home — Recommended -->
-        <div class="ppricing__card ppricing__card--featured">
-          <span class="ppricing__badge">Most popular</span>
-          <div class="ppricing__card-inner">
-            <span class="ppricing__name">Full Home</span>
-            <p class="ppricing__desc">Transform multiple rooms and see the full vision for your home.</p>
-            <div class="ppricing__price">
-              <span class="ppricing__amount">$29.99</span>
-              <span class="ppricing__period">one-time</span>
-            </div>
-            <ul class="ppricing__features">
-              <li>5 room transformations</li>
-              <li>Personalized style direction</li>
-              <li>Room analysis & design notes</li>
-              <li>Step-by-step recommendations</li>
-              <li>Curated product guidance</li>
-              <li>Mix & match any styles</li>
-            </ul>
-            <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'pricing', plan: 'full_home'})">Get started</a>
-          </div>
-        </div>
+  <section class="lp-next-steps">
+    <h2 class="lp-section-title">What happens next</h2>
+    <p class="lp-section-subtitle">Three simple steps after purchase</p>
+    <div class="lp-next-grid">
+      <div class="lp-next-item">
+        <span class="lp-next-num">1</span>
+        <h3 class="lp-next-title">Upload your room</h3>
+        <p class="lp-next-body">Take a photo of any room you want transformed.</p>
+      </div>
+      <div class="lp-next-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="lp-next-item">
+        <span class="lp-next-num">2</span>
+        <h3 class="lp-next-title">We apply the style</h3>
+        <p class="lp-next-body">Your room gets transformed in the Vintage Charm aesthetic.</p>
+      </div>
+      <div class="lp-next-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="lp-next-item">
+        <span class="lp-next-num">3</span>
+        <h3 class="lp-next-title">Receive your plan</h3>
+        <p class="lp-next-body">Get a styled image plus a full design guide in about 60 seconds.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ 6. WHAT HAPPENS NEXT ============ -->
-  <section class="pnext">
-    <div class="container">
-      <h2 class="section-title">What happens after you purchase</h2>
-      <div class="pnext__grid">
-        <div class="pnext__item">
-          <span class="pnext__num">1</span>
-          <h3 class="pnext__title">Upload your room</h3>
-          <p class="pnext__body">Take a photo of any room you want transformed.</p>
-        </div>
-        <div class="pnext__arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="pnext__item">
-          <span class="pnext__num">2</span>
-          <h3 class="pnext__title">We apply the style</h3>
-          <p class="pnext__body">Your room gets transformed in the Vintage Charm aesthetic.</p>
-        </div>
-        <div class="pnext__arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="pnext__item">
-          <span class="pnext__num">3</span>
-          <h3 class="pnext__title">Receive your plan</h3>
-          <p class="pnext__body">Get a styled image plus a full design guide in about 60 seconds.</p>
-        </div>
+  <section class="lp-faq">
+    <h2 class="lp-section-title">Common questions</h2>
+    <div class="lp-faq-list">
+      <div class="lp-faq-item">
+        <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What exactly do I receive?
+          <svg class="lp-faq-icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lp-faq-answer"><p class="lp-faq-answer-inner">A personalized styled image of your room, a detailed room analysis, step-by-step style direction, and curated product suggestions. Everything is viewable, savable, and downloadable instantly.</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How long does it take?
+          <svg class="lp-faq-icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lp-faq-answer"><p class="lp-faq-answer-inner">Your transformation and design plan are generated in about 60 seconds. You can view, save, and download everything right away.</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Is this for one room?
+          <svg class="lp-faq-icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lp-faq-answer"><p class="lp-faq-answer-inner">The Single Room plan covers one room. The Full Home plan gives you five transformations, so you can do your living room, bedroom, kitchen, office, and more (or any combination you like).</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Is this a subscription?
+          <svg class="lp-faq-icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lp-faq-answer"><p class="lp-faq-answer-inner">No. Both plans are a one-time purchase. You pay once and keep everything forever. No recurring charges.</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What if I'm not happy with the result?
+          <svg class="lp-faq-icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lp-faq-answer"><p class="lp-faq-answer-inner">You can regenerate with a different style or adjust your preferences. If you need extra help, email grace@housing.info and we'll work with you personally.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 7. FAQ ============ -->
-  <section class="pfaq">
-    <div class="container">
-      <h2 class="section-title">Common questions</h2>
-      <div class="pfaq__list">
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            What exactly do I receive?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">A personalized styled image of your room, a detailed room analysis, step-by-step style direction, and curated product suggestions. Everything is viewable, savable, and downloadable instantly.</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            How long does it take?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">Your transformation and design plan are generated in about 60 seconds. You can view, save, and download everything right away.</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            Is this for one room?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">The Single Room plan covers one room. The Full Home plan gives you five transformations, so you can do your living room, bedroom, kitchen, office, and more (or any combination you like).</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            Can I choose a different style?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">Yes! You can pick from multiple curated aesthetics. With the Full Home plan, you can try different styles for each room.</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            Is this a subscription?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">No. Both plans are a one-time purchase. You pay once and keep everything forever. No recurring charges.</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            What if I'm not happy with the result?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">You can regenerate with a different style or adjust your preferences. If you need extra help, email grace@housing.info and we'll work with you personally.</p></div>
-        </div>
-      </div>
-    </div>
+  <!-- Final CTA -->
+  <section class="lp-final-cta">
+    <h2 class="lp-final-cta-title">Ready to see this style in your room?</h2>
+    <p class="lp-final-cta-subtitle">Upload your room photo and receive a personalized design transformation and plan tailored to this look.</p>
+    <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="lp-cta-button lp-cta-large">Visualize my dream space</a>
   </section>
 
-  <!-- ============ 8. FINAL CTA ============ -->
-  <section class="pfinal">
-    <div class="container pfinal__inner">
-      <h2 class="pfinal__title">Stop saving inspiration. Start bringing it to life.</h2>
-      <p class="pfinal__sub">You've found a look you love. Now see exactly how it translates to your own space.</p>
-      <a href="https://buy.stripe.com/9B65kDf5UcyQ5zj1C1ebu00" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'final'})">Transform my room</a>
-      <p class="pfinal__note">One-time purchase. Works for living rooms, bedrooms, kitchens, and more.</p>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="pfooter">
-    <div class="container pfooter__inner">
-      <div class="pfooter__links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="mailto:grace@housing.info">Contact</a>
-      </div>
-      <p class="pfooter__copy">&copy; Housing Info</p>
-    </div>
+  <!-- Footer -->
+  <footer class="lp-footer">
+    <a href="../index.html" class="lp-footer-logo">DREAM SPACE TOOL</a>
+    <p class="lp-footer-tagline">AI-powered interior design visualizer</p>
   </footer>
 
-  <!-- ============ STICKY MOBILE CTA ============ -->
-  <div class="psticky" id="psticky">
-    <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {style: 'Vintage Charm', location: 'sticky'})">Try this style in my room</a>
-  </div>
-
-  <script>
-    // Sticky nav background on scroll
-    const nav = document.getElementById('pnav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('pnav--scrolled', window.scrollY > 40);
-    });
-
-    // Show/hide sticky mobile CTA based on scroll (hide when hero CTA is visible)
-    const sticky = document.getElementById('psticky');
-    const heroEnd = document.querySelector('.phero');
-    if (sticky && heroEnd) {
-      const stickyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          sticky.style.transform = entry.isIntersecting ? 'translateY(100%)' : 'translateY(0)';
-          sticky.style.transition = 'transform .3s ease';
-        });
-      }, { threshold: 0 });
-      stickyObserver.observe(heroEnd);
-    }
-
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.phero__text, .phero__image, .pstyle__inner, .psteps__grid, .pvalue__grid, .ppricing__grid, .pnext__grid, .pfaq__list, .pfinal__inner').forEach(el => {
-      el.classList.add('fade-target');
-      observer.observe(el);
-    });
-
-    // ============ CAROUSEL ============
-    (function() {
-      const carousel = document.getElementById('heroCarousel');
-      if (!carousel) return;
-
-      const slides = carousel.querySelectorAll('.carousel__slide');
-      const dotsContainer = document.getElementById('carouselDots');
-      const total = slides.length;
-      let current = 0;
-      let interval;
-
-      // Create dots
-      for (let i = 0; i < total; i++) {
-        const dot = document.createElement('button');
-        dot.className = 'carousel__dot' + (i === 0 ? ' carousel__dot--active' : '');
-        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        dot.addEventListener('click', () => goTo(i));
-        dotsContainer.appendChild(dot);
-      }
-
-      const dots = dotsContainer.querySelectorAll('.carousel__dot');
-
-      function goTo(index) {
-        slides[current].classList.remove('carousel__slide--active');
-        dots[current].classList.remove('carousel__dot--active');
-        current = index;
-        slides[current].classList.add('carousel__slide--active');
-        dots[current].classList.add('carousel__dot--active');
-      }
-
-      function next() {
-        goTo((current + 1) % total);
-      }
-
-      function startAuto() {
-        interval = setInterval(next, 3500);
-      }
-
-      function stopAuto() {
-        clearInterval(interval);
-      }
-
-      // Pause on hover/touch
-      carousel.addEventListener('mouseenter', stopAuto);
-      carousel.addEventListener('mouseleave', startAuto);
-      carousel.addEventListener('touchstart', stopAuto, { passive: true });
-      carousel.addEventListener('touchend', () => { setTimeout(startAuto, 3000); }, { passive: true });
-
-      startAuto();
-    })();
-  </script>
-
+  <script src="../script.js"></script>
 </body>
 </html>

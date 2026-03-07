@@ -418,6 +418,236 @@
   color: #A896FF;
 }
 
+/* Pricing */
+.lp-pricing {
+  padding: 80px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.lp-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+.lp-pricing-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.lp-pricing-card--featured {
+  border-color: #A896FF;
+  box-shadow: 0 8px 32px rgba(168, 150, 255, 0.15);
+}
+.lp-pricing-badge {
+  display: block;
+  background: #A896FF;
+  color: #fff;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 8px 0;
+}
+.lp-pricing-inner {
+  padding: 32px 28px 28px;
+}
+.lp-pricing-card--featured .lp-pricing-inner {
+  padding-top: 24px;
+}
+.lp-pricing-name {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.lp-pricing-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.lp-pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.lp-pricing-amount {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1;
+  color: #1a1a1a;
+}
+.lp-pricing-period {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #999;
+}
+.lp-pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lp-pricing-features li {
+  padding-left: 24px;
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+.lp-pricing-features li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 5px;
+  width: 14px; height: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='%23A896FF' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+.lp-pricing-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.lp-pricing-cta--primary {
+  background: #A896FF;
+  color: #fff;
+}
+.lp-pricing-cta--primary:hover {
+  background: #9580FF;
+  transform: translateY(-1px);
+}
+.lp-pricing-cta--outline {
+  background: transparent;
+  color: #A896FF;
+  border: 1.5px solid #A896FF;
+}
+.lp-pricing-cta--outline:hover {
+  background: #A896FF;
+  color: #fff;
+}
+
+/* What Happens Next */
+.lp-next-steps {
+  background-color: #FAFAFA;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 80px 40px;
+  text-align: center;
+}
+.lp-next-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.lp-next-item {
+  flex: 0 1 220px;
+  text-align: center;
+}
+.lp-next-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: #A896FF;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+.lp-next-title {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+.lp-next-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+.lp-next-arrow {
+  color: #A896FF;
+  flex-shrink: 0;
+  margin-top: 10px;
+  opacity: .4;
+}
+
+/* FAQ */
+.lp-faq {
+  padding: 80px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.lp-faq-list {
+  margin-top: 40px;
+}
+.lp-faq-item {
+  border-bottom: 1px solid #E5E7EB;
+}
+.lp-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.lp-faq-question:hover { color: #A896FF; }
+.lp-faq-icon {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  transition: transform .25s;
+}
+.lp-faq-item.open .lp-faq-icon { transform: rotate(45deg); }
+.lp-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+}
+.lp-faq-item.open .lp-faq-answer {
+  max-height: 300px;
+}
+.lp-faq-answer-inner {
+  padding: 0 0 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+}
+
 /* Final CTA */
 .lp-final-cta {
   background: linear-gradient(135deg, #EDE4FF 0%, #DDD0F0 40%, #D4D4F8 70%, #D4E5FF 100%);
@@ -559,6 +789,18 @@
   .lp-trust {
     padding: 48px 24px;
   }
+
+  .lp-pricing { padding: 60px 24px; }
+  .lp-pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .lp-pricing-amount { font-size: 32px; }
+  .lp-pricing-inner { padding: 24px 20px 20px; }
+
+  .lp-next-steps { padding: 60px 24px; }
+  .lp-next-grid { flex-direction: column; align-items: center; gap: 20px; }
+  .lp-next-arrow { transform: rotate(90deg); margin-top: 0; }
+  .lp-next-item { flex: none; max-width: 280px; }
+
+  .lp-faq { padding: 60px 24px; }
 
   .lp-final-cta {
     padding: 60px 24px;

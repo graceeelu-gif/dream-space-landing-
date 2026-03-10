@@ -51,6 +51,29 @@
         <p class="hero__eyebrow">FROM HOUSING INFO</p>
         <h1 class="hero__title">See your room transformed in a <br class="mobile-br">style you love</h1>
         <p class="hero__sub">Upload a photo of your room and instantly visualize your space in the design aesthetics inspired by the beautiful homes we study and curate.</p>
+        <div class="hero__visual hero__visual--inline">
+          <div class="hero__frame">
+            <div class="hero__showcase" id="heroShowcaseInline">
+              <!-- Pair 1: Living room -->
+              <div class="hero__pair active">
+                <img src="images/showcase3.webp" alt="Before — living room" class="hero__img hero__img--before">
+                <img src="images/showcase4.jpg" alt="After — living room" class="hero__img hero__img--after">
+              </div>
+              <!-- Pair 2: Staircase -->
+              <div class="hero__pair">
+                <img src="images/showcase1.png" alt="Before — staircase" class="hero__img hero__img--before">
+                <img src="images/showcase2.jpg" alt="After — staircase" class="hero__img hero__img--after">
+              </div>
+              <!-- Pair 3: Large living room -->
+              <div class="hero__pair">
+                <img src="images/showcase5.jpg" alt="Before — large living room" class="hero__img hero__img--before">
+                <img src="images/showcase6.jpg" alt="After — large living room" class="hero__img hero__img--after">
+              </div>
+            </div>
+            <!-- Badge -->
+            <div class="hero__badge" id="heroBadgeInline">Before</div>
+          </div>
+        </div>
         <ul class="hero__bullets">
           <li>Instant style visualization</li>
           <li>Personalized room analysis</li>
@@ -59,29 +82,6 @@
         <div class="hero__actions">
           <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {location: 'hero', action: 'scroll_to_pricing'})">Transform my room</a>
           <a href="#examples" class="hero__secondary">See examples</a>
-        </div>
-      </div>
-      <div class="hero__visual">
-        <div class="hero__frame">
-          <div class="hero__showcase" id="heroShowcase">
-            <!-- Pair 1: Living room -->
-            <div class="hero__pair active">
-              <img src="images/showcase3.webp" alt="Before — living room" class="hero__img hero__img--before">
-              <img src="images/showcase4.jpg" alt="After — living room" class="hero__img hero__img--after">
-            </div>
-            <!-- Pair 2: Staircase -->
-            <div class="hero__pair">
-              <img src="images/showcase1.png" alt="Before — staircase" class="hero__img hero__img--before">
-              <img src="images/showcase2.jpg" alt="After — staircase" class="hero__img hero__img--after">
-            </div>
-            <!-- Pair 3: Large living room -->
-            <div class="hero__pair">
-              <img src="images/showcase5.jpg" alt="Before — large living room" class="hero__img hero__img--before">
-              <img src="images/showcase6.jpg" alt="After — large living room" class="hero__img hero__img--after">
-            </div>
-          </div>
-          <!-- Badge -->
-          <div class="hero__badge" id="heroBadge">Before</div>
         </div>
       </div>
     </div>
@@ -558,7 +558,7 @@
     // Hero before/after animation
     (function() {
       const pairs = document.querySelectorAll('.hero__pair');
-      const badge = document.getElementById('heroBadge');
+      const badge = document.getElementById('heroBadgeInline');
       if (!pairs.length) return;
 
       let current = 0;

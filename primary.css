@@ -163,9 +163,10 @@ body {
 }
 .hero__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 64px;
   align-items: center;
+  max-width: 640px;
 }
 .hero__eyebrow {
   font-size: 12px;
@@ -221,6 +222,9 @@ body {
 .hero__secondary:hover { color: var(--text); }
 
 /* Hero Before/After Visual */
+.hero__visual--inline {
+  margin: 28px 0 32px;
+}
 .hero__visual {
   display: flex;
   justify-content: center;
@@ -233,7 +237,7 @@ body {
   background: var(--surface);
   box-shadow: 0 8px 40px rgba(0,0,0,.06);
   width: 100%;
-  max-width: 540px;
+  max-width: 100%;
 }
 .hero__showcase {
   position: relative;
@@ -956,7 +960,7 @@ body {
   .nav__hamburger { display: block; }
 
   .hero { padding: 120px 0 64px; }
-  .hero__grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero__grid { gap: 48px; }
   .hero__title { font-size: 38px; }
   .hero__sub { max-width: 100%; }
 

@@ -49,31 +49,8 @@
     <div class="container hero__grid">
       <div class="hero__text">
         <p class="hero__eyebrow">FROM HOUSING INFO</p>
-        <h1 class="hero__title">See your room transformed in a <br class="mobile-br">style you love</h1>
-        <div class="hero__visual hero__visual--inline">
-          <div class="hero__frame">
-            <div class="hero__showcase" id="heroShowcaseInline">
-              <!-- Pair 1: Living room -->
-              <div class="hero__pair active">
-                <img src="images/showcase3.webp" alt="Before — living room" class="hero__img hero__img--before">
-                <img src="images/showcase4.jpg" alt="After — living room" class="hero__img hero__img--after">
-              </div>
-              <!-- Pair 2: Staircase -->
-              <div class="hero__pair">
-                <img src="images/showcase1.png" alt="Before — staircase" class="hero__img hero__img--before">
-                <img src="images/showcase2.jpg" alt="After — staircase" class="hero__img hero__img--after">
-              </div>
-              <!-- Pair 3: Large living room -->
-              <div class="hero__pair">
-                <img src="images/showcase5.jpg" alt="Before — large living room" class="hero__img hero__img--before">
-                <img src="images/showcase6.jpg" alt="After — large living room" class="hero__img hero__img--after">
-              </div>
-            </div>
-            <!-- Badge -->
-            <div class="hero__badge" id="heroBadgeInline">Before</div>
-          </div>
-        </div>
-        <p class="hero__sub">Upload a photo of your room and instantly visualize your space in the design aesthetics inspired by the beautiful homes we study and curate.</p>
+        <h1 class="hero__title">Recreate the Homes You Love on Housing Info</h1>
+        <p class="hero__sub">Upload a photo of your room and instantly visualize it in the same design aesthetics we study across thousands of beautiful interiors.</p>
         <ul class="hero__bullets">
           <li>Instant style visualization</li>
           <li>Personalized room analysis</li>
@@ -84,9 +61,9 @@
           <a href="#examples" class="hero__secondary">See examples</a>
         </div>
       </div>
-      <div class="hero__visual hero__visual--desktop">
+      <div class="hero__visual">
         <div class="hero__frame">
-          <div class="hero__showcase" id="heroShowcaseDesktop">
+          <div class="hero__showcase" id="heroShowcase">
             <!-- Pair 1: Living room -->
             <div class="hero__pair active">
               <img src="images/showcase3.webp" alt="Before — living room" class="hero__img hero__img--before">
@@ -104,7 +81,7 @@
             </div>
           </div>
           <!-- Badge -->
-          <div class="hero__badge" id="heroBadgeDesktop">Before</div>
+          <div class="hero__badge" id="heroBadge">Before</div>
         </div>
       </div>
     </div>
@@ -580,43 +557,40 @@
 
     // Hero before/after animation
     (function() {
-      const inlinePairs = document.querySelectorAll('#heroShowcaseInline .hero__pair');
-      const desktopPairs = document.querySelectorAll('#heroShowcaseDesktop .hero__pair');
-      const badges = [document.getElementById('heroBadgeInline'), document.getElementById('heroBadgeDesktop')];
-      if (!inlinePairs.length) return;
+      const pairs = document.querySelectorAll('.hero__pair');
+      const badge = document.getElementById('heroBadge');
+      if (!pairs.length) return;
 
-      const allPairSets = [inlinePairs, desktopPairs];
       let current = 0;
       let showingAfter = false;
-      const pairCount = inlinePairs.length;
-
-      function setBadgeText(text) {
-        badges.forEach(function(b) { if (b) b.textContent = text; });
-      }
 
       // Timing: show "before" for 2s, crossfade to "after" (1s), hold "after" for 2.5s,
       // then fade to next pair's "before"
       function showBefore() {
         showingAfter = false;
-        setBadgeText('Before');
-        allPairSets.forEach(function(pairs) { pairs[current].classList.remove('show-after'); });
+        badge.textContent = 'Before';
+        pairs[current].classList.remove('show-after');
+        // After 2s, transition to "after"
         setTimeout(showAfter, 2000);
       }
 
       function showAfter() {
         showingAfter = true;
-        setBadgeText('After');
-        allPairSets.forEach(function(pairs) { pairs[current].classList.add('show-after'); });
+        badge.textContent = 'After';
+        pairs[current].classList.add('show-after');
+        // Hold "after" for 2.5s, then go to next pair
         setTimeout(nextPair, 2500);
       }
 
       function nextPair() {
-        allPairSets.forEach(function(pairs) { pairs[current].classList.remove('active', 'show-after'); });
-        current = (current + 1) % pairCount;
-        allPairSets.forEach(function(pairs) {
-          pairs[current].classList.add('active');
-          pairs[current].classList.remove('show-after');
-        });
+        // Fade out current pair
+        pairs[current].classList.remove('active', 'show-after');
+        // Move to next
+        current = (current + 1) % pairs.length;
+        // Activate next pair (starts on "before")
+        pairs[current].classList.add('active');
+        pairs[current].classList.remove('show-after');
+        // Small delay then start the cycle
         setTimeout(showBefore, 400);
       }
 

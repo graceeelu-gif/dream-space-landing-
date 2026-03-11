@@ -183,6 +183,10 @@ body {
   background: var(--surface);
   box-shadow: 0 8px 40px rgba(0,0,0,.06);
 }
+.phero__image--mobile {
+  display: none;
+  margin: 24px 0 28px;
+}
 .phero__image img {
   border-radius: calc(var(--radius) - 4px);
   width: 100%;
@@ -813,6 +817,8 @@ body {
 @media (max-width: 900px) {
   .phero { padding: 110px 0 64px; }
   .phero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .phero__image:not(.phero__image--mobile) { display: none; }
+  .phero__image--mobile { display: block; }
   .phero__title { font-size: 34px; }
 
   .psteps__grid { grid-template-columns: 1fr; gap: 40px; }

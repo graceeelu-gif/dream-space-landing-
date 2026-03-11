@@ -61,6 +61,14 @@
         <p class="phero__eyebrow">AS SEEN ON HOUSING INFO</p>
         <!-- SWAP: POST_TITLE in headline -->
         <h1 class="phero__title">Love this style? Recreate it in your own space.</h1>
+        <div class="phero__image phero__image--mobile">
+          <div class="carousel" id="heroCarouselMobile">
+            <div class="carousel__track">
+              <img src="../images/trending-7.jpg" alt="Modern Coastal living room inspiration" class="carousel__slide carousel__slide--active" loading="eager">
+            </div>
+            <div class="carousel__dots" id="carouselDotsMobile"></div>
+          </div>
+        </div>
         <!-- SWAP: STYLE_NAME + description -->
         <p class="phero__sub">Upload a photo of your room and see it transformed in the Modern Coastal style. Get a full design breakdown, style direction, and a clear plan you can follow.</p>
         <p class="phero__proof">
@@ -384,6 +392,62 @@
       el.classList.add('fade-target');
       observer.observe(el);
     });
+
+    // ============ MOBILE CAROUSEL ============
+    (function() {
+      const carousel = document.getElementById('heroCarouselMobile');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.carousel__slide');
+      const dotsContainer = document.getElementById('carouselDotsMobile');
+      const total = slides.length;
+      let current = 0;
+      let interval;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      // Create dots
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel__dot' + (i === 0 ? ' carousel__dot--active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
+        dotsContainer.appendChild(dot);
+      }
+
+      const dots = dotsContainer.querySelectorAll('.carousel__dot');
+
+      function goTo(index) {
+        slides[current].classList.remove('carousel__slide--active');
+        dots[current].classList.remove('carousel__dot--active');
+        current = index;
+        slides[current].classList.add('carousel__slide--active');
+        dots[current].classList.add('carousel__dot--active');
+      }
+
+      function next() { goTo((current + 1) % total); }
+      function prev() { goTo((current - 1 + total) % total); }
+
+      function startAuto() { interval = setInterval(next, 3500); }
+      function stopAuto() { clearInterval(interval); }
+
+      // Touch swipe support
+      carousel.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAuto();
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) next(); else prev();
+        }
+        setTimeout(startAuto, 3000);
+      }, { passive: true });
+
+      startAuto();
+    })();
   </script>
 
 </body>

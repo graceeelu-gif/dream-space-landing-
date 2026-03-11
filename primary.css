@@ -182,7 +182,7 @@ body {
   margin-bottom: 20px;
 }
 .hero__title .title-br { display: inline; }
-.hero__visual--mobile { display: none; }
+.hero__visual.hero__visual--mobile { display: none; }
 .hero__sub {
   color: var(--muted);
   font-size: 17px;

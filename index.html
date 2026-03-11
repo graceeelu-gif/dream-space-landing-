@@ -84,6 +84,29 @@
           <a href="#examples" class="hero__secondary">See examples</a>
         </div>
       </div>
+      <div class="hero__visual hero__visual--desktop">
+        <div class="hero__frame">
+          <div class="hero__showcase" id="heroShowcaseDesktop">
+            <!-- Pair 1: Living room -->
+            <div class="hero__pair active">
+              <img src="images/showcase3.webp" alt="Before — living room" class="hero__img hero__img--before">
+              <img src="images/showcase4.jpg" alt="After — living room" class="hero__img hero__img--after">
+            </div>
+            <!-- Pair 2: Staircase -->
+            <div class="hero__pair">
+              <img src="images/showcase1.png" alt="Before — staircase" class="hero__img hero__img--before">
+              <img src="images/showcase2.jpg" alt="After — staircase" class="hero__img hero__img--after">
+            </div>
+            <!-- Pair 3: Large living room -->
+            <div class="hero__pair">
+              <img src="images/showcase5.jpg" alt="Before — large living room" class="hero__img hero__img--before">
+              <img src="images/showcase6.jpg" alt="After — large living room" class="hero__img hero__img--after">
+            </div>
+          </div>
+          <!-- Badge -->
+          <div class="hero__badge" id="heroBadgeDesktop">Before</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -557,40 +580,43 @@
 
     // Hero before/after animation
     (function() {
-      const pairs = document.querySelectorAll('.hero__pair');
-      const badge = document.getElementById('heroBadgeInline');
-      if (!pairs.length) return;
+      const inlinePairs = document.querySelectorAll('#heroShowcaseInline .hero__pair');
+      const desktopPairs = document.querySelectorAll('#heroShowcaseDesktop .hero__pair');
+      const badges = [document.getElementById('heroBadgeInline'), document.getElementById('heroBadgeDesktop')];
+      if (!inlinePairs.length) return;
 
+      const allPairSets = [inlinePairs, desktopPairs];
       let current = 0;
       let showingAfter = false;
+      const pairCount = inlinePairs.length;
+
+      function setBadgeText(text) {
+        badges.forEach(function(b) { if (b) b.textContent = text; });
+      }
 
       // Timing: show "before" for 2s, crossfade to "after" (1s), hold "after" for 2.5s,
       // then fade to next pair's "before"
       function showBefore() {
         showingAfter = false;
-        badge.textContent = 'Before';
-        pairs[current].classList.remove('show-after');
-        // After 2s, transition to "after"
+        setBadgeText('Before');
+        allPairSets.forEach(function(pairs) { pairs[current].classList.remove('show-after'); });
         setTimeout(showAfter, 2000);
       }
 
       function showAfter() {
         showingAfter = true;
-        badge.textContent = 'After';
-        pairs[current].classList.add('show-after');
-        // Hold "after" for 2.5s, then go to next pair
+        setBadgeText('After');
+        allPairSets.forEach(function(pairs) { pairs[current].classList.add('show-after'); });
         setTimeout(nextPair, 2500);
       }
 
       function nextPair() {
-        // Fade out current pair
-        pairs[current].classList.remove('active', 'show-after');
-        // Move to next
-        current = (current + 1) % pairs.length;
-        // Activate next pair (starts on "before")
-        pairs[current].classList.add('active');
-        pairs[current].classList.remove('show-after');
-        // Small delay then start the cycle
+        allPairSets.forEach(function(pairs) { pairs[current].classList.remove('active', 'show-after'); });
+        current = (current + 1) % pairCount;
+        allPairSets.forEach(function(pairs) {
+          pairs[current].classList.add('active');
+          pairs[current].classList.remove('show-after');
+        });
         setTimeout(showBefore, 400);
       }
 

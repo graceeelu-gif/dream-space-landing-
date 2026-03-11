@@ -182,6 +182,8 @@ body {
   margin-bottom: 20px;
 }
 .hero__title .desktop-br { display: inline; }
+.hero__title .mobile-br { display: none; }
+.hero__visual--mobile { display: none; }
 .hero__sub {
   color: var(--muted);
   font-size: 17px;
@@ -957,7 +959,12 @@ body {
 
   .hero { padding: 120px 0 64px; }
   .hero__grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero__visual { display: none; }
+  .hero__visual--mobile { display: block; margin: 28px 0 32px; }
+  .hero__visual--mobile .hero__frame { max-width: 100%; }
   .hero__title { font-size: 38px; }
+  .hero__title .desktop-br { display: none; }
+  .hero__title .mobile-br { display: inline; }
   .hero__sub { max-width: 100%; }
 
   .hero__frame { max-width: 100%; }

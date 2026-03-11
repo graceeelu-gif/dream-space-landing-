@@ -49,7 +49,29 @@
     <div class="container hero__grid">
       <div class="hero__text">
         <p class="hero__eyebrow">FROM HOUSING INFO</p>
-        <h1 class="hero__title">See your room transformed in <br class="desktop-br">a style you love</h1>
+        <h1 class="hero__title">See your room transformed in <br class="desktop-br"><br class="mobile-br">a style you love</h1>
+        <div class="hero__visual hero__visual--mobile">
+          <div class="hero__frame">
+            <div class="hero__showcase" id="heroShowcaseMobile">
+              <!-- Pair 1: Living room -->
+              <div class="hero__pair active">
+                <img src="images/showcase3.webp" alt="Before — living room" class="hero__img hero__img--before">
+                <img src="images/showcase4.jpg" alt="After — living room" class="hero__img hero__img--after">
+              </div>
+              <!-- Pair 2: Staircase -->
+              <div class="hero__pair">
+                <img src="images/showcase1.png" alt="Before — staircase" class="hero__img hero__img--before">
+                <img src="images/showcase2.jpg" alt="After — staircase" class="hero__img hero__img--after">
+              </div>
+              <!-- Pair 3: Large living room -->
+              <div class="hero__pair">
+                <img src="images/showcase5.jpg" alt="Before — large living room" class="hero__img hero__img--before">
+                <img src="images/showcase6.jpg" alt="After — large living room" class="hero__img hero__img--after">
+              </div>
+            </div>
+            <div class="hero__badge" id="heroBadgeMobile">Before</div>
+          </div>
+        </div>
         <p class="hero__sub">Upload a photo of your room and instantly visualize your space in the design aesthetics inspired by the beautiful homes we study and curate.</p>
         <ul class="hero__bullets">
           <li>Instant style visualization</li>
@@ -550,40 +572,43 @@
 
     // Hero before/after animation
     (function() {
-      const pairs = document.querySelectorAll('.hero__pair');
-      const badge = document.getElementById('heroBadge');
-      if (!pairs.length) return;
+      const desktopPairs = document.querySelectorAll('#heroShowcase .hero__pair');
+      const mobilePairs = document.querySelectorAll('#heroShowcaseMobile .hero__pair');
+      const badges = [document.getElementById('heroBadge'), document.getElementById('heroBadgeMobile')];
+      var allPairSets = [desktopPairs, mobilePairs].filter(function(s) { return s.length > 0; });
+      if (!allPairSets.length) return;
 
+      var pairCount = allPairSets[0].length;
       let current = 0;
       let showingAfter = false;
+
+      function setBadgeText(text) {
+        badges.forEach(function(b) { if (b) b.textContent = text; });
+      }
 
       // Timing: show "before" for 2s, crossfade to "after" (1s), hold "after" for 2.5s,
       // then fade to next pair's "before"
       function showBefore() {
         showingAfter = false;
-        badge.textContent = 'Before';
-        pairs[current].classList.remove('show-after');
-        // After 2s, transition to "after"
+        setBadgeText('Before');
+        allPairSets.forEach(function(pairs) { pairs[current].classList.remove('show-after'); });
         setTimeout(showAfter, 2000);
       }
 
       function showAfter() {
         showingAfter = true;
-        badge.textContent = 'After';
-        pairs[current].classList.add('show-after');
-        // Hold "after" for 2.5s, then go to next pair
+        setBadgeText('After');
+        allPairSets.forEach(function(pairs) { pairs[current].classList.add('show-after'); });
         setTimeout(nextPair, 2500);
       }
 
       function nextPair() {
-        // Fade out current pair
-        pairs[current].classList.remove('active', 'show-after');
-        // Move to next
-        current = (current + 1) % pairs.length;
-        // Activate next pair (starts on "before")
-        pairs[current].classList.add('active');
-        pairs[current].classList.remove('show-after');
-        // Small delay then start the cycle
+        allPairSets.forEach(function(pairs) { pairs[current].classList.remove('active', 'show-after'); });
+        current = (current + 1) % pairCount;
+        allPairSets.forEach(function(pairs) {
+          pairs[current].classList.add('active');
+          pairs[current].classList.remove('show-after');
+        });
         setTimeout(showBefore, 400);
       }
 

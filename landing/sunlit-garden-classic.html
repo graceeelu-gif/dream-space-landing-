@@ -37,7 +37,23 @@
         <p class="phero__eyebrow">AS SEEN ON HOUSING INFO</p>
         <h1 class="phero__title">Love this style? Recreate it in your own space.</h1>
         <div class="phero__image phero__image--mobile">
-          <img src="../images/sgc-slide-1.jpg" alt="Sunlit Garden Classic inspiration" loading="eager" style="width:100%; border-radius:12px;">
+          <div class="carousel" id="heroCarouselMobile">
+            <div class="carousel__track">
+              <img src="../images/sgc-slide-1.jpg" alt="Sunlit Garden Classic inspiration 1" class="carousel__slide carousel__slide--active" loading="eager">
+              <img src="../images/sgc-slide-2.jpg" alt="Sunlit Garden Classic inspiration 2" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-3.jpg" alt="Sunlit Garden Classic inspiration 3" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-4.jpg" alt="Sunlit Garden Classic inspiration 4" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-5.jpg" alt="Sunlit Garden Classic inspiration 5" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-6.jpg" alt="Sunlit Garden Classic inspiration 6" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-7.jpg" alt="Sunlit Garden Classic inspiration 7" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-8.jpg" alt="Sunlit Garden Classic inspiration 8" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-9.jpg" alt="Sunlit Garden Classic inspiration 9" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-10.jpg" alt="Sunlit Garden Classic inspiration 10" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-11.jpg" alt="Sunlit Garden Classic inspiration 11" class="carousel__slide" loading="lazy">
+              <img src="../images/sgc-slide-12.jpg" alt="Sunlit Garden Classic inspiration 12" class="carousel__slide" loading="lazy">
+            </div>
+            <div class="carousel__dots" id="carouselDotsMobile"></div>
+          </div>
         </div>
         <p class="phero__sub">Upload a photo of your room and see it transformed in the Sunlit Garden Classic style. Get a full design breakdown, style direction, and a clear plan you can follow.</p>
         <p class="phero__proof">
@@ -50,7 +66,23 @@
         </div>
       </div>
       <div class="phero__image">
-        <img src="../images/sgc-slide-1.jpg" alt="Sunlit Garden Classic inspiration" loading="eager" style="width:100%; border-radius:12px;">
+        <div class="carousel" id="heroCarousel">
+          <div class="carousel__track">
+            <img src="../images/sgc-slide-1.jpg" alt="Sunlit Garden Classic inspiration 1" class="carousel__slide carousel__slide--active" loading="eager">
+            <img src="../images/sgc-slide-2.jpg" alt="Sunlit Garden Classic inspiration 2" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-3.jpg" alt="Sunlit Garden Classic inspiration 3" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-4.jpg" alt="Sunlit Garden Classic inspiration 4" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-5.jpg" alt="Sunlit Garden Classic inspiration 5" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-6.jpg" alt="Sunlit Garden Classic inspiration 6" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-7.jpg" alt="Sunlit Garden Classic inspiration 7" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-8.jpg" alt="Sunlit Garden Classic inspiration 8" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-9.jpg" alt="Sunlit Garden Classic inspiration 9" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-10.jpg" alt="Sunlit Garden Classic inspiration 10" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-11.jpg" alt="Sunlit Garden Classic inspiration 11" class="carousel__slide" loading="lazy">
+            <img src="../images/sgc-slide-12.jpg" alt="Sunlit Garden Classic inspiration 12" class="carousel__slide" loading="lazy">
+          </div>
+          <div class="carousel__dots" id="carouselDots"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -433,6 +465,113 @@
       window.addEventListener('mouseup', onEnd);
       window.addEventListener('touchend', onEnd);
     });
+
+    // ============ CAROUSEL ============
+    (function() {
+      const carousel = document.getElementById('heroCarousel');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.carousel__slide');
+      const dotsContainer = document.getElementById('carouselDots');
+      const total = slides.length;
+      let current = 0;
+      let interval;
+
+      // Create dots
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel__dot' + (i === 0 ? ' carousel__dot--active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      }
+
+      const dots = dotsContainer.querySelectorAll('.carousel__dot');
+
+      function goTo(index) {
+        slides[current].classList.remove('carousel__slide--active');
+        dots[current].classList.remove('carousel__dot--active');
+        current = index;
+        slides[current].classList.add('carousel__slide--active');
+        dots[current].classList.add('carousel__dot--active');
+      }
+
+      function next() {
+        goTo((current + 1) % total);
+      }
+
+      function startAuto() {
+        interval = setInterval(next, 3500);
+      }
+
+      function stopAuto() {
+        clearInterval(interval);
+      }
+
+      // Pause on hover/touch
+      carousel.addEventListener('mouseenter', stopAuto);
+      carousel.addEventListener('mouseleave', startAuto);
+      carousel.addEventListener('touchstart', stopAuto, { passive: true });
+      carousel.addEventListener('touchend', () => { setTimeout(startAuto, 3000); }, { passive: true });
+
+      startAuto();
+    })();
+
+    // ============ MOBILE CAROUSEL ============
+    (function() {
+      const carousel = document.getElementById('heroCarouselMobile');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.carousel__slide');
+      const dotsContainer = document.getElementById('carouselDotsMobile');
+      const total = slides.length;
+      let current = 0;
+      let interval;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      // Create dots
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel__dot' + (i === 0 ? ' carousel__dot--active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
+        dotsContainer.appendChild(dot);
+      }
+
+      const dots = dotsContainer.querySelectorAll('.carousel__dot');
+
+      function goTo(index) {
+        slides[current].classList.remove('carousel__slide--active');
+        dots[current].classList.remove('carousel__dot--active');
+        current = index;
+        slides[current].classList.add('carousel__slide--active');
+        dots[current].classList.add('carousel__dot--active');
+      }
+
+      function next() { goTo((current + 1) % total); }
+      function prev() { goTo((current - 1 + total) % total); }
+
+      function startAuto() { interval = setInterval(next, 3500); }
+      function stopAuto() { clearInterval(interval); }
+
+      // Touch swipe support
+      carousel.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAuto();
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) next(); else prev();
+        }
+        setTimeout(startAuto, 3000);
+      }, { passive: true });
+
+      startAuto();
+    })();
   </script>
 
 </body>

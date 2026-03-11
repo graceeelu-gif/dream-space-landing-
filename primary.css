@@ -181,7 +181,7 @@ body {
   line-height: 1.12;
   margin-bottom: 20px;
 }
-.hero__title .mobile-br { display: none; }
+.hero__title .desktop-br { display: inline; }
 .hero__sub {
   color: var(--muted);
   font-size: 17px;
@@ -990,7 +990,7 @@ body {
   .container { padding: 0 20px; }
   .nav__inner { padding: 16px 20px; }
   .hero__title { font-size: 32px; }
-  .hero__title .mobile-br { display: inline; }
+  .hero__title .desktop-br { display: none; }
   .section-title { font-size: 26px; }
 
   .hero__showcase { aspect-ratio: 3/2; }

@@ -238,6 +238,49 @@
       object-fit: cover;
       display: block;
     }
+
+    /* Hero carousel */
+    .hero__carousel {
+      position: relative;
+      border-radius: calc(var(--radius) - 4px);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+    .hero__carousel-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+    .hero__carousel-slide.active {
+      opacity: 1;
+    }
+    .hero__carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      aspect-ratio: unset;
+    }
+    .hero__carousel-dots {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+    }
+    .hero__carousel-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      transition: background 0.3s;
+    }
+    .hero__carousel-dot.active {
+      background: #fff;
+    }
     .hero__image-placeholder {
       /* Replace with actual French natural image */
       background: linear-gradient(160deg, #EDE8DF 0%, #D8CFC0 40%, #C8BEA8 100%);
@@ -796,9 +839,17 @@
         <p class="hero__eyebrow">French Natural Sanctuary Pack</p>
         <h1 class="hero__title">Turn Your Home Into a French Natural Sanctuary</h1>
 
-        <!-- Mobile image -->
+        <!-- Mobile carousel -->
         <div class="hero__image-wrap hero__image-mobile">
-          <img src="../images/DVblfARD1uL-slide-1.jpg" alt="French Natural Sanctuary — sun-drenched staircase with plants and hardwood floors">
+          <div class="hero__carousel" id="hero-carousel-mobile">
+            <div class="hero__carousel-slide active"><img src="../images/DVblfARD1uL-slide-1.jpg" alt="French natural staircase with plants"></div>
+            <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-2.jpg" alt="French natural dining room"></div>
+            <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-3.jpg" alt="French natural living room with daisies"></div>
+            <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-4.jpg" alt="French natural arched interior"></div>
+            <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-5.jpg" alt="French natural bedroom"></div>
+            <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-6.jpg" alt="French natural room 6"></div>
+            <div class="hero__carousel-dots" id="hero-dots-mobile"></div>
+          </div>
         </div>
 
         <p class="hero__sub">A digital style pack inspired by the sun‑drenched French homes you save on Instagram—so you can bring that airy, grounded calm into your own space.</p>
@@ -810,9 +861,17 @@
         <p class="hero__support">Soft light, warm wood, and nature woven into every corner—without needing a farmhouse in Provence.</p>
       </div>
 
-      <!-- Desktop image -->
+      <!-- Desktop carousel -->
       <div class="hero__image-wrap fade-in">
-        <img src="../images/DVblfARD1uL-slide-1.jpg" alt="French Natural Sanctuary — sun-drenched staircase with plants and hardwood floors">
+        <div class="hero__carousel" id="hero-carousel-desktop">
+          <div class="hero__carousel-slide active"><img src="../images/DVblfARD1uL-slide-1.jpg" alt="French natural staircase with plants"></div>
+          <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-2.jpg" alt="French natural dining room"></div>
+          <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-3.jpg" alt="French natural living room with daisies"></div>
+          <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-4.jpg" alt="French natural arched interior"></div>
+          <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-5.jpg" alt="French natural bedroom"></div>
+          <div class="hero__carousel-slide"><img src="../images/DVblfARD1uL-slide-6.jpg" alt="French natural room 6"></div>
+          <div class="hero__carousel-dots" id="hero-dots-desktop"></div>
+        </div>
       </div>
 
     </div>
@@ -1100,6 +1159,36 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+    // Hero carousels
+    function initCarousel(carouselId, dotsId) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel) return;
+      const slides = carousel.querySelectorAll('.hero__carousel-slide');
+      const dotsContainer = document.getElementById(dotsId);
+      let current = 0;
+
+      // Build dots
+      slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'hero__carousel-dot' + (i === 0 ? ' active' : '');
+        dotsContainer.appendChild(dot);
+      });
+      const dots = dotsContainer.querySelectorAll('.hero__carousel-dot');
+
+      function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      setInterval(() => goTo(current + 1), 3000);
+    }
+
+    initCarousel('hero-carousel-desktop', 'hero-dots-desktop');
+    initCarousel('hero-carousel-mobile', 'hero-dots-mobile');
   </script>
 
 </body>

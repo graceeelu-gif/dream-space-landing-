@@ -724,5 +724,102 @@
     })();
   </script>
 
+  <!-- ============ EXIT-INTENT QUIZ ============ -->
+  <div id="exit-quiz-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(20,18,14,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;">
+    <div id="exit-quiz-box" style="background:#FBF7F2;border-radius:20px;max-width:480px;width:100%;padding:40px 36px 32px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.18);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+
+      <!-- Close button -->
+      <button onclick="closeExitQuiz()" aria-label="Close" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:#5B6168;font-size:20px;line-height:1;padding:4px;">✕</button>
+
+      <!-- Step 1: Question -->
+      <div id="exit-quiz-step1">
+        <p style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#C8A45D;margin-bottom:10px;">Quick question</p>
+        <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:26px;line-height:1.25;margin-bottom:8px;color:#1F2328;">Before you go — what held you back?</h2>
+        <p style="font-size:15px;color:#5B6168;margin-bottom:28px;line-height:1.6;">Takes 5 seconds. Helps us improve.</p>
+
+        <div id="exit-quiz-options" style="display:flex;flex-direction:column;gap:10px;">
+          <button class="exit-quiz-opt" onclick="selectExitOption(this, 'price_too_high')">💸 The price feels too high</button>
+          <button class="exit-quiz-opt" onclick="selectExitOption(this, 'not_sure_itll_work')">🤔 Not sure it'll work for my room</button>
+          <button class="exit-quiz-opt" onclick="selectExitOption(this, 'need_more_time')">⏳ I need more time to think</button>
+          <button class="exit-quiz-opt" onclick="selectExitOption(this, 'just_browsing')">👀 Just browsing, not ready to buy</button>
+          <button class="exit-quiz-opt" onclick="selectExitOption(this, 'missing_feature')">🔍 It's missing something I need</button>
+          <button class="exit-quiz-opt" onclick="selectExitOption(this, 'other')">💬 Something else</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Thank you -->
+      <div id="exit-quiz-step2" style="display:none;text-align:center;">
+        <div style="font-size:40px;margin-bottom:16px;">🙏</div>
+        <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:24px;line-height:1.3;margin-bottom:12px;color:#1F2328;">Thanks — that really helps.</h2>
+        <p id="exit-quiz-followup" style="font-size:15px;color:#5B6168;line-height:1.65;margin-bottom:28px;"></p>
+        <button onclick="closeExitQuiz()" style="background:#C8A45D;color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .exit-quiz-opt {
+      width: 100%;
+      text-align: left;
+      background: #fff;
+      border: 1.5px solid rgba(31,35,40,.1);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 15px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1F2328;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+    }
+    .exit-quiz-opt:hover {
+      border-color: #C8A45D;
+      background: #F5EDD8;
+    }
+  </style>
+
+  <script>
+    (function() {
+      var shown = false;
+
+      var followups = {
+        price_too_high:    "We hear you. If price is the barrier, the $9.99 single-room plan is a low-risk way to try it on one space first.",
+        not_sure_itll_work: "Fair — it's hard to know until you see it. You can try a free preview right on the page before spending anything.",
+        need_more_time:    "Totally fine. The page will be here when you're ready. No pressure at all.",
+        just_browsing:     "No worries at all. Come back whenever you're ready — we'll be here.",
+        missing_feature:   "We'd love to know what's missing. Feel free to email us at grace@housing.info.",
+        other:             "We'd love to hear more. Feel free to reach out at grace@housing.info anytime."
+      };
+
+      function showExitQuiz() {
+        if (shown) return;
+        shown = true;
+        var overlay = document.getElementById('exit-quiz-overlay');
+        overlay.style.display = 'flex';
+        if (window.posthog) posthog.capture('exit_quiz_shown');
+      }
+
+      window.closeExitQuiz = function() {
+        document.getElementById('exit-quiz-overlay').style.display = 'none';
+      };
+
+      window.selectExitOption = function(btn, reason) {
+        if (window.posthog) posthog.capture('exit_quiz_response', { reason: reason });
+        document.getElementById('exit-quiz-followup').textContent = followups[reason] || followups['other'];
+        document.getElementById('exit-quiz-step1').style.display = 'none';
+        document.getElementById('exit-quiz-step2').style.display = 'block';
+      };
+
+      // Trigger on mouse leaving the top of the page (heading to browser/tab bar)
+      document.addEventListener('mouseleave', function(e) {
+        if (e.clientY <= 10) showExitQuiz();
+      });
+
+      // Close on overlay background click
+      document.getElementById('exit-quiz-overlay').addEventListener('click', function(e) {
+        if (e.target === this) closeExitQuiz();
+      });
+    })();
+  </script>
+
 </body>
 </html>

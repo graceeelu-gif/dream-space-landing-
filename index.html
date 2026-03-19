@@ -809,9 +809,14 @@
         document.getElementById('exit-quiz-step2').style.display = 'block';
       };
 
-      // Trigger on mouse leaving the top of the page (heading to browser/tab bar)
+      // Desktop: mouse leaving toward browser/tab bar
       document.addEventListener('mouseleave', function(e) {
         if (e.clientY <= 10) showExitQuiz();
+      });
+
+      // Mobile: user switches tabs, goes to home screen, or minimizes browser
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') showExitQuiz();
       });
 
       // Close on overlay background click

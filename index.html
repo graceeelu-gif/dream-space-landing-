@@ -743,7 +743,13 @@
           <button class="exit-quiz-opt" onclick="selectExitOption(this, 'need_more_time')">⏳ I need more time to think</button>
           <button class="exit-quiz-opt" onclick="selectExitOption(this, 'just_browsing')">👀 Just browsing, not ready to buy</button>
           <button class="exit-quiz-opt" onclick="selectExitOption(this, 'missing_feature')">🔍 It's missing something I need</button>
-          <button class="exit-quiz-opt" onclick="selectExitOption(this, 'other')">💬 Something else</button>
+          <button class="exit-quiz-opt" onclick="showOtherTextbox(this)">💬 Something else</button>
+        </div>
+
+        <!-- "Something else" text box (hidden until selected) -->
+        <div id="exit-quiz-other-box" style="display:none;margin-top:14px;">
+          <textarea id="exit-quiz-other-text" placeholder="Tell us what's on your mind..." rows="3" style="width:100%;border:1.5px solid #C8A45D;border-radius:12px;padding:14px 16px;font-size:15px;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1F2328;background:#fff;resize:none;outline:none;line-height:1.5;box-sizing:border-box;"></textarea>
+          <button onclick="submitOtherResponse()" style="margin-top:10px;width:100%;background:#C8A45D;color:#fff;border:none;border-radius:50px;padding:14px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;">Submit</button>
         </div>
       </div>
 
@@ -806,6 +812,24 @@
         if (window.posthog) posthog.capture('exit_quiz_response', { reason: reason });
         document.getElementById('exit-quiz-followup').textContent = followups[reason] || followups['other'];
         document.getElementById('exit-quiz-step1').style.display = 'none';
+        document.getElementById('exit-quiz-step2').style.display = 'block';
+      };
+
+      window.showOtherTextbox = function(btn) {
+        // Highlight the button as selected
+        document.querySelectorAll('.exit-quiz-opt').forEach(function(b) { b.style.borderColor = ''; b.style.background = ''; });
+        btn.style.borderColor = '#C8A45D';
+        btn.style.background = '#F5EDD8';
+        document.getElementById('exit-quiz-other-box').style.display = 'block';
+        document.getElementById('exit-quiz-other-text').focus();
+      };
+
+      window.submitOtherResponse = function() {
+        var text = document.getElementById('exit-quiz-other-text').value.trim();
+        if (window.posthog) posthog.capture('exit_quiz_response', { reason: 'other', other_text: text });
+        document.getElementById('exit-quiz-followup').textContent = "We'd love to hear more. Feel free to reach out at grace@housing.info anytime.";
+        document.getElementById('exit-quiz-step1').style.display = 'none';
+        document.getElementById('exit-quiz-other-box').style.display = 'none';
         document.getElementById('exit-quiz-step2').style.display = 'block';
       };
 

@@ -305,19 +305,24 @@ body {
   margin-top: 48px;
 }
 .psteps__demo {
-  margin-top: 56px;
-  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 12px 48px rgba(0,0,0,.10);
   border: 1px solid var(--hairline);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .psteps__demo video {
   display: block;
   width: 100%;
   height: auto;
+}
+.psteps__demo--desktop {
+  margin-top: 56px;
+  border-radius: var(--radius);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.psteps__demo--mobile {
+  display: none;
 }
 
 /* ============================================================
@@ -901,8 +906,8 @@ body {
 
   .psteps__grid { grid-template-columns: 1fr; gap: 40px; }
   .psteps { padding-top: 0; }
-  .psteps .container { display: flex; flex-direction: column; }
-  .psteps__demo { order: -1; margin-left: -20px; margin-right: -20px; margin-top: 0; margin-bottom: 48px; border-radius: 0; border-left: none; border-right: none; border-top: none; }
+  .psteps__demo--desktop { display: none; }
+  .psteps__demo--mobile { display: block; width: 100%; border-radius: 0; border-left: none; border-right: none; border-top: none; margin-bottom: 48px; }
 
   .pba__grid { grid-template-columns: 1fr; }
 

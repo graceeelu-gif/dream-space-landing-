@@ -32,31 +32,12 @@
 
   <!-- ============ 1. HERO ============ -->
   <section class="phero">
-
-    <!-- Original 2-column hero: text left, carousel right -->
     <div class="container phero__grid">
+
+      <!-- Column 1: text -->
       <div class="phero__text">
         <p class="phero__eyebrow">AS SEEN ON HOUSING INFO</p>
         <h1 class="phero__title">Love this style? Recreate it in your own space.</h1>
-        <div class="phero__image phero__image--mobile">
-          <div class="carousel" id="heroCarouselMobile">
-            <div class="carousel__track">
-              <img src="../images/nmc-slide-1.jpg" alt="Natural Modern Classic inspiration 1" class="carousel__slide carousel__slide--active" loading="eager">
-              <img src="../images/nmc-slide-2.jpg" alt="Natural Modern Classic inspiration 2" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-3.jpg" alt="Natural Modern Classic inspiration 3" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-4.jpg" alt="Natural Modern Classic inspiration 4" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-5.jpg" alt="Natural Modern Classic inspiration 5" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-6.jpg" alt="Natural Modern Classic inspiration 6" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-7.jpg" alt="Natural Modern Classic inspiration 7" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-8.jpg" alt="Natural Modern Classic inspiration 8" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-9.jpg" alt="Natural Modern Classic inspiration 9" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-10.jpg" alt="Natural Modern Classic inspiration 10" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-11.jpg" alt="Natural Modern Classic inspiration 11" class="carousel__slide" loading="lazy">
-              <img src="../images/nmc-slide-12.jpg" alt="Natural Modern Classic inspiration 12" class="carousel__slide" loading="lazy">
-            </div>
-            <div class="carousel__dots" id="carouselDotsMobile"></div>
-          </div>
-        </div>
         <p class="phero__sub">Upload a photo of your room and see it transformed in the Natural Modern Classic style. Get a full design breakdown, style direction, and a clear plan you can follow.</p>
         <p class="phero__proof">
           <span class="phero__proof-dot"></span>
@@ -67,7 +48,10 @@
           <a href="#examples" class="phero__secondary">See examples</a>
         </div>
       </div>
+
+      <!-- Column 2: carousel -->
       <div class="phero__image">
+        <p class="phero__col-label">The style</p>
         <div class="carousel" id="heroCarousel">
           <div class="carousel__track">
             <img src="../images/nmc-slide-1.jpg" alt="Natural Modern Classic inspiration 1" class="carousel__slide carousel__slide--active" loading="eager">
@@ -86,20 +70,15 @@
           <div class="carousel__dots" id="carouselDots"></div>
         </div>
       </div>
-    </div>
 
-    <!-- Proof row: label left, slider right — still part of the hero -->
-    <div class="container phero__proof-row">
-      <div class="phero__proof-row-text">
-        <p class="phero__proof-row-label">See it in action</p>
-        <p class="phero__proof-row-desc">Here's what our tool does to a real room. Drag to compare.</p>
-      </div>
-      <div class="phero__proof-row-slider">
+      <!-- Column 3: before/after slider -->
+      <div class="phero__image">
+        <p class="phero__col-label">Your room, transformed</p>
         <div class="ba-slider" data-before="../images/showcase3.webp" data-after="../images/nmc-after-1.jpg">
           <div class="ba-slider__wrapper">
-            <img src="../images/nmc-after-1.jpg" alt="After transformation" class="ba-slider__after" loading="lazy">
+            <img src="../images/nmc-after-1.jpg" alt="After transformation" class="ba-slider__after" loading="eager">
             <div class="ba-slider__before-clip">
-              <img src="../images/showcase3.webp" alt="Before transformation" class="ba-slider__before" loading="lazy">
+              <img src="../images/showcase3.webp" alt="Before transformation" class="ba-slider__before" loading="eager">
             </div>
             <div class="ba-slider__handle">
               <div class="ba-slider__line"></div>
@@ -116,8 +95,8 @@
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </section>
 
   <!-- ============ 2. WHY THIS LOOK WORKS ============ -->

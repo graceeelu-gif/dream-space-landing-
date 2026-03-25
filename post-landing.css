@@ -132,8 +132,8 @@ body {
 }
 .phero__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
   align-items: center;
 }
 .phero__eyebrow {
@@ -170,28 +170,13 @@ body {
   background: var(--accent);
   opacity: .6;
 }
-/* Proof row: below the 2-column grid, still inside the hero */
-.phero__proof-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
-  align-items: center;
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid var(--hairline);
-}
-.phero__proof-row-label {
+.phero__col-label {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 8px;
-}
-.phero__proof-row-desc {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.5;
+  margin-bottom: 10px;
 }
 .phero__actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .phero__price {
@@ -839,10 +824,8 @@ body {
    ============================================================ */
 @media (max-width: 900px) {
   .phero { padding: 110px 0 64px; }
-  .phero__grid { grid-template-columns: 1fr; gap: 40px; }
-  .phero__image:not(.phero__image--mobile) { display: none; }
-  .phero__image--mobile { display: block; }
-  .phero__proof-row { grid-template-columns: 1fr; gap: 20px; }
+  .phero__grid { grid-template-columns: 1fr; gap: 32px; }
+  .phero__image:not(.phero__image--mobile) { display: block; }
   .phero__title { font-size: 34px; }
 
   .psteps__grid { grid-template-columns: 1fr; gap: 40px; }

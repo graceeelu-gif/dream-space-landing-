@@ -549,10 +549,15 @@ body {
   text-transform: uppercase;
   padding: 8px 0;
 }
+.ppricing__badge--empty {
+  background: transparent;
+  visibility: hidden;
+}
 .ppricing__card-inner {
   padding: 36px 32px 32px;
 }
-.ppricing__card--featured .ppricing__card-inner {
+.ppricing__card--featured .ppricing__card-inner,
+.ppricing__badge--empty + .ppricing__card-inner {
   padding-top: 28px;
 }
 .ppricing__name {

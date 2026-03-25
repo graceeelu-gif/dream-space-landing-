@@ -173,15 +173,18 @@ body {
 }
 /* Examples grid inside hero */
 .phero__examples {
-  padding-top: 80px;
   border-top: 1px solid var(--hairline);
   text-align: center;
 }
 .phero__examples .section-title {
   font-size: 26px;
   white-space: nowrap;
+  padding-top: 64px;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+.phero__examples .section-body {
+  margin-bottom: 24px;
 }
 .phero__examples-grid {
   display: grid;
@@ -839,8 +842,9 @@ body {
   .phero__grid { grid-template-columns: 1fr; gap: 40px; }
   .phero__image:not(.phero__image--mobile) { display: none; }
   .phero__image--mobile { display: block; }
-  .phero__examples { text-align: left; padding-top: 64px; }
-  .phero__examples .section-title { font-size: 22px; white-space: normal; margin-top: 0; }
+  .phero__examples { text-align: left; }
+  .phero__examples .section-title { font-size: 22px; white-space: normal; padding-top: 48px; margin-top: 0; }
+  .phero__examples .section-body { text-align: left; margin-bottom: 20px; }
   .phero__examples-grid { grid-template-columns: 1fr; margin-top: 20px; }
   .phero__examples-grid .pba__card:nth-child(n+5) { display: none; }
   .phero__title { font-size: 34px; }

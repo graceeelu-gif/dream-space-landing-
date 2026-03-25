@@ -132,7 +132,7 @@ body {
 }
 .phero__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1fr;
   gap: 32px;
   align-items: start;
   align-items: center;
@@ -178,11 +178,6 @@ body {
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 10px;
-}
-/* Text row spans both image columns */
-.phero__text--full {
-  grid-column: 1 / -1;
-  max-width: 640px;
 }
 .phero__actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .phero__price {
@@ -832,7 +827,6 @@ body {
   .phero { padding: 110px 0 64px; }
   .phero__grid { grid-template-columns: 1fr; gap: 32px; }
   .phero__image:not(.phero__image--mobile) { display: block; }
-  .phero__text--full { grid-column: 1; }
   .phero__title { font-size: 34px; }
 
   .psteps__grid { grid-template-columns: 1fr; gap: 40px; }

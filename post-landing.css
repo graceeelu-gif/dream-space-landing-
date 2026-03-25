@@ -844,7 +844,7 @@ body {
   .phero__image--mobile { display: block; }
   .phero__examples { text-align: left; }
   .phero__examples .section-title { font-size: 22px; white-space: normal; padding-top: 48px; margin-top: 0; }
-  .phero__examples .section-body { text-align: left; margin-bottom: 20px; }
+  .phero__examples .section-body { text-align: center; margin-bottom: 20px; }
   .phero__examples-grid { grid-template-columns: 1fr; margin-top: 20px; }
   .phero__examples-grid .pba__card:nth-child(n+5) { display: none; }
   .phero__title { font-size: 34px; }

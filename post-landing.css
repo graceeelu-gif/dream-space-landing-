@@ -132,9 +132,9 @@ body {
 }
 .phero__grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 32px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
   align-items: center;
 }
 .phero__eyebrow {
@@ -178,6 +178,19 @@ body {
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 10px;
+}
+/* Slide type label that updates with the carousel */
+.phero__slide-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+  transition: opacity 0.2s;
+}
+.phero__slide-label.is-transformation {
+  color: #6b7c5c;
 }
 .phero__actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .phero__price {
@@ -825,8 +838,9 @@ body {
    ============================================================ */
 @media (max-width: 900px) {
   .phero { padding: 110px 0 64px; }
-  .phero__grid { grid-template-columns: 1fr; gap: 32px; }
-  .phero__image:not(.phero__image--mobile) { display: block; }
+  .phero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .phero__image:not(.phero__image--mobile) { display: none; }
+  .phero__image--mobile { display: block; }
   .phero__title { font-size: 34px; }
 
   .psteps__grid { grid-template-columns: 1fr; gap: 40px; }

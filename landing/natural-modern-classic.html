@@ -30,14 +30,29 @@
     </div>
   </nav>
 
-  <!-- ============ 1. HERO ============ -->
+  <!-- ============ 1. HERO WITH CAROUSEL ============ -->
   <section class="phero">
     <div class="container phero__grid">
-
-      <!-- Column 1: text -->
       <div class="phero__text">
         <p class="phero__eyebrow">AS SEEN ON HOUSING INFO</p>
         <h1 class="phero__title">Love this style? Recreate it in your own space.</h1>
+        <div class="phero__image phero__image--mobile">
+          <div class="carousel" id="heroCarouselMobile">
+            <div class="carousel__track">
+              <img src="../images/nmc-slide-1.jpg" alt="Inspiration" class="carousel__slide carousel__slide--active" data-type="inspiration" loading="eager">
+              <img src="../images/nmc-after-1.jpg" alt="Transformation" class="carousel__slide" data-type="transformation" loading="lazy">
+              <img src="../images/nmc-slide-2.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+              <img src="../images/showcase6.jpg" alt="Transformation" class="carousel__slide" data-type="transformation" loading="lazy">
+              <img src="../images/nmc-slide-3.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+              <img src="../images/nmc-slide-4.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+              <img src="../images/nmc-slide-5.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+              <img src="../images/nmc-slide-6.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+              <img src="../images/nmc-slide-7.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+              <img src="../images/nmc-slide-8.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+            </div>
+            <div class="carousel__dots" id="carouselDotsMobile"></div>
+          </div>
+        </div>
         <p class="phero__sub">Upload a photo of your room and see it transformed in the Natural Modern Classic style. Get a full design breakdown, style direction, and a clear plan you can follow.</p>
         <p class="phero__proof">
           <span class="phero__proof-dot"></span>
@@ -48,54 +63,24 @@
           <a href="#examples" class="phero__secondary">See examples</a>
         </div>
       </div>
-
-      <!-- Row 2 left: carousel -->
       <div class="phero__image">
-        <p class="phero__col-label">Inspiration</p>
+        <div class="phero__slide-label" id="heroSlideLabel">Inspiration</div>
         <div class="carousel" id="heroCarousel">
           <div class="carousel__track">
-            <img src="../images/nmc-slide-1.jpg" alt="Natural Modern Classic inspiration 1" class="carousel__slide carousel__slide--active" loading="eager">
-            <img src="../images/nmc-slide-2.jpg" alt="Natural Modern Classic inspiration 2" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-3.jpg" alt="Natural Modern Classic inspiration 3" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-4.jpg" alt="Natural Modern Classic inspiration 4" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-5.jpg" alt="Natural Modern Classic inspiration 5" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-6.jpg" alt="Natural Modern Classic inspiration 6" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-7.jpg" alt="Natural Modern Classic inspiration 7" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-8.jpg" alt="Natural Modern Classic inspiration 8" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-9.jpg" alt="Natural Modern Classic inspiration 9" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-10.jpg" alt="Natural Modern Classic inspiration 10" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-11.jpg" alt="Natural Modern Classic inspiration 11" class="carousel__slide" loading="lazy">
-            <img src="../images/nmc-slide-12.jpg" alt="Natural Modern Classic inspiration 12" class="carousel__slide" loading="lazy">
+            <img src="../images/nmc-slide-1.jpg" alt="Inspiration" class="carousel__slide carousel__slide--active" data-type="inspiration" loading="eager">
+            <img src="../images/nmc-after-1.jpg" alt="Transformation" class="carousel__slide" data-type="transformation" loading="lazy">
+            <img src="../images/nmc-slide-2.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+            <img src="../images/showcase6.jpg" alt="Transformation" class="carousel__slide" data-type="transformation" loading="lazy">
+            <img src="../images/nmc-slide-3.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+            <img src="../images/nmc-slide-4.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+            <img src="../images/nmc-slide-5.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+            <img src="../images/nmc-slide-6.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+            <img src="../images/nmc-slide-7.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
+            <img src="../images/nmc-slide-8.jpg" alt="Inspiration" class="carousel__slide" data-type="inspiration" loading="lazy">
           </div>
           <div class="carousel__dots" id="carouselDots"></div>
         </div>
       </div>
-
-      <!-- Row 2 right: before/after slider -->
-      <div class="phero__image">
-        <p class="phero__col-label">Transformation</p>
-        <div class="ba-slider" data-before="../images/showcase3.webp" data-after="../images/nmc-after-1.jpg">
-          <div class="ba-slider__wrapper">
-            <img src="../images/nmc-after-1.jpg" alt="After transformation" class="ba-slider__after" loading="eager">
-            <div class="ba-slider__before-clip">
-              <img src="../images/showcase3.webp" alt="Before transformation" class="ba-slider__before" loading="eager">
-            </div>
-            <div class="ba-slider__handle">
-              <div class="ba-slider__line"></div>
-              <div class="ba-slider__knob">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19l-7-7 7-7"/><path d="M13 5l7 7-7 7"/></svg>
-              </div>
-            </div>
-            <span class="ba-slider__label ba-slider__label--before">Original</span>
-            <span class="ba-slider__label ba-slider__label--after">Transformed</span>
-          </div>
-          <div class="ba-slider__hint">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
-            <span>Drag to compare</span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -583,6 +568,18 @@
       }, { passive: true });
 
       startAuto();
+
+      // Update slide label on advance
+      const slideLabel = document.getElementById('heroSlideLabel');
+      if (slideLabel) {
+        function updateLabel() {
+          const type = slides[current].getAttribute('data-type');
+          slideLabel.textContent = type === 'transformation' ? 'Transformation' : 'Inspiration';
+          slideLabel.classList.toggle('is-transformation', type === 'transformation');
+        }
+        const origGoTo = goTo;
+        goTo = function(index) { origGoTo(index); updateLabel(); };
+      }
     })();
   </script>
 

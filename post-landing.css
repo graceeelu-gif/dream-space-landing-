@@ -177,6 +177,10 @@ body {
   border-top: 1px solid var(--hairline);
   text-align: center;
 }
+.phero__examples .section-title {
+  font-size: 26px;
+  white-space: nowrap;
+}
 .phero__examples-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -834,6 +838,7 @@ body {
   .phero__image:not(.phero__image--mobile) { display: none; }
   .phero__image--mobile { display: block; }
   .phero__examples { text-align: left; padding-top: 32px; margin-top: 36px; }
+  .phero__examples .section-title { font-size: 22px; white-space: normal; }
   .phero__examples-grid { grid-template-columns: 1fr; margin-top: 20px; }
   .phero__examples-grid .pba__card:nth-child(n+5) { display: none; }
   .phero__title { font-size: 34px; }

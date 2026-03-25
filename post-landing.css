@@ -172,7 +172,7 @@ body {
 }
 /* Examples grid inside hero */
 .phero__examples {
-  margin-top: 100px;
+  margin-top: 56px;
   padding-top: 48px;
   border-top: 1px solid var(--hairline);
   text-align: center;

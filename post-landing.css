@@ -304,6 +304,21 @@ body {
   text-align: center;
   margin-top: 48px;
 }
+.psteps__demo {
+  margin-top: 56px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0,0,0,.10);
+  border: 1px solid var(--hairline);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.psteps__demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* ============================================================
    4. BEFORE / AFTER
@@ -503,6 +518,24 @@ body {
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 8px;
+}
+.pvalue__showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.pvalue__showcase-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  box-shadow: 0 4px 20px rgba(0,0,0,.07);
+}
+.pvalue__showcase-img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 .pvalue__card-body {
   font-size: 14px;
@@ -877,6 +910,7 @@ body {
   .pba__grid { grid-template-columns: 1fr; }
 
   .pvalue__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pvalue__showcase { grid-template-columns: 1fr; }
 
   .ppricing__grid { grid-template-columns: 1fr; max-width: 440px; }
   .ppricing__grid--three { grid-template-columns: 1fr; max-width: 440px; }

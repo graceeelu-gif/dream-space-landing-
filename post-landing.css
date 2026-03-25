@@ -173,7 +173,7 @@ body {
 /* Examples grid inside hero */
 .phero__examples {
   margin-top: 100px;
-  padding-top: 320px;
+  padding-top: 80px;
   border-top: 1px solid var(--hairline);
   text-align: center;
 }
@@ -837,7 +837,7 @@ body {
   .phero__grid { grid-template-columns: 1fr; gap: 40px; }
   .phero__image:not(.phero__image--mobile) { display: none; }
   .phero__image--mobile { display: block; }
-  .phero__examples { text-align: left; padding-top: 32px; margin-top: 36px; }
+  .phero__examples { text-align: left; padding-top: 80px; margin-top: 36px; }
   .phero__examples .section-title { font-size: 22px; white-space: normal; }
   .phero__examples-grid { grid-template-columns: 1fr; margin-top: 20px; }
   .phero__examples-grid .pba__card:nth-child(n+5) { display: none; }

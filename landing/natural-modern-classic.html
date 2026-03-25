@@ -34,21 +34,8 @@
   <section class="phero">
     <div class="container phero__grid">
 
-      <!-- Left column: text top, carousel bottom -->
+      <!-- Left column: carousel top, text bottom -->
       <div class="phero__left">
-        <div class="phero__text">
-          <p class="phero__eyebrow">AS SEEN ON HOUSING INFO</p>
-          <h1 class="phero__title">Love this style? Recreate it in your own space.</h1>
-          <p class="phero__sub">Upload a photo of your room and see it transformed in the Natural Modern Classic style. Get a full design breakdown, style direction, and a clear plan you can follow.</p>
-          <p class="phero__proof">
-            <span class="phero__proof-dot"></span>
-            Trusted by 2M+ design lovers
-          </p>
-          <div class="phero__actions">
-            <a href="#pricing" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'hero'})">Try Natural Modern Classic in my room</a>
-            <a href="#examples" class="phero__secondary">See examples</a>
-          </div>
-        </div>
         <div class="phero__image">
           <p class="phero__col-label">The style</p>
           <div class="carousel" id="heroCarousel">
@@ -67,6 +54,19 @@
               <img src="../images/nmc-slide-12.jpg" alt="Natural Modern Classic inspiration 12" class="carousel__slide" loading="lazy">
             </div>
             <div class="carousel__dots" id="carouselDots"></div>
+          </div>
+        </div>
+        <div class="phero__text">
+          <p class="phero__eyebrow">AS SEEN ON HOUSING INFO</p>
+          <h1 class="phero__title">Love this style? Recreate it in your own space.</h1>
+          <p class="phero__sub">Upload a photo of your room and see it transformed in the Natural Modern Classic style. Get a full design breakdown, style direction, and a clear plan you can follow.</p>
+          <p class="phero__proof">
+            <span class="phero__proof-dot"></span>
+            Trusted by 2M+ design lovers
+          </p>
+          <div class="phero__actions">
+            <a href="#pricing" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Natural Modern Classic', location: 'hero'})">Try Natural Modern Classic in my room</a>
+            <a href="#examples" class="phero__secondary">See examples</a>
           </div>
         </div>
       </div>

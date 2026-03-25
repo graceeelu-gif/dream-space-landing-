@@ -809,6 +809,18 @@ body {
 .carousel__slide--active {
   opacity: 1;
 }
+/* Prevent hidden slides from intercepting touches */
+.carousel__slide:not(.carousel__slide--active) {
+  pointer-events: none;
+}
+/* Ba-slider embedded as a carousel slide */
+.carousel__slide .ba-slider {
+  position: absolute;
+  inset: 0;
+}
+.carousel__slide .ba-slider__wrapper {
+  height: 100%;
+}
 .carousel__dots {
   display: flex;
   justify-content: center;

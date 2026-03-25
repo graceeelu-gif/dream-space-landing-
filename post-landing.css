@@ -135,7 +135,6 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
-  align-items: center;
 }
 .phero__eyebrow {
   font-size: 12px;
@@ -171,26 +170,49 @@ body {
   background: var(--accent);
   opacity: .6;
 }
-.phero__col-label {
+/* Static before/after row */
+.phero__ba-static {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--hairline);
+}
+.phero__ba-static-img {
+  flex: 1;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+}
+.phero__ba-static-img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.phero__ba-static-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 10px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
-/* Slide type label that updates with the carousel */
-.phero__slide-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 10px;
-  transition: opacity 0.2s;
+.phero__ba-static-tag--after {
+  background: var(--accent);
 }
-.phero__slide-label.is-transformation {
-  color: #6b7c5c;
+.phero__ba-static-arrow {
+  font-size: 24px;
+  color: var(--accent);
+  flex-shrink: 0;
+  line-height: 1;
 }
 .phero__actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .phero__price {
@@ -809,18 +831,6 @@ body {
 .carousel__slide--active {
   opacity: 1;
 }
-/* Prevent hidden slides from intercepting touches */
-.carousel__slide:not(.carousel__slide--active) {
-  pointer-events: none;
-}
-/* Ba-slider embedded as a carousel slide */
-.carousel__slide .ba-slider {
-  position: absolute;
-  inset: 0;
-}
-.carousel__slide .ba-slider__wrapper {
-  height: 100%;
-}
 .carousel__dots {
   display: flex;
   justify-content: center;
@@ -853,6 +863,8 @@ body {
   .phero__grid { grid-template-columns: 1fr; gap: 40px; }
   .phero__image:not(.phero__image--mobile) { display: none; }
   .phero__image--mobile { display: block; }
+  .phero__ba-static { flex-direction: column; gap: 12px; }
+  .phero__ba-static-arrow { transform: rotate(90deg); }
   .phero__title { font-size: 34px; }
 
   .psteps__grid { grid-template-columns: 1fr; gap: 40px; }

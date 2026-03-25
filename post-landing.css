@@ -135,6 +135,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
+  margin-bottom: 56px;
 }
 .phero__eyebrow {
   font-size: 12px;
@@ -172,14 +173,15 @@ body {
 }
 /* Examples grid inside hero */
 .phero__examples {
-  margin-top: 56px;
-  padding-top: 48px;
+  padding-top: 80px;
   border-top: 1px solid var(--hairline);
   text-align: center;
 }
 .phero__examples .section-title {
   font-size: 26px;
   white-space: nowrap;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 .phero__examples-grid {
   display: grid;
@@ -837,8 +839,8 @@ body {
   .phero__grid { grid-template-columns: 1fr; gap: 40px; }
   .phero__image:not(.phero__image--mobile) { display: none; }
   .phero__image--mobile { display: block; }
-  .phero__examples { text-align: left; padding-top: 48px; margin-top: 56px; }
-  .phero__examples .section-title { font-size: 22px; white-space: normal; }
+  .phero__examples { text-align: left; padding-top: 64px; }
+  .phero__examples .section-title { font-size: 22px; white-space: normal; margin-top: 0; }
   .phero__examples-grid { grid-template-columns: 1fr; margin-top: 20px; }
   .phero__examples-grid .pba__card:nth-child(n+5) { display: none; }
   .phero__title { font-size: 34px; }

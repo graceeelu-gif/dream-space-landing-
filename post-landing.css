@@ -533,6 +533,8 @@ body {
   border: 1px solid var(--hairline);
   border-radius: var(--radius);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .ppricing__card--featured {
   border-color: var(--accent);
@@ -555,6 +557,9 @@ body {
 }
 .ppricing__card-inner {
   padding: 36px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .ppricing__card--featured .ppricing__card-inner,
 .ppricing__badge--empty + .ppricing__card-inner {
@@ -603,6 +608,7 @@ body {
   flex-direction: column;
   gap: 12px;
   margin-bottom: 32px;
+  flex: 1;
 }
 .ppricing__features li {
   padding-left: 24px;
@@ -616,15 +622,6 @@ body {
   left: 0; top: 7px;
   width: 14px; height: 14px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='%23C8A45D' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
-}
-.ppricing__btns {
-  display: flex;
-  gap: 10px;
-}
-.ppricing__btns .btn--pricing {
-  flex: 1;
-  padding: 14px 12px;
-  font-size: 14px;
 }
 .btn--pricing {
   width: 100%;

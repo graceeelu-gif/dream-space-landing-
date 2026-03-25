@@ -175,23 +175,14 @@ body {
   margin-top: 48px;
   padding-top: 40px;
   border-top: 1px solid var(--hairline);
-}
-.phero__examples-title {
-  font-family: var(--serif);
-  font-size: 28px;
-  font-weight: 600;
-  color: var(--fg);
-  margin-bottom: 8px;
-}
-.phero__examples-sub {
-  font-size: 15px;
-  color: var(--muted);
-  margin-bottom: 32px;
+  text-align: center;
 }
 .phero__examples-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-top: 32px;
+  text-align: left;
 }
 .phero__actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .phero__price {

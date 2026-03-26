@@ -702,6 +702,10 @@ body {
   max-width: 780px;
   margin: 48px auto 0;
 }
+.pricing__grid--three {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px;
+}
 .pricing__card {
   position: relative;
   background: var(--surface);
@@ -723,6 +727,22 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 8px 0;
+}
+.pricing__badge--empty {
+  background: transparent;
+  color: transparent;
+  pointer-events: none;
+}
+.pricing__price-wrap {
+  margin-bottom: 28px;
+}
+.pricing__price-wrap .pricing__price {
+  margin-bottom: 4px;
+}
+.pricing__note {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
 }
 .pricing__card-inner {
   padding: 36px 32px 32px;
@@ -980,6 +1000,7 @@ body {
   .section-title--left { text-align: center; }
 
   .pricing__grid { grid-template-columns: 1fr; max-width: 440px; }
+  .pricing__grid--three { grid-template-columns: 1fr; max-width: 440px; }
 
   .next-steps__grid { flex-direction: column; align-items: center; gap: 24px; }
   .next-steps__arrow { transform: rotate(90deg); margin-top: 0; }

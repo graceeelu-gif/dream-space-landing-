@@ -228,51 +228,91 @@
   <!-- ============ 6. PRICING ============ -->
   <section class="ppricing" id="pricing">
     <div class="container">
-      <h2 class="section-title">Choose your room transformation</h2>
-      <p class="section-body">Every package includes a personalized design plan you can actually follow.</p>
-      <div class="ppricing__grid">
-        <!-- Single Room -->
+      <h2 class="section-title">Choose your plan</h2>
+      <p class="section-body">Every plan includes a personalized design plan you can actually follow.</p>
+      <div class="ppricing__grid ppricing__grid--three">
+
+        <!-- Dreamer -->
         <div class="ppricing__card">
+          <span class="ppricing__badge ppricing__badge--empty">placeholder</span>
           <div class="ppricing__card-inner">
-            <span class="ppricing__name">Single Room</span>
-            <p class="ppricing__desc">Perfect for trying one room or refreshing a single space.</p>
-            <div class="ppricing__price">
-              <span class="ppricing__amount">$9.99</span>
-              <span class="ppricing__period">per month</span>
+            <span class="ppricing__name">Dreamer</span>
+            <p class="ppricing__desc">For anyone ready to start transforming their space</p>
+            <div class="ppricing__price-wrap">
+              <div class="ppricing__price">
+                <span class="ppricing__amount">$9.99</span>
+                <span class="ppricing__period">/mo</span>
+              </div>
+              <p class="ppricing__note">Cancel anytime</p>
             </div>
             <ul class="ppricing__features">
-              <li>1 room transformation</li>
+              <li>3 room transformations per month</li>
+              <li>Access to all current styles</li>
+              <li>New styles added monthly</li>
               <li>Personalized style direction</li>
               <li>Room analysis & design notes</li>
-              <li>Step-by-step recommendations</li>
-              <li>Curated product guidance</li>
+              <li>Saved style history</li>
             </ul>
-            <a href="https://housing-info.vercel.app/try/choose?style=Elegant+Sanctuary" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'single', action: 'free_preview'})">Try free preview</a>
-            <a href="https://buy.stripe.com/9B64gzbTIgP61j35Shebu03?client_reference_id=elegant-sanctuary" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'single', action: 'generate'})" style="margin-top: 0.5rem;">Generate now</a>
+            <a href="https://housing-info.vercel.app/try/choose?style=Elegant+Sanctuary" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'dreamer', action: 'free_preview'})">Try free preview</a>
+            <a href="https://buy.stripe.com/9B64gzbTIgP61j35Shebu03?client_reference_id=elegant-sanctuary" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'dreamer', action: 'generate'})" style="margin-top: 0.5rem;">Get started</a>
           </div>
         </div>
-        <!-- Full Home — Recommended -->
+
+        <!-- Visionary — Most Popular -->
         <div class="ppricing__card ppricing__card--featured">
           <span class="ppricing__badge">Most popular</span>
           <div class="ppricing__card-inner">
-            <span class="ppricing__name">Full Home</span>
-            <p class="ppricing__desc">Transform multiple rooms and see the full vision for your home.</p>
-            <div class="ppricing__price">
-              <span class="ppricing__amount">$29.99</span>
-              <span class="ppricing__period">per month</span>
+            <span class="ppricing__name">Visionary</span>
+            <p class="ppricing__desc">For anyone transforming their whole home</p>
+            <div class="ppricing__price-wrap">
+              <div class="ppricing__price">
+                <span class="ppricing__amount">$29.99</span>
+                <span class="ppricing__period">/mo</span>
+              </div>
+              <p class="ppricing__note">Cancel anytime</p>
             </div>
             <ul class="ppricing__features">
-              <li>Unlimited room generations</li>
-              <li>Personalized style direction</li>
-              <li>Room analysis & design notes</li>
-              <li>Step-by-step recommendations</li>
-              <li>Curated product guidance</li>
-              <li>Mix & match any styles</li>
+              <li>Unlimited room transformations</li>
+              <li>Early access to new styles before public release</li>
+              <li>Full home style consistency report</li>
+              <li>Multi-room planning & coordination</li>
+              <li>Style mixing across rooms</li>
+              <li>Room-by-room shopping list with budget tiers</li>
+              <li>Unlimited saved transformations</li>
             </ul>
-            <a href="https://housing-info.vercel.app/try/choose?style=Elegant+Sanctuary" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'full_home', action: 'free_preview'})">Try free preview</a>
-            <a href="https://buy.stripe.com/3cIcN53ncgP61j3eoNebu04?client_reference_id=elegant-sanctuary" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'full_home', action: 'generate'})" style="margin-top: 0.5rem;">Generate now</a>
+            <a href="https://housing-info.vercel.app/try/choose?style=Elegant+Sanctuary" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'visionary', action: 'free_preview'})">Try free preview</a>
+            <a href="https://buy.stripe.com/3cIcN53ncgP61j3eoNebu04?client_reference_id=elegant-sanctuary" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'visionary', action: 'generate'})" style="margin-top: 0.5rem;">Get started</a>
           </div>
         </div>
+
+        <!-- Tastemaker — One-time -->
+        <div class="ppricing__card ppricing__card--featured">
+          <span class="ppricing__badge">Most Comprehensive</span>
+          <div class="ppricing__card-inner">
+            <span class="ppricing__name">Tastemaker</span>
+            <p class="ppricing__desc">For anyone who wants the full premium experience</p>
+            <div class="ppricing__price-wrap">
+              <div class="ppricing__price">
+                <span class="ppricing__amount">$99</span>
+                <span class="ppricing__period">one-time</span>
+              </div>
+              <p class="ppricing__note">Never pay again</p>
+            </div>
+            <ul class="ppricing__features">
+              <li>Everything in Visionary</li>
+              <li>Real interior designer reviews your transformation</li>
+              <li>Personalized written notes on your specific space</li>
+              <li>3 alternative style recommendations for your room</li>
+              <li>Priority processing</li>
+              <li>Lifetime access to all released styles</li>
+              <li>Personal style profile consultation</li>
+              <li>Exclusive designer-curated product picks</li>
+            </ul>
+            <a href="https://housing-info.vercel.app/try/choose?style=Elegant+Sanctuary" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'tastemaker', action: 'free_preview'})">Try free preview</a>
+            <a href="https://buy.stripe.com/cNi5kD9LA42k3rb6Wlebu05?client_reference_id=elegant-sanctuary" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Elegant Sanctuary', location: 'pricing', plan: 'tastemaker', action: 'generate'})" style="margin-top: 0.5rem;">Get started</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

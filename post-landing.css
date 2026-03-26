@@ -908,6 +908,8 @@ body {
   .psteps { padding-top: 0; }
   .psteps__demo--desktop { display: none; }
   .psteps__demo--mobile { display: block; width: 100%; border: none; border-radius: 0; box-shadow: none; margin-top: 40px; }
+  .psteps__demo--mobile video { aspect-ratio: 4/3; object-fit: cover; }
+  .psteps .section-title { padding-top: 48px; margin-top: 0; }
 
   .pba__grid { grid-template-columns: 1fr; }
 

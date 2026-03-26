@@ -908,7 +908,7 @@ body {
   .psteps { padding-top: 0; padding-bottom: 0; }
   .psteps__demo--desktop { display: none; }
   .psteps__demo--mobile { display: block; width: 100%; border: none; border-radius: 0; box-shadow: none; margin-top: 40px; }
-  .psteps__demo--mobile video { width: 100%; height: 70vw; object-fit: cover; display: block; }
+  .psteps__demo--mobile video { width: 100%; height: 120vw; object-fit: cover; display: block; }
   .psteps .section-title { padding-top: 48px; margin-top: 0; }
 
   .pba__grid { grid-template-columns: 1fr; }

@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop the Look – Soft Modern Home | @housinginfo</title>
-  <meta name="description" content="Shop every piece from this soft modern home post — linen sofas, curved chairs, warm wood accents, and more. Curated by @housinginfo.">
-  <meta property="og:title" content="Shop the Look – Soft Modern Home">
-  <meta property="og:description" content="Shop every piece from this soft modern home post — curated by @housinginfo.">
+  <title>Shop the Look – Warm Natural Home | @housinginfo</title>
+  <meta name="description" content="Shop every piece from this warm natural home post — wood dining tables, cream linen sofas, rattan pendants, platform beds, and more. Curated by @housinginfo.">
+  <meta property="og:title" content="Shop the Look – Warm Natural Home">
+  <meta property="og:description" content="Shop every piece from this warm natural home post — curated by @housinginfo.">
   <meta property="og:image" content="https://dream-space-landing.vercel.app/images/DXF_E6aGrOL-slide-1.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================================================
-       TOKENS
-    ============================================================ */
     :root {
       --bg: #FBF7F2;
       --surface: #FFFFFF;
@@ -53,9 +50,7 @@
       padding: 0 24px;
     }
 
-    /* ============================================================
-       NAV
-    ============================================================ */
+    /* NAV */
     .nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -76,25 +71,12 @@
       justify-content: space-between;
       padding: 18px 24px;
     }
-    .nav__wordmark {
-      font-family: var(--font-serif);
-      font-weight: 600;
-      font-size: 17px;
-    }
-    .nav__ig {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--muted);
-    }
+    .nav__wordmark { font-family: var(--font-serif); font-weight: 600; font-size: 17px; }
+    .nav__ig { font-size: 13px; font-weight: 600; color: var(--muted); }
     .nav__ig span { color: var(--accent); }
 
-    /* ============================================================
-       HERO
-    ============================================================ */
-    .hero {
-      padding: 110px 0 0;
-      text-align: center;
-    }
+    /* HERO */
+    .hero { padding: 110px 0 0; text-align: center; }
     .hero__eyebrow {
       display: inline-block;
       font-size: 11px;
@@ -120,35 +102,22 @@
     }
 
     /* Strip carousel */
-    .strip {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      margin-bottom: 0;
-    }
+    .strip { position: relative; overflow: hidden; width: 100%; margin-bottom: 0; }
     .strip__track {
       display: flex;
       gap: 12px;
       width: max-content;
-      animation: scroll-strip 40s linear infinite;
+      animation: scroll-strip 44s linear infinite;
       padding: 0 6px;
     }
     .strip:hover .strip__track { animation-play-state: paused; }
-    .strip__img {
-      width: 220px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 14px;
-      flex-shrink: 0;
-    }
+    .strip__img { width: 220px; height: 280px; object-fit: cover; border-radius: 14px; flex-shrink: 0; }
     @keyframes scroll-strip {
       0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
 
-    /* ============================================================
-       INTRO BAND
-    ============================================================ */
+    /* INTRO BAND */
     .intro-band {
       background: var(--surface2);
       border-top: 1px solid var(--hairline);
@@ -157,26 +126,11 @@
       text-align: center;
       margin-top: 0;
     }
-    .intro-band p {
-      font-size: 15px;
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .intro-band a {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
+    .intro-band p { font-size: 15px; color: var(--muted); max-width: 600px; margin: 0 auto; }
+    .intro-band a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
-    /* ============================================================
-       SECTION HEADER
-    ============================================================ */
-    .section-header {
-      padding: 64px 0 36px;
-      text-align: center;
-    }
+    /* SECTION HEADER */
+    .section-header { padding: 64px 0 36px; text-align: center; }
     .section-header__label {
       display: inline-block;
       font-size: 11px;
@@ -186,31 +140,12 @@
       color: var(--accent);
       margin-bottom: 12px;
     }
-    .section-header__title {
-      font-family: var(--font-serif);
-      font-size: 30px;
-      font-weight: 600;
-      line-height: 1.25;
-      margin-bottom: 10px;
-    }
-    .section-header__sub {
-      color: var(--muted);
-      font-size: 15px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
+    .section-header__title { font-family: var(--font-serif); font-size: 30px; font-weight: 600; line-height: 1.25; margin-bottom: 10px; }
+    .section-header__sub { color: var(--muted); font-size: 15px; max-width: 500px; margin: 0 auto; }
 
-    /* ============================================================
-       PRODUCT GRID
-    ============================================================ */
-    .products {
-      padding-bottom: 80px;
-    }
-    .products__grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
+    /* PRODUCT GRID */
+    .products { padding-bottom: 80px; }
+    .products__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 
     .product-card {
       background: var(--surface);
@@ -221,29 +156,14 @@
       flex-direction: column;
       transition: box-shadow .25s, transform .25s;
     }
-    .product-card:hover {
-      box-shadow: 0 10px 40px rgba(0,0,0,.08);
-      transform: translateY(-3px);
-    }
+    .product-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,.08); transform: translateY(-3px); }
 
-    .product-card__img-wrap {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 4/3;
-    }
-    .product-card__img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .4s ease;
-    }
-    .product-card:hover .product-card__img-wrap img {
-      transform: scale(1.04);
-    }
+    .product-card__img-wrap { position: relative; overflow: hidden; aspect-ratio: 4/3; }
+    .product-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .product-card:hover .product-card__img-wrap img { transform: scale(1.04); }
     .product-card__room-tag {
       position: absolute;
-      top: 12px;
-      left: 12px;
+      top: 12px; left: 12px;
       background: rgba(251,247,242,0.92);
       backdrop-filter: blur(6px);
       font-size: 10px;
@@ -256,33 +176,10 @@
       border: 1px solid var(--hairline);
     }
 
-    .product-card__body {
-      padding: 18px 18px 20px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 6px;
-    }
-    .product-card__retailer {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .product-card__name {
-      font-family: var(--font-serif);
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.3;
-      color: var(--text);
-    }
-    .product-card__desc {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.55;
-      flex: 1;
-    }
+    .product-card__body { padding: 18px 18px 20px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+    .product-card__retailer { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .product-card__name { font-family: var(--font-serif); font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--text); }
+    .product-card__desc { font-size: 13px; color: var(--muted); line-height: 1.55; flex: 1; }
     .product-card__footer {
       display: flex;
       align-items: center;
@@ -291,11 +188,7 @@
       padding-top: 14px;
       border-top: 1px solid var(--hairline);
     }
-    .product-card__price {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-    }
+    .product-card__price { font-size: 15px; font-weight: 600; color: var(--text); }
     .product-card__btn {
       display: inline-flex;
       align-items: center;
@@ -310,70 +203,21 @@
       text-decoration: none;
       white-space: nowrap;
     }
-    .product-card__btn:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-    .product-card__btn svg {
-      width: 11px; height: 11px;
-      flex-shrink: 0;
-    }
+    .product-card__btn:hover { background: var(--accent); color: #fff; }
+    .product-card__btn svg { width: 11px; height: 11px; flex-shrink: 0; }
 
-    /* ============================================================
-       ROOM DIVIDERS
-    ============================================================ */
-    .room-section {
-      padding-bottom: 60px;
-    }
-    .room-section + .room-section {
-      padding-top: 12px;
-    }
-    .room-label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .room-label__text {
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-    .room-label__line {
-      flex: 1;
-      height: 1px;
-      background: var(--hairline);
-    }
-    .room-label__img {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--hairline);
-      flex-shrink: 0;
-    }
+    /* ROOM DIVIDERS */
+    .room-section { padding-bottom: 60px; }
+    .room-section + .room-section { padding-top: 12px; }
+    .room-label { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .room-label__text { font-family: var(--font-serif); font-size: 20px; font-weight: 600; white-space: nowrap; }
+    .room-label__line { flex: 1; height: 1px; background: var(--hairline); }
+    .room-label__img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--hairline); flex-shrink: 0; }
 
-    /* ============================================================
-       FOOTER
-    ============================================================ */
-    .footer {
-      background: var(--surface2);
-      border-top: 1px solid var(--hairline);
-      padding: 40px 24px;
-      text-align: center;
-    }
-    .footer__wordmark {
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .footer__sub {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
+    /* FOOTER */
+    .footer { background: var(--surface2); border-top: 1px solid var(--hairline); padding: 40px 24px; text-align: center; }
+    .footer__wordmark { font-family: var(--font-serif); font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+    .footer__sub { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
     .footer__ig-link {
       display: inline-flex;
       align-items: center;
@@ -385,9 +229,7 @@
       text-underline-offset: 3px;
     }
 
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
+    /* RESPONSIVE */
     @media (max-width: 960px) {
       .products__grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .hero__title { font-size: 36px; }
@@ -414,25 +256,24 @@
   <section class="hero">
     <div class="container">
       <div class="hero__eyebrow">Shop the Look</div>
-      <h1 class="hero__title">Soft Modern Home</h1>
+      <h1 class="hero__title">Warm Natural Home</h1>
       <p class="hero__sub">Every piece from the post, sourced and linked so you can bring this exact feeling home.</p>
     </div>
 
-    <!-- Scrolling strip -->
+    <!-- Scrolling strip — slide 12 excluded (promo slide) -->
     <div class="strip">
       <div class="strip__track" id="strip">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-1.jpg" alt="Soft modern living room">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-2.jpg" alt="Soft modern dining room">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-3.jpg" alt="Soft modern bedroom">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-4.jpg" alt="Soft modern kitchen">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-5.jpg" alt="Soft modern sitting area">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-6.jpg" alt="Soft modern details">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-7.jpg" alt="Soft modern hallway">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-8.jpg" alt="Soft modern bathroom">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-9.jpg" alt="Soft modern study">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-10.jpg" alt="Soft modern patio">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-11.jpg" alt="Soft modern entryway">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-12.jpg" alt="Soft modern accent">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-1.jpg" alt="Kitchen dining area">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-2.jpg" alt="Sunny living room">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-3.jpg" alt="Open plan living and dining">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-4.jpg" alt="Dining room with bookshelf">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-5.jpg" alt="Library living room">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-6.jpg" alt="Home office with glass partition">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-7.jpg" alt="Window study nook">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-8.jpg" alt="Living room with TV console">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-9.jpg" alt="Plant-filled bedroom">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-10.jpg" alt="Serene master bedroom">
+        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-11.jpg" alt="Balcony with rattan sofa">
         <!-- duplicate for seamless loop -->
         <img class="strip__img" src="../images/DXF_E6aGrOL-slide-1.jpg" alt="">
         <img class="strip__img" src="../images/DXF_E6aGrOL-slide-2.jpg" alt="">
@@ -445,7 +286,6 @@
         <img class="strip__img" src="../images/DXF_E6aGrOL-slide-9.jpg" alt="">
         <img class="strip__img" src="../images/DXF_E6aGrOL-slide-10.jpg" alt="">
         <img class="strip__img" src="../images/DXF_E6aGrOL-slide-11.jpg" alt="">
-        <img class="strip__img" src="../images/DXF_E6aGrOL-slide-12.jpg" alt="">
       </div>
     </div>
   </section>
@@ -459,31 +299,111 @@
   <section class="products">
     <div class="container">
 
-      <!-- LIVING ROOM -->
       <div class="section-header">
         <div class="section-header__label">From the post</div>
         <div class="section-header__title">Shop by Room</div>
         <p class="section-header__sub">Click any card to shop the piece directly on the retailer's site.</p>
       </div>
 
+      <!-- ── DINING ROOM ── -->
       <div class="room-section">
         <div class="room-label">
-          <img class="room-label__img" src="../images/DXF_E6aGrOL-slide-1.jpg" alt="Living Room">
+          <img class="room-label__img" src="../images/DXF_E6aGrOL-slide-1.jpg" alt="Dining Room">
+          <span class="room-label__text">Dining Room</span>
+          <div class="room-label__line"></div>
+        </div>
+        <div class="products__grid">
+
+          <!-- Solid Wood Dining Table -->
+          <a class="product-card" href="https://www.wayfair.com/furniture/sb2/rectangular-dining-tables-c215323-a7049~rect+tables-a5185~solid+wood.html" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-1.jpg" alt="Solid oak dining table">
+              <span class="product-card__room-tag">Dining Room</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Wayfair</div>
+              <div class="product-card__name">Solid Wood Rectangular Dining Table, Oak</div>
+              <div class="product-card__desc">A sturdy oak-finish dining table with clean lines — the warm centrepiece anchoring the kitchen dining space in slides 1 &amp; 4.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">from $599</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Plaid Dining Chairs -->
+          <a class="product-card" href="https://www.amazon.com/s?k=plaid+upholstered+dining+chairs+wood+legs" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-4.jpg" alt="Plaid upholstered dining chairs">
+              <span class="product-card__room-tag">Dining Room</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Plaid Upholstered Dining Chairs, Wood Legs</div>
+              <div class="product-card__desc">Blue-and-cream plaid fabric seats on solid wood legs — exactly the mix of chairs seen around the dining table in slide 4.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$120–$180 each</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Rattan Globe Pendant -->
+          <a class="product-card" href="https://www.amazon.com/s?k=rattan+wicker+globe+pendant+light" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-4.jpg" alt="Rattan globe pendant light">
+              <span class="product-card__room-tag">Dining Room</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Rattan Globe Pendant Light</div>
+              <div class="product-card__desc">A large woven rattan ball pendant casting soft, warm light over the dining table — the statement light fixture from slide 4.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$60–$120</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Wall-Mounted Open Shelves -->
+          <a class="product-card" href="https://www.amazon.com/s?k=wood+wall+mounted+floating+shelves+set+of+3+kitchen" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-1.jpg" alt="Wood floating wall shelves">
+              <span class="product-card__room-tag">Dining Room</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Floating Wood Wall Shelves, Set of 3</div>
+              <div class="product-card__desc">Warm-toned wood shelves wall-mounted above the dining area — used to display plants, ceramics, and cookbooks as seen in slide 1.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$50–$90</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ── LIVING ROOM ── -->
+      <div class="room-section">
+        <div class="room-label">
+          <img class="room-label__img" src="../images/DXF_E6aGrOL-slide-2.jpg" alt="Living Room">
           <span class="room-label__text">Living Room</span>
           <div class="room-label__line"></div>
         </div>
         <div class="products__grid">
 
-          <!-- Card 1: Linen Sofa -->
-          <a class="product-card" href="https://www.potterybarn.com/products/pb-comfort-square-arm-sofa/" target="_blank" rel="noopener">
+          <!-- Cream Linen Sofa -->
+          <a class="product-card" href="https://www.potterybarn.com/products/pb-comfort-square-arm-sofa/?catalogId=44&sku=9419894&cm_ven=PLA" target="_blank" rel="noopener">
             <div class="product-card__img-wrap">
-              <img src="../images/shop-dining-table.jpg" alt="Linen upholstered sofa">
+              <img src="../images/DXF_E6aGrOL-slide-2.jpg" alt="Cream linen sofa">
               <span class="product-card__room-tag">Living Room</span>
             </div>
             <div class="product-card__body">
               <div class="product-card__retailer">Pottery Barn</div>
-              <div class="product-card__name">PB Comfort Square Arm Sofa, Linen</div>
-              <div class="product-card__desc">Deep, relaxed cushions in a warm linen weave — the centerpiece sofa anchoring the living room.</div>
+              <div class="product-card__name">PB Comfort Square Arm Sofa, Cream Linen</div>
+              <div class="product-card__desc">Deep, sink-in cushions upholstered in warm cream linen — the large corner sofa filling the living room in slides 2, 3 &amp; 8.</div>
               <div class="product-card__footer">
                 <span class="product-card__price">from $2,299</span>
                 <span class="product-card__btn">Shop Now <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
@@ -491,125 +411,50 @@
             </div>
           </a>
 
-          <!-- Card 2: Curved Accent Chair -->
-          <a class="product-card" href="https://www.wayfair.com/furniture/sb2/accent-chairs-c1866825-a93989~barrel+chairs.html" target="_blank" rel="noopener">
+          <!-- Oval Glass Coffee Table -->
+          <a class="product-card" href="https://www.wayfair.com/furniture/sb2/oval-glass-coffee-tables-c415149.html" target="_blank" rel="noopener">
             <div class="product-card__img-wrap">
-              <img src="../images/shop-dining-chairs.jpg" alt="Curved barrel accent chair">
+              <img src="../images/DXF_E6aGrOL-slide-3.jpg" alt="Oval glass and wood coffee table">
               <span class="product-card__room-tag">Living Room</span>
             </div>
             <div class="product-card__body">
               <div class="product-card__retailer">Wayfair</div>
-              <div class="product-card__name">Curved Barrel Accent Chair, Cream</div>
-              <div class="product-card__desc">A rounded, cocoon-like silhouette in cream upholstery — the sculptural accent chair from the corner of the room.</div>
+              <div class="product-card__name">Oval Glass Coffee Table with Wood Frame</div>
+              <div class="product-card__desc">Clear tempered glass top on a warm wood frame — the light, airy coffee table seen in the centre of the living room in slide 3.</div>
               <div class="product-card__footer">
-                <span class="product-card__price">from $499</span>
+                <span class="product-card__price">from $350</span>
                 <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
               </div>
             </div>
           </a>
 
-          <!-- Card 3: Round Coffee Table -->
-          <a class="product-card" href="https://www.potterybarn.com/products/griffin-round-coffee-table/" target="_blank" rel="noopener">
+          <!-- Floral Area Rug -->
+          <a class="product-card" href="https://www.wayfair.com/rugs/sb2/floral-rugs-c415179-a140~floral.html" target="_blank" rel="noopener">
             <div class="product-card__img-wrap">
-              <img src="../images/shop-coffee-table.jpg" alt="Round natural wood coffee table">
-              <span class="product-card__room-tag">Living Room</span>
-            </div>
-            <div class="product-card__body">
-              <div class="product-card__retailer">Pottery Barn</div>
-              <div class="product-card__name">Griffin Round Coffee Table</div>
-              <div class="product-card__desc">A solid wood round table with a warm natural finish — grounds the seating area with organic warmth.</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">~$899</span>
-                <span class="product-card__btn">Shop Now <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 4: Jute Area Rug -->
-          <a class="product-card" href="https://www.wayfair.com/rugs/sb2/jute-rugs-c415179-a5076~272699.html" target="_blank" rel="noopener">
-            <div class="product-card__img-wrap">
-              <img src="../images/shop-rug.jpg" alt="Natural jute area rug">
+              <img src="../images/DXF_E6aGrOL-slide-8.jpg" alt="Floral cream area rug">
               <span class="product-card__room-tag">Living Room</span>
             </div>
             <div class="product-card__body">
               <div class="product-card__retailer">Wayfair</div>
-              <div class="product-card__name">Natural Jute Area Rug</div>
-              <div class="product-card__desc">Woven natural jute in a warm neutral tone — layers beautifully under a linen sofa and wood coffee table.</div>
+              <div class="product-card__name">Floral Cream Area Rug</div>
+              <div class="product-card__desc">A soft cream rug with a delicate floral print — grounds the sofa and coffee table as seen in slide 8.</div>
               <div class="product-card__footer">
-                <span class="product-card__price">from $150</span>
+                <span class="product-card__price">from $180</span>
                 <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
               </div>
             </div>
           </a>
 
-        </div>
-      </div>
-
-      <!-- DINING ROOM -->
-      <div class="room-section">
-        <div class="room-label">
-          <img class="room-label__img" src="../images/DXF_E6aGrOL-slide-2.jpg" alt="Dining Room">
-          <span class="room-label__text">Dining Room</span>
-          <div class="room-label__line"></div>
-        </div>
-        <div class="products__grid" style="grid-template-columns: repeat(2, 1fr);">
-
-          <!-- Card 5: Dining Table -->
-          <a class="product-card" href="https://www.potterybarn.com/products/banks-extending-dining-table/" target="_blank" rel="noopener">
+          <!-- Wood TV Console -->
+          <a class="product-card" href="https://www.potterybarn.com/products/media-console-cabinet/?catalogId=44" target="_blank" rel="noopener">
             <div class="product-card__img-wrap">
-              <img src="../images/shop-dining-table.jpg" alt="Rectangular dining table warm wood">
-              <span class="product-card__room-tag">Dining Room</span>
+              <img src="../images/DXF_E6aGrOL-slide-8.jpg" alt="Wood TV media console">
+              <span class="product-card__room-tag">Living Room</span>
             </div>
             <div class="product-card__body">
               <div class="product-card__retailer">Pottery Barn</div>
-              <div class="product-card__name">Banks Extending Dining Table</div>
-              <div class="product-card__desc">Solid hardwood with a warm honey finish — the long dining table seen anchoring the dining space.</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">~$2,499</span>
-                <span class="product-card__btn">Shop Now <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 6: Pendant Light -->
-          <a class="product-card" href="https://www.wayfair.com/lighting/sb2/pendant-lights-c215323-a92050~rattan+wicker.html" target="_blank" rel="noopener">
-            <div class="product-card__img-wrap">
-              <img src="../images/shop-chandelier.jpg" alt="Woven rattan pendant light">
-              <span class="product-card__room-tag">Dining Room</span>
-            </div>
-            <div class="product-card__body">
-              <div class="product-card__retailer">Wayfair</div>
-              <div class="product-card__name">Woven Rattan Pendant Light</div>
-              <div class="product-card__desc">A natural rattan weave pendant casting warm, dappled light — the dining room overhead fixture from the post.</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">from $120</span>
-                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- BEDROOM -->
-      <div class="room-section">
-        <div class="room-label">
-          <img class="room-label__img" src="../images/DXF_E6aGrOL-slide-3.jpg" alt="Bedroom">
-          <span class="room-label__text">Bedroom</span>
-          <div class="room-label__line"></div>
-        </div>
-        <div class="products__grid" style="grid-template-columns: repeat(2, 1fr);">
-
-          <!-- Card 7: Upholstered Bed -->
-          <a class="product-card" href="https://www.potterybarn.com/products/pb-teen-Cameron-upholstered-bed/" target="_blank" rel="noopener">
-            <div class="product-card__img-wrap">
-              <img src="../images/shop-sconce.jpg" alt="Linen upholstered bed frame">
-              <span class="product-card__room-tag">Bedroom</span>
-            </div>
-            <div class="product-card__body">
-              <div class="product-card__retailer">Pottery Barn</div>
-              <div class="product-card__name">Upholstered Bed, Linen Blend</div>
-              <div class="product-card__desc">A low-profile upholstered headboard in soft linen — the bed frame bringing quiet luxury to the bedroom.</div>
+              <div class="product-card__name">Burnished Wood Media Console</div>
+              <div class="product-card__desc">A long, low sideboard in warm burnished wood with cabinet storage — the TV console anchoring the far wall in slide 8.</div>
               <div class="product-card__footer">
                 <span class="product-card__price">from $1,299</span>
                 <span class="product-card__btn">Shop Now <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
@@ -617,19 +462,208 @@
             </div>
           </a>
 
-          <!-- Card 8: Terracotta Pot -->
-          <a class="product-card" href="https://www.amazon.com/INGOFIN-Terracotta-Pot-Saucer-Drainage/dp/B0DJS9RYRC" target="_blank" rel="noopener">
+        </div>
+      </div>
+
+      <!-- ── HOME OFFICE / STUDY ── -->
+      <div class="room-section">
+        <div class="room-label">
+          <img class="room-label__img" src="../images/DXF_E6aGrOL-slide-6.jpg" alt="Home Office">
+          <span class="room-label__text">Home Office &amp; Study</span>
+          <div class="room-label__line"></div>
+        </div>
+        <div class="products__grid">
+
+          <!-- Wood-Frame Glass Room Divider -->
+          <a class="product-card" href="https://www.amazon.com/s?k=wood+frame+glass+room+divider+partition" target="_blank" rel="noopener">
             <div class="product-card__img-wrap">
-              <img src="../images/shop-terracotta-pot.jpg" alt="Large terracotta pot">
+              <img src="../images/DXF_E6aGrOL-slide-6.jpg" alt="Wood frame glass room divider">
+              <span class="product-card__room-tag">Home Office</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Wood-Frame Glass Room Divider / Partition</div>
+              <div class="product-card__desc">A sleek natural wood frame with glass panes that separates the home office from the rest of the space — as seen in slide 6.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$200–$400</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Window Desk / Floating Shelf Desk -->
+          <a class="product-card" href="https://www.amazon.com/s?k=wall+mounted+floating+desk+wood+natural" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-7.jpg" alt="Window-side floating desk">
+              <span class="product-card__room-tag">Home Office</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Wall-Mounted Floating Desk, Natural Wood</div>
+              <div class="product-card__desc">A minimal floating desk shelf built into the window bay with a city view — the clean, understated workspace from slide 7.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$80–$150</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bamboo Blinds -->
+          <a class="product-card" href="https://www.amazon.com/s?k=bamboo+woven+wood+roller+blinds+natural" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-7.jpg" alt="Natural bamboo woven blinds">
+              <span class="product-card__room-tag">Home Office</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Natural Bamboo Woven Roller Blinds</div>
+              <div class="product-card__desc">Warm woven bamboo slat blinds filtering soft, dappled light — the window treatment framing the study nook in slide 7.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$40–$90</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Tall Bookshelf -->
+          <a class="product-card" href="https://www.wayfair.com/furniture/sb2/bookcases-bookshelves-c215323-a3162~5+plus+shelves-a69116~71+in+or+more.html" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-5.jpg" alt="Tall floor-to-ceiling bookshelf">
+              <span class="product-card__room-tag">Study</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Wayfair</div>
+              <div class="product-card__name">Tall Floor-to-Ceiling Bookcase, Warm Wood</div>
+              <div class="product-card__desc">A floor-to-ceiling bookcase packed with books and objects — the dramatic built-in style shelving unit from slides 4 &amp; 5.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">from $250</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ── BEDROOM ── -->
+      <div class="room-section">
+        <div class="room-label">
+          <img class="room-label__img" src="../images/DXF_E6aGrOL-slide-9.jpg" alt="Bedroom">
+          <span class="room-label__text">Bedroom</span>
+          <div class="room-label__line"></div>
+        </div>
+        <div class="products__grid">
+
+          <!-- Low Wood Platform Bed -->
+          <a class="product-card" href="https://www.wayfair.com/furniture/sb2/platform-beds-c215323-a2309~low+profile-a3290~wood.html" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-9.jpg" alt="Low wood platform bed">
+              <span class="product-card__room-tag">Bedroom</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Wayfair</div>
+              <div class="product-card__name">Low-Profile Wood Platform Bed</div>
+              <div class="product-card__desc">A minimal low-to-the-floor solid wood platform bed — the calm, grounded bed frame layered with sage green bedding in slide 9.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">from $499</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Paper Globe Pendant Light -->
+          <a class="product-card" href="https://www.amazon.com/s?k=large+paper+globe+pendant+light+white+ceiling" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-9.jpg" alt="Paper globe pendant light">
               <span class="product-card__room-tag">Bedroom</span>
             </div>
             <div class="product-card__body">
               <div class="product-card__retailer">Amazon</div>
-              <div class="product-card__name">Large Terracotta Pot with Saucer</div>
-              <div class="product-card__desc">Classic clay terracotta — the statement plant pot adding a grounded, earthy accent to the bedroom corner.</div>
+              <div class="product-card__name">Large Paper Globe Pendant Light</div>
+              <div class="product-card__desc">A big, soft white rice paper globe hanging from the ceiling — diffuses a gentle warm glow over the bedroom as in slides 4 &amp; 9.</div>
               <div class="product-card__footer">
-                <span class="product-card__price">~$25</span>
+                <span class="product-card__price">~$25–$60</span>
                 <span class="product-card__btn">Shop Now <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Sheer Linen Curtains -->
+          <a class="product-card" href="https://www.amazon.com/s?k=sheer+linen+curtains+beige+cream+floor+length" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-10.jpg" alt="Sheer linen curtains">
+              <span class="product-card__room-tag">Bedroom</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Sheer Linen Curtains, Cream / Beige</div>
+              <div class="product-card__desc">Floor-length sheer linen panels pooling softly — the billowy window curtains letting warm light pour in as seen in slides 9 &amp; 10.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$30–$70 per panel</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bedside Table / Wood Dresser -->
+          <a class="product-card" href="https://www.potterybarn.com/products/toulouse-nightstand/?catalogId=44" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-10.jpg" alt="Wood bedside nightstand">
+              <span class="product-card__room-tag">Bedroom</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Pottery Barn</div>
+              <div class="product-card__name">Toulouse Wood Nightstand</div>
+              <div class="product-card__desc">A warm-toned wood bedside table with drawer storage — the nightstand paired with a table lamp and flowers in slide 10.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$499</span>
+                <span class="product-card__btn">Shop Now <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ── BALCONY ── -->
+      <div class="room-section">
+        <div class="room-label">
+          <img class="room-label__img" src="../images/DXF_E6aGrOL-slide-11.jpg" alt="Balcony">
+          <span class="room-label__text">Balcony</span>
+          <div class="room-label__line"></div>
+        </div>
+        <div class="products__grid" style="grid-template-columns: repeat(2, 1fr);">
+
+          <!-- Rattan Outdoor Loveseat -->
+          <a class="product-card" href="https://www.amazon.com/s?k=rattan+wicker+outdoor+loveseat+sofa+cushions" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-11.jpg" alt="Rattan outdoor loveseat">
+              <span class="product-card__room-tag">Balcony</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Rattan Outdoor Loveseat with Cushions</div>
+              <div class="product-card__desc">A natural wicker loveseat with plump floral-print cushions — the cosy balcony seating surrounded by flowers in slide 11.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$200–$400</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Large Potted Flowers -->
+          <a class="product-card" href="https://www.amazon.com/s?k=large+terracotta+planter+pot+outdoor+pink+hydrangea" target="_blank" rel="noopener">
+            <div class="product-card__img-wrap">
+              <img src="../images/DXF_E6aGrOL-slide-11.jpg" alt="Large potted pink hydrangeas">
+              <span class="product-card__room-tag">Balcony</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__retailer">Amazon</div>
+              <div class="product-card__name">Large Terracotta Planters for Outdoor Flowers</div>
+              <div class="product-card__desc">Big terracotta pots perfect for lush pink hydrangeas — the overflowing flower pots that make the balcony feel like a garden in slide 11.</div>
+              <div class="product-card__footer">
+                <span class="product-card__price">~$20–$45</span>
+                <span class="product-card__btn">Browse <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8M6 2l4 4-4 4"/></svg></span>
               </div>
             </div>
           </a>
@@ -651,7 +685,6 @@
   </footer>
 
   <script>
-    // Sticky nav
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('nav--scrolled', window.scrollY > 20);

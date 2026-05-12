@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/trending", "destination": "/api/trending" },
-    { "source": "/cozyhome", "destination": "/cozyhome.html" }
+    { "source": "/api/trending", "destination": "/api/trending" }
   ]
 }

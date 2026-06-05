@@ -1,549 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title>Shop the Look — French Blue & White Home | @housinginfo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Shop every piece from this French blue and white home — antique gilt mirrors, blue-and-white ginger jars, oushak rugs, and the soft, lived-in patina that makes a house feel loved for generations. Curated by @housinginfo.">
+<meta property="og:title" content="Shop the Look – French Blue & White Home">
+<meta property="og:description" content="Shop every piece from this French blue and white home — curated by @housinginfo.">
+<meta property="og:image" content="https://dream-space-landing.vercel.app/images/dzl4-slide-1.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f7f8fc;
+    --paper: #ffffff;
+    --ink: #1e2a3a;
+    --ink-soft: #5a6a7e;
+    --line: #dce4ee;
+    --accent: #3b6ea5;
+    --accent-soft: #e8eef7;
+    --warm: #8b6a3e;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; }
+  body { padding: 0 0 80px; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-  <title>Your Space, Fixed — See What's Possible | Dream Space Tool</title>
-  <meta name="description" content="Upload a photo of your room and see it transformed in this warm, botanical, classic aesthetic — the same look from this Housing Info post. Get a full design breakdown you can actually follow.">
-  <meta property="og:title" content="Your Space, Fixed — See What's Possible | Dream Space Tool">
-  <meta property="og:description" content="Warm botanical style, brass accents, layered textures, and the kind of character that makes a house feel like a home.">
-  <meta property="og:image" content="../images/dxfg-slide-2.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../post-landing.css">
-  <!-- PostHog Analytics -->
-  <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init rs ls yi ns us ts ss capture Hi calculateEventProperties vs register register_once register_for_session unregister unregister_for_session gs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fs ds createPersonProfile ps Qr opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing hs debug O cs getPageViewId captureTraceFeedback captureTraceMetric Kr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_bMApsOmHPJstTt5gvvm7XEwMFs3KDYlttZQ44j6LMCN', {
-        api_host: 'https://us.i.posthog.com',
-        defaults: '2025-11-30',
-        person_profiles: 'identified_only',
-    })
-  </script>
+  .toolbar {
+    background: var(--ink); color: #f7f8fc; padding: 12px 24px;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 30;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .toolbar .brand { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; }
+  .toolbar .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tbtn {
+    background: transparent; color: #f7f8fc; border: 1px solid rgba(247,248,252,0.4);
+    padding: 7px 14px; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase;
+    cursor: pointer; border-radius: 4px; font-family: 'Inter', sans-serif; font-weight: 500;
+  }
+  .tbtn:hover { background: rgba(247,248,252,0.12); }
+  .tbtn.primary { background: #f7f8fc; color: var(--ink); border-color: #f7f8fc; }
+  .tbtn.primary:hover { background: #fff; }
+
+  .hero { padding: 80px 0 60px; text-align: center; }
+  .hero .acct { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 8px; }
+  .hero .follow {
+    display: inline-block; margin-bottom: 36px; font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink); border: 1px solid var(--ink); padding: 7px 16px; border-radius: 999px; text-decoration: none;
+  }
+  .hero .follow:hover { background: var(--ink); color: var(--bg); }
+  .hero .eyebrow { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--ink-soft); margin-bottom: 8px; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 64px; line-height: 1.05; margin: 0 0 20px; letter-spacing: -0.01em; }
+  .hero p { max-width: 560px; margin: 0 auto; font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
+
+  .strip { position: relative; overflow: hidden; width: 100%; margin: 40px 0 80px; }
+  .strip__track {
+    display: flex; gap: 12px; width: max-content;
+    animation: scroll-strip 52s linear infinite; padding: 0 6px;
+  }
+  .strip:hover .strip__track { animation-play-state: paused; }
+  .strip__img { width: 220px; height: 280px; object-fit: cover; border-radius: 14px; flex-shrink: 0; background: #dce4ee; cursor: zoom-in; }
+  @keyframes scroll-strip {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @media (max-width: 560px) { .strip__img { width: 160px; height: 210px; } }
+
+  .source-line {
+    text-align: center; font-size: 14px; color: var(--ink-soft); margin: 24px 0 80px; line-height: 1.7;
+  }
+  .source-line a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+  .shop-header { text-align: center; margin: 60px 0 40px; }
+  .shop-header .eyebrow { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
+  .shop-header h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 48px; margin: 0 0 12px; }
+  .shop-header p { color: var(--ink-soft); font-size: 14px; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+  .room {
+    margin-bottom: 80px;
+    display: grid; grid-template-columns: 1fr 2fr; gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 880px) { .room { grid-template-columns: 1fr; gap: 24px; } }
+  .room-anchor { position: sticky; top: 80px; }
+  @media (max-width: 880px) { .room-anchor { position: static; } }
+  .room-anchor .anchor-img {
+    aspect-ratio: 4 / 5; background: #dce4ee; border-radius: 4px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .room-anchor .anchor-img img { width: 100%; height: 100%; object-fit: cover; }
+  .room-anchor h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; margin: 16px 0 4px; }
+  .room-anchor .slides { font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; }
+
+  .products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 600px) { .products { grid-template-columns: 1fr; } }
+
+  .product {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 6px; padding: 18px 18px 16px;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    text-decoration: none; color: inherit;
+  }
+  .product:hover { box-shadow: 0 6px 20px rgba(30, 42, 58, 0.08); transform: translateY(-1px); }
+  .product .tags { display: flex; justify-content: space-between; align-items: center; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .product .tags .retailer { font-weight: 600; color: var(--accent); }
+  .product .name { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 19px; line-height: 1.2; color: var(--ink); }
+  .product .desc { font-size: 12.5px; line-height: 1.55; color: var(--ink-soft); flex: 1; }
+  .product .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; }
+  .product .price { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: var(--ink); }
+  .product .shop-btn {
+    background: var(--ink); color: var(--bg); text-decoration: none;
+    padding: 7px 14px; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    border-radius: 4px;
+  }
+  .product .shop-btn:hover { background: var(--accent); }
+
+  body.edit-mode [contenteditable] {
+    outline: 1px dashed var(--accent);
+    outline-offset: 2px;
+    background: rgba(59, 110, 165, 0.06);
+  }
+  body.edit-mode .product { border-color: var(--accent); }
+  body.edit-mode .shop-btn { pointer-events: none; opacity: 0.6; }
+
+  .lightbox {
+    position: fixed; inset: 0; background: rgba(18, 26, 38, 0.94);
+    display: none; align-items: center; justify-content: center; z-index: 200;
+    padding: 30px; cursor: zoom-out;
+  }
+  .lightbox.show { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+  .lightbox .close { position: absolute; top: 20px; right: 24px; color: #f7f8fc; font-size: 28px; cursor: pointer; background: none; border: 0; }
+
+  footer {
+    border-top: 1px solid var(--line); margin-top: 60px; padding: 40px 0; text-align: center;
+    background: var(--paper);
+  }
+  footer h4 { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 24px; margin: 0 0 8px; }
+  footer p { color: var(--ink-soft); font-size: 13px; margin: 0 0 14px; }
+  footer a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; font-size: 13px; }
+</style>
 </head>
 <body>
 
-  <!-- ============ NAV ============ -->
-  <nav class="pnav" id="pnav">
-    <div class="pnav__inner">
-      <a href="../index.html" class="pnav__wordmark">Dream Space Tool</a>
-      <a href="#pricing" class="pnav__cta" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'nav'})">Try this style</a>
-    </div>
-  </nav>
+<div class="toolbar">
+  <div class="brand">housinginfo · Shop the Look</div>
+  <div class="actions">
+    <button class="tbtn" id="editBtn" type="button">✏️ Edit Mode</button>
+    <button class="tbtn" id="saveBtn" type="button">💾 Save Standalone HTML</button>
+  </div>
+</div>
 
-  <!-- ============ 1. HERO WITH CAROUSEL ============ -->
-  <section class="phero">
-    <div class="container phero__grid">
-      <div class="phero__text">
-        <p class="phero__eyebrow">AS SEEN ON HOUSING INFO</p>
-        <h1 class="phero__title">Love this style? Recreate it in your own space.</h1>
-        <div class="phero__image phero__image--mobile">
-          <div class="carousel" id="heroCarouselMobile">
-            <div class="carousel__track">
-              <img src="../images/dxfg-slide-1.jpg" alt="Before: awkward hallway" class="carousel__slide carousel__slide--active" loading="eager">
-              <img src="../images/dxfg-slide-2.jpg" alt="After: warm botanical hallway" class="carousel__slide" loading="lazy">
-              <img src="../images/dxfg-slide-3.jpg" alt="Before: bare bedroom" class="carousel__slide" loading="lazy">
-              <img src="../images/dxfg-slide-4.jpg" alt="After: warm sage bedroom" class="carousel__slide" loading="lazy">
-              <img src="../images/dxfg-slide-5.jpg" alt="Before: living room lacking character" class="carousel__slide" loading="lazy">
-              <img src="../images/dxfg-slide-6.jpg" alt="After: warm botanical living room" class="carousel__slide" loading="lazy">
-            </div>
-            <div class="carousel__dots" id="carouselDotsMobile"></div>
-          </div>
-        </div>
-        <p class="phero__sub">Upload a photo of your room and see it transformed in this warm, layered aesthetic. Get a full design breakdown, style direction, and a clear plan you can follow.</p>
-        <p class="phero__proof">
-          <span class="phero__proof-dot"></span>
-          Trusted by 2M+ design lovers
-        </p>
-        <div class="phero__actions">
-          <a href="#pricing" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'hero'})">Try this style in my room</a>
-          <a href="#examples" class="phero__secondary">See examples</a>
-        </div>
-      </div>
-      <div class="phero__image">
-        <div class="carousel" id="heroCarousel">
-          <div class="carousel__track">
-            <img src="../images/dxfg-slide-1.jpg" alt="Before: awkward hallway" class="carousel__slide carousel__slide--active" loading="eager">
-            <img src="../images/dxfg-slide-2.jpg" alt="After: warm botanical hallway" class="carousel__slide" loading="lazy">
-            <img src="../images/dxfg-slide-3.jpg" alt="Before: bare bedroom" class="carousel__slide" loading="lazy">
-            <img src="../images/dxfg-slide-4.jpg" alt="After: warm sage bedroom" class="carousel__slide" loading="lazy">
-            <img src="../images/dxfg-slide-5.jpg" alt="Before: living room lacking character" class="carousel__slide" loading="lazy">
-            <img src="../images/dxfg-slide-6.jpg" alt="After: warm botanical living room" class="carousel__slide" loading="lazy">
-          </div>
-          <div class="carousel__dots" id="carouselDots"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="container">
 
-  <!-- ============ 2. WHY THIS LOOK WORKS ============ -->
-  <section class="pstyle">
-    <div class="container">
-      <div class="pstyle__inner">
-        <span class="pstyle__tag">Warm Botanical Style</span>
-        <h2 class="pstyle__heading">Why this look works</h2>
-        <p class="pstyle__body">Your room doesn't need a renovation — it needs the right ingredients. Warmth, texture, character. This style takes spaces that feel awkward, flat, or unfinished and turns them into rooms that feel lived-in and loved. Here's what makes the transformation work.</p>
-        <ul class="pstyle__bullets">
-          <li>Soft sage green and warm cream tones that instantly make a room feel calmer</li>
-          <li>Warm wood tones — honey oak, walnut, and natural rattan — grounding the space</li>
-          <li>Brass and antique gold fixtures that add warmth without feeling heavy</li>
-          <li>Botanical art prints, floral rugs, and trailing plants that layer in life</li>
-          <li>Linen, knit throws, and patterned cushions that make every seat feel inviting</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 3. HOW IT WORKS ============ -->
-  <section class="psteps" id="how-it-works">
-    <div class="container">
-      <h2 class="section-title">How it works</h2>
-      <div class="psteps__grid">
-        <div class="psteps__item">
-          <span class="psteps__num">1</span>
-          <h3 class="psteps__item-title">Upload your room photo</h3>
-          <p class="psteps__item-body">Snap a photo of any room you want to restyle. Any angle works.</p>
-        </div>
-        <div class="psteps__item">
-          <span class="psteps__num">2</span>
-          <h3 class="psteps__item-title">Apply Warm Botanical</h3>
-          <p class="psteps__item-body">We'll apply the exact style from this post to your room's unique layout.</p>
-        </div>
-        <div class="psteps__item">
-          <span class="psteps__num">3</span>
-          <h3 class="psteps__item-title">Get your transformation + plan</h3>
-          <p class="psteps__item-body">Receive a styled image and a step-by-step design guide you can follow.</p>
-        </div>
-      </div>
-      <div class="psteps__cta">
-        <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'steps'})">Try this style in my room</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 4. BEFORE / AFTER ============ -->
-  <section class="pba" id="examples">
-    <div class="container">
-      <h2 class="section-title">Your room, styled like this post</h2>
-      <p class="section-body">Same room, different direction. Drag the slider to compare.</p>
-      <div class="pba__grid">
-        <div class="pba__card">
-          <div class="ba-slider" data-before="../images/dxfg-slide-1.jpg" data-after="../images/dxfg-slide-2.jpg">
-            <div class="ba-slider__wrapper">
-              <img src="../images/dxfg-slide-2.jpg" alt="After" class="ba-slider__after" loading="lazy">
-              <div class="ba-slider__before-clip">
-                <img src="../images/dxfg-slide-1.jpg" alt="Before" class="ba-slider__before" loading="lazy">
-              </div>
-              <div class="ba-slider__handle">
-                <div class="ba-slider__line"></div>
-                <div class="ba-slider__knob">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19l-7-7 7-7"/><path d="M13 5l7 7-7 7"/></svg>
-                </div>
-              </div>
-              <span class="ba-slider__label ba-slider__label--before">Original</span>
-              <span class="ba-slider__label ba-slider__label--after">Transformed</span>
-            </div>
-            <div class="ba-slider__hint">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
-              <span>Drag to compare</span>
-            </div>
-          </div>
-          <p class="pba__caption">"From bare and bland to warm and full of character"</p>
-        </div>
-        <div class="pba__card">
-          <div class="ba-slider" data-before="../images/dxfg-slide-3.jpg" data-after="../images/dxfg-slide-4.jpg">
-            <div class="ba-slider__wrapper">
-              <img src="../images/dxfg-slide-4.jpg" alt="After" class="ba-slider__after" loading="lazy">
-              <div class="ba-slider__before-clip">
-                <img src="../images/dxfg-slide-3.jpg" alt="Before" class="ba-slider__before" loading="lazy">
-              </div>
-              <div class="ba-slider__handle">
-                <div class="ba-slider__line"></div>
-                <div class="ba-slider__knob">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19l-7-7 7-7"/><path d="M13 5l7 7-7 7"/></svg>
-                </div>
-              </div>
-              <span class="ba-slider__label ba-slider__label--before">Original</span>
-              <span class="ba-slider__label ba-slider__label--after">Transformed</span>
-            </div>
-            <div class="ba-slider__hint">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
-              <span>Drag to compare</span>
-            </div>
-          </div>
-          <p class="pba__caption">"Clean bones, completely transformed soul"</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 5. WHAT YOU GET ============ -->
-  <section class="pvalue">
-    <div class="container">
-      <h2 class="section-title">What you'll get</h2>
-      <div class="pvalue__grid">
-        <div class="pvalue__card">
-          <div class="pvalue__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="3" y="3" width="26" height="26" rx="4" stroke="currentColor" stroke-width="1.2"/><path d="M8 22l5-6 4 4 7-9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 class="pvalue__card-title">Visual transformation</h3>
-          <p class="pvalue__card-body">A personalized styled image of your actual room in this exact aesthetic.</p>
-        </div>
-        <div class="pvalue__card">
-          <div class="pvalue__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.2"/><path d="M16 10v6l4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-          </div>
-          <h3 class="pvalue__card-title">Room analysis</h3>
-          <p class="pvalue__card-body">What's working in your space and what to change, with clear next steps.</p>
-        </div>
-        <div class="pvalue__card">
-          <div class="pvalue__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 26V8a2 2 0 012-2h16a2 2 0 012 2v18l-5-3-5 3-5-3-5 3z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><line x1="11" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.2"/><line x1="11" y1="17" x2="18" y2="17" stroke="currentColor" stroke-width="1.2"/></svg>
-          </div>
-          <h3 class="pvalue__card-title">Style direction</h3>
-          <p class="pvalue__card-body">Key design moves, material suggestions, and a step-by-step plan.</p>
-        </div>
-        <div class="pvalue__card">
-          <div class="pvalue__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="18" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="4" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="18" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/></svg>
-          </div>
-          <h3 class="pvalue__card-title">Product suggestions</h3>
-          <p class="pvalue__card-body">Curated picks to help you bring this look to life in your own space.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 6. PRICING ============ -->
-  <section class="ppricing" id="pricing">
-    <div class="container">
-      <h2 class="section-title">Choose your room transformation</h2>
-      <p class="section-body">Every package includes a personalized design plan you can actually follow.</p>
-      <div class="ppricing__grid">
-        <!-- Single Room -->
-        <div class="ppricing__card">
-          <div class="ppricing__card-inner">
-            <span class="ppricing__name">Single Room</span>
-            <p class="ppricing__desc">Perfect for trying one room or refreshing a single space.</p>
-            <div class="ppricing__price">
-              <span class="ppricing__amount">$9.99</span>
-              <span class="ppricing__period">per month</span>
-            </div>
-            <ul class="ppricing__features">
-              <li>1 room transformation</li>
-              <li>Personalized style direction</li>
-              <li>Room analysis & design notes</li>
-              <li>Step-by-step recommendations</li>
-              <li>Curated product guidance</li>
-            </ul>
-            <a href="https://housing-info.vercel.app/try/choose?style=Warm+Botanical&ref=ig-DXFGlHtlGkq" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'pricing', plan: 'single', action: 'free_preview'})">Try free preview</a>
-            <a href="https://buy.stripe.com/9B64gzbTIgP61j35Shebu03?client_reference_id=DXFGlHtlGkq" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'pricing', plan: 'single', action: 'generate'})" style="margin-top: 0.5rem;">Generate now</a>
-          </div>
-        </div>
-        <!-- Full Home — Recommended -->
-        <div class="ppricing__card ppricing__card--featured">
-          <span class="ppricing__badge">Most popular</span>
-          <div class="ppricing__card-inner">
-            <span class="ppricing__name">Full Home</span>
-            <p class="ppricing__desc">Transform multiple rooms and see the full vision for your home.</p>
-            <div class="ppricing__price">
-              <span class="ppricing__amount">$29.99</span>
-              <span class="ppricing__period">per month</span>
-            </div>
-            <ul class="ppricing__features">
-              <li>Unlimited room generations</li>
-              <li>Personalized style direction</li>
-              <li>Room analysis & design notes</li>
-              <li>Step-by-step recommendations</li>
-              <li>Curated product guidance</li>
-              <li>Mix & match any styles</li>
-            </ul>
-            <a href="https://housing-info.vercel.app/try/choose?style=Warm+Botanical&ref=ig-DXFGlHtlGkq" class="btn btn--outline btn--pricing" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'pricing', plan: 'full_home', action: 'free_preview'})">Try free preview</a>
-            <a href="https://buy.stripe.com/3cIcN53ncgP61j3eoNebu04?client_reference_id=DXFGlHtlGkq" class="btn btn--primary btn--pricing" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'pricing', plan: 'full_home', action: 'generate'})" style="margin-top: 0.5rem;">Generate now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 7. WHAT HAPPENS NEXT ============ -->
-  <section class="pnext">
-    <div class="container">
-      <h2 class="section-title">What happens after you purchase</h2>
-      <div class="pnext__grid">
-        <div class="pnext__item">
-          <span class="pnext__num">1</span>
-          <h3 class="pnext__title">Upload your room</h3>
-          <p class="pnext__body">Take a photo of any room you want transformed.</p>
-        </div>
-        <div class="pnext__arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="pnext__item">
-          <span class="pnext__num">2</span>
-          <h3 class="pnext__title">We apply the style</h3>
-          <p class="pnext__body">Your room gets transformed in the Warm Botanical aesthetic.</p>
-        </div>
-        <div class="pnext__arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="pnext__item">
-          <span class="pnext__num">3</span>
-          <h3 class="pnext__title">Receive your plan</h3>
-          <p class="pnext__body">Get a styled image plus a full design guide in about 60 seconds.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 8. FAQ ============ -->
-  <section class="pfaq">
-    <div class="container">
-      <h2 class="section-title">Common questions</h2>
-      <div class="pfaq__list">
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            What exactly do I receive?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">A personalized styled image of your room in the Warm Botanical aesthetic, a detailed room analysis, step-by-step style direction, and curated product suggestions. Everything is viewable, savable, and downloadable instantly.</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            How long does it take?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">Your transformation and design plan are generated in about 60 seconds. You can view, save, and download everything right away.</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            Is this for one room?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">The Single Room plan covers one room. The Full Home plan gives you unlimited transformations, so you can do your living room, bedroom, kitchen, office, and more (or any combination you like).</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            Can I choose a different style?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">Yes! You can pick from multiple curated aesthetics. With the Full Home plan, you can try different styles for each room.</p></div>
-        </div>
-        <div class="pfaq__item">
-          <button class="pfaq__question" onclick="this.parentElement.classList.toggle('open')">
-            What if I'm not happy with the result?
-            <svg class="pfaq__icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="pfaq__answer"><p class="pfaq__answer-inner">You can regenerate with a different style or adjust your preferences. If you need extra help, email grace@housing.info and we'll work with you personally.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 9. FINAL CTA ============ -->
-  <section class="pfinal">
-    <div class="container pfinal__inner">
-      <h2 class="pfinal__title">Stop saving inspiration. Start bringing it to life.</h2>
-      <p class="pfinal__sub">You've found a look you love. Now see exactly how it translates to your own space.</p>
-      <a href="https://buy.stripe.com/9B64gzbTIgP61j35Shebu03?client_reference_id=DXFGlHtlGkq" class="btn btn--primary btn--large" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'final'})">Transform my room</a>
-      <p class="pfinal__note">per month. Works for living rooms, bedrooms, kitchens, and more.</p>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="pfooter">
-    <div class="container pfooter__inner">
-      <div class="pfooter__links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="mailto:grace@housing.info">Contact</a>
-      </div>
-      <p class="pfooter__copy">&copy; Dream Space Tool</p>
-    </div>
-  </footer>
-
-  <!-- ============ STICKY MOBILE CTA ============ -->
-  <div class="psticky" id="psticky">
-    <a href="#pricing" class="btn btn--primary" onclick="posthog.capture('cta_click', {style: 'Warm Botanical', location: 'sticky'})">Try this style in my room</a>
+  <div class="hero">
+    <div class="acct">housinginfo</div>
+    <a class="follow" href="https://www.instagram.com/housinginfo/" target="_blank" rel="noopener">Follow @housinginfo</a>
+    <div class="eyebrow">Shop the Look</div>
+    <h1>French Blue & White Home</h1>
+    <p>Antique gilt mirrors, blue-and-white ginger jars, faded oushak rugs, and that soft, lived-in patina that makes a house feel like it's been loved for generations. Every key piece sourced so you can bring this feeling home.</p>
   </div>
 
-  <script>
-    const nav = document.getElementById('pnav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('pnav--scrolled', window.scrollY > 40);
-    });
+  <div class="strip">
+    <div class="strip__track" id="gallery"></div>
+  </div>
 
-    const sticky = document.getElementById('psticky');
-    const heroEnd = document.querySelector('.phero');
-    if (sticky && heroEnd) {
-      const stickyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          sticky.style.transform = entry.isIntersecting ? 'translateY(100%)' : 'translateY(0)';
-          sticky.style.transition = 'transform .3s ease';
-        });
-      }, { threshold: 0 });
-      stickyObserver.observe(heroEnd);
-    }
+  <div class="source-line">
+    From <a href="https://www.instagram.com/p/DZL4IJxmuE0/" target="_blank" rel="noopener">this post</a> by @housinginfo — every key piece sourced across Pottery Barn, Wayfair, CB2 &amp; Amazon. All prices shown are approximate.
+  </div>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
+  <div class="shop-header">
+    <div class="eyebrow">From the post</div>
+    <h2>Shop by Room</h2>
+    <p>Click any card to shop the piece directly on the retailer's site.</p>
+  </div>
 
-    document.querySelectorAll('.phero__text, .phero__image, .pstyle__inner, .psteps__grid, .pba__grid, .pvalue__grid, .ppricing__grid, .pnext__grid, .pfaq__list, .pfinal__inner').forEach(el => {
-      el.classList.add('fade-target');
-      observer.observe(el);
-    });
+  <!-- LIVING ROOM -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="0" alt="Living room" /></div>
+      <h3 contenteditable="true">Living Room</h3>
+      <div class="slides" contenteditable="true">Slide 1</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.potterybarn.com/products/comfort-roll-arm-slipcovered-sofa/" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Sofa</span><span class="retailer" contenteditable="true">Pottery Barn</span></div>
+        <div class="name" contenteditable="true">Comfort Roll Arm Slipcovered Sofa, Cream Linen</div>
+        <div class="desc" contenteditable="true">Deep cream linen slipcover with classic rolled arms — the effortlessly elegant anchor sofa in the living room, styled with blue and white stripe cushions.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $1,899</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/rugs/pdp/lark-manor-handmade-blue-area-rug-lrkm6701.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Area Rug</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Blue Floral Oushak Area Rug, 8×10</div>
+        <div class="desc" contenteditable="true">Soft blue and cream Turkish-style oushak with an all-over floral pattern — the faded, antique-feeling rug that grounds the whole living room in slide 1.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $299</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Uttermost-Ornate-Carved-Antique-Gold/dp/B089MJ1V1F?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Mirror</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Ornate Carved Gilt Wall Mirror, 40"</div>
+        <div class="desc" contenteditable="true">Deeply carved baroque frame in warm antique gold — the statement mirror hung above the white carved fireplace mantel in slide 1, pulling the whole room together.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$189</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Ginger-Jar-Set/dp/B08F4HMJSY?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Décor</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue & White Ginger Jar Set of 3</div>
+        <div class="desc" contenteditable="true">Set of three lidded ginger jars in classic blue willow and chinoiserie patterns — the instantly recognisable ceramics filling the built-in shelves and mantel in slide 1.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$69</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
 
-    // ============ BEFORE/AFTER SLIDERS ============
-    document.querySelectorAll('.ba-slider').forEach(slider => {
-      const wrapper = slider.querySelector('.ba-slider__wrapper');
-      const beforeClip = slider.querySelector('.ba-slider__before-clip');
-      const handle = slider.querySelector('.ba-slider__handle');
-      const beforeImg = slider.querySelector('.ba-slider__before');
-      let isDragging = false;
+  <!-- KITCHEN -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="1" alt="Kitchen" /></div>
+      <h3 contenteditable="true">Kitchen</h3>
+      <div class="slides" contenteditable="true">Slides 2–3</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.amazon.com/Kingston-Brass-KB1462AXBS-Widespread-Brushed/dp/B00P2IYWXI?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Faucet</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Bridge Kitchen Faucet, Unlacquered Brass</div>
+        <div class="desc" contenteditable="true">Two-handle bridge faucet in warm unlacquered brass over the white farmhouse apron sink — the gleaming hardware that instantly elevates the blue and white kitchen in slides 2–3.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$310</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/lighting/pdp/darby-home-co-4-light-lantern-pendant-drbh8471.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Pendant Light</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">4-Light Brass Lantern Pendant</div>
+        <div class="desc" contenteditable="true">Classic cage lantern in antique brass — the warm focal light hanging above the island that balances the cool blue-grey cabinetry in slide 2.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$149</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/home-improvement/pdp/solid-walnut-floating-shelf-w002523497.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Open Shelving</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Solid Walnut Floating Shelves, Set of 2</div>
+        <div class="desc" contenteditable="true">Warm honey-toned walnut floating shelves — the open shelves displaying blue and white stacked plates and ceramic pitchers above the counter in slide 2.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$110 / set</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Porcelain-Pitcher-Chinoiserie/dp/B08WJWX5LQ?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Décor</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue & White Chinoiserie Pitcher & Bowl Set</div>
+        <div class="desc" contenteditable="true">Tall blue and white porcelain pitcher with matching bowl in a delicate floral willow pattern — the classic ceramic vignette beside the brass faucet in slide 3.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$55</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
 
-      function syncBeforeWidth() {
-        beforeImg.style.width = wrapper.offsetWidth + 'px';
-      }
-      syncBeforeWidth();
-      window.addEventListener('resize', syncBeforeWidth);
+  <!-- DINING ROOM -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="3" alt="Dining room" /></div>
+      <h3 contenteditable="true">Dining Room</h3>
+      <div class="slides" contenteditable="true">Slide 4</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/birch-lane-heritage-french-country-dining-table-bln10047.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Dining Table</span><span class="retailer" contenteditable="true">Birch Lane</span></div>
+        <div class="name" contenteditable="true">French Country Dining Table, Honey Oak</div>
+        <div class="desc" contenteditable="true">Warm honey-toned solid wood dining table with turned cabriole legs — the beautiful French farmhouse centrepiece seating six in slide 4, dressed with roses in a blue and white vase.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $799</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Christopher-Knight-Home-Cane-Back-Dining/dp/B07FNNXJWL?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Dining Chairs</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Cane-Back French Dining Chair, Set of 2, Blue/Grey</div>
+        <div class="desc" contenteditable="true">Oval cane back in a natural wood frame with a soft blue-grey cushion — the classic chairs that ring the dining table and carry the blue palette through slide 4.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$329 / pair</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/lighting/pdp/house-of-hampton-5-light-crystal-candelabra-chandelier-hoho2316.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Chandelier</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">5-Light Crystal Candelabra Chandelier, Brass</div>
+        <div class="desc" contenteditable="true">Five-arm brass chandelier with crystal drops — the elegant centrepiece hanging above the dining table in slide 4, casting warm light across the room.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$219</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/lark-manor-french-country-buffet-sideboard-white-lrkm9472.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Buffet</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">French Country Buffet Sideboard, White</div>
+        <div class="desc" contenteditable="true">White painted buffet with shaker-style doors and tapered legs — the sideboard against the wall in slide 4, topped with a ginger jar and a lamp.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $649</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
 
-      function setPosition(x) {
-        const rect = wrapper.getBoundingClientRect();
-        let pct = ((x - rect.left) / rect.width) * 100;
-        pct = Math.max(2, Math.min(98, pct));
-        beforeClip.style.width = pct + '%';
-        handle.style.left = pct + '%';
+  <!-- LIBRARY -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="5" alt="Library" /></div>
+      <h3 contenteditable="true">Library</h3>
+      <div class="slides" contenteditable="true">Slide 6</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.amazon.com/Chesterfield-Cognac-Leather-Settee-Loveseat/dp/B08DKRLSVL?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Settee</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Chesterfield Tufted Leather Settee, Cognac</div>
+        <div class="desc" contenteditable="true">Button-tufted cognac leather with scrolled arms and carved wood legs — the warm settee that anchors the slate blue library and contrasts beautifully against the painted shelves in slide 6.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $899</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/darby-home-co-french-writing-desk-dark-mahogany-drbh6410.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Writing Desk</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">French Writing Desk, Dark Mahogany</div>
+        <div class="desc" contenteditable="true">Carved dark mahogany desk with cabriole legs — the elegant work surface beside the window in slide 6, topped with books and a brass task lamp.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $449</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/rugs/pdp/navy-blue-medallion-area-rug-noui2345.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Area Rug</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Navy Blue Medallion Rug, 6×9</div>
+        <div class="desc" contenteditable="true">Deep navy ground with a large central medallion in ivory and blue — the rug that grounds the library floor and ties the slate blue shelving to the warm wood desk in slide 6.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $249</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Brass-Adjustable-Desk-Lamp-Shade/dp/B07XWMJ2RH?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Desk Lamp</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Adjustable Brass Desk Lamp with Cream Shade</div>
+        <div class="desc" contenteditable="true">Articulated antique brass arm lamp with a small cream shade — the warm task light on the writing desk in slide 6, glowing against the blue bookshelves behind it.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$79</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
 
-        const beforeLabel = slider.querySelector('.ba-slider__label--before');
-        const afterLabel = slider.querySelector('.ba-slider__label--after');
-        if (beforeLabel) beforeLabel.style.opacity = pct > 12 ? '1' : '0';
-        if (afterLabel) afterLabel.style.opacity = pct < 88 ? '1' : '0';
-      }
+  <!-- FOYER -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="6" alt="Foyer" /></div>
+      <h3 contenteditable="true">Foyer</h3>
+      <div class="slides" contenteditable="true">Slide 7</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/lark-manor-french-blue-console-table-2-drawer-lrkm8811.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Console Table</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">French Blue Console Table, 2-Drawer</div>
+        <div class="desc" contenteditable="true">Painted light blue console with two drawers, fluted legs, and a lower open shelf — the entry table that immediately sets the tone for the whole home's blue and white palette in slide 7.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $349</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Ornate-Carved-Arched-Wall-Mirror/dp/B08L68RFJQ?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Mirror</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Carved Gilt Arch Mirror, 38"</div>
+        <div class="desc" contenteditable="true">Tall arched mirror with an ornate carved gilt frame — the dramatic entry mirror filling the wall above the console in slide 7.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$199</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Chinoiserie-Urn-Vase-Tall/dp/B07XWMJ3LQ?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Vases</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue & White Chinoiserie Urn Vases, Set of 2</div>
+        <div class="desc" contenteditable="true">Tall matching blue and white porcelain urns with floral chinoiserie scenes — the pair on the foyer console, filled with cherry blossom branches in slide 7.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$89 / set</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/rugs/pdp/blue-oushak-entry-runner-rug-noui5522.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Runner Rug</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Blue Oushak Medallion Runner, 2.5×8</div>
+        <div class="desc" contenteditable="true">Soft blue runner with a central medallion on a cream ground — the same oushak family that flows through the entire home, welcoming you from the moment you step inside in slide 7.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $129</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
 
-      function onStart(e) {
-        isDragging = true;
-        slider.classList.add('interacted');
-        const x = e.touches ? e.touches[0].clientX : e.clientX;
-        setPosition(x);
-      }
-      function onMove(e) {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.touches ? e.touches[0].clientX : e.clientX;
-        setPosition(x);
-      }
-      function onEnd() { isDragging = false; }
+  <!-- BEDROOM -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="7" alt="Bedroom" /></div>
+      <h3 contenteditable="true">Bedroom</h3>
+      <div class="slides" contenteditable="true">Slides 8–9</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.potterybarn.com/products/toulouse-upholstered-bed/" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Bed Frame</span><span class="retailer" contenteditable="true">Pottery Barn</span></div>
+        <div class="name" contenteditable="true">Toulouse Carved Upholstered Bed, Cream</div>
+        <div class="desc" contenteditable="true">Arched upholstered headboard with carved wood trim in a creamy white finish — the classically elegant bed that anchors the serene blue and white bedroom in slide 8.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $1,299</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-Toile-Floral-Curtain-Panels/dp/B08F4HMJSY?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Curtains</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue Floral Toile Curtain Panels, Set of 2</div>
+        <div class="desc" contenteditable="true">Soft blue floral toile on a white ground — the delicate panels framing the bedroom window and bringing the blue and white theme to the walls in slide 8.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$79 / pair</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/lark-manor-french-blue-nightstand-brass-lrkm8842.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Nightstand</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">French Blue Painted Nightstand with Brass Hardware</div>
+        <div class="desc" contenteditable="true">Soft blue painted nightstand with a single drawer and brass knob — the bedside table in slides 8–9, topped with a blue and white chinoiserie lamp and small ceramic vase.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$299</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-Chinoiserie-Ginger-Jar-Table-Lamp/dp/B07XWMJ2RH?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Table Lamp</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue & White Chinoiserie Ginger Jar Lamp</div>
+        <div class="desc" contenteditable="true">Classic blue willow chinoiserie ginger jar base with a brass neck and cream empire shade — the iconic bedside lamp stacked on books on the blue nightstand in slide 9.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$119</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
 
-      wrapper.addEventListener('mousedown', onStart);
-      wrapper.addEventListener('touchstart', onStart, { passive: true });
-      window.addEventListener('mousemove', onMove);
-      window.addEventListener('touchmove', onMove, { passive: false });
-      window.addEventListener('mouseup', onEnd);
-      window.addEventListener('touchend', onEnd);
-    });
+  <!-- OUTDOOR PATIO -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="9" alt="Outdoor patio" /></div>
+      <h3 contenteditable="true">Outdoor</h3>
+      <div class="slides" contenteditable="true">Slide 10</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.wayfair.com/outdoor/pdp/darby-home-co-louis-xvi-outdoor-armchair-pale-blue-drbh5510.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Outdoor Chairs</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Louis XVI Style Armchair, Pale Blue, Set of 2</div>
+        <div class="desc" contenteditable="true">Gold-finished carved wood frame with pale blue cushions — the French bistro-style chairs flanking the marble table on the patio in slide 10, bringing the interior palette outside.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$799 / pair</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Round-Marble-Bistro-Table-Outdoor/dp/B08K33M79N?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Bistro Table</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Round Marble Bistro Table, 24"</div>
+        <div class="desc" contenteditable="true">White Carrara marble top on a slim iron base — the classic outdoor bistro table in slide 10, holding a blue and white bowl of white garden roses.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$299</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Garden-Planter-Chinoiserie/dp/B08F4HMJSY?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Garden Planters</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue & White Chinoiserie Garden Planters, Set of 2</div>
+        <div class="desc" contenteditable="true">Large blue and white porcelain-style garden planters — the pots flanking the patio with lavender in slide 10, extending the blue and white theme beautifully outdoors.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$89 / set</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Outdoor-Canopy-Shade-Sail-White/dp/B07XWMJ3LQ?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Canopy</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Outdoor Fabric Canopy Drape, White</div>
+        <div class="desc" contenteditable="true">Flowing white fabric panel draped over a pergola frame — the romantic canopy shading the patio in slide 10, adding that sun-drenched French countryside feeling.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$49</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
 
-    // ============ DESKTOP CAROUSEL ============
-    (function() {
-      const carousel = document.getElementById('heroCarousel');
-      if (!carousel) return;
+</div>
 
-      const slides = carousel.querySelectorAll('.carousel__slide');
-      const dotsContainer = document.getElementById('carouselDots');
-      const total = slides.length;
-      let current = 0;
-      let interval;
+<footer>
+  <h4>housinginfo</h4>
+  <p>Curated interiors, sourced for real homes.</p>
+  <a href="https://www.instagram.com/housinginfo/" target="_blank" rel="noopener">@housinginfo on Instagram</a>
+</footer>
 
-      for (let i = 0; i < total; i++) {
-        const dot = document.createElement('button');
-        dot.className = 'carousel__dot' + (i === 0 ? ' carousel__dot--active' : '');
-        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        dot.addEventListener('click', () => goTo(i));
-        dotsContainer.appendChild(dot);
-      }
+<div class="lightbox" id="lightbox">
+  <button class="close" id="lightboxClose" type="button">×</button>
+  <img id="lightboxImg" alt="" />
+</div>
 
-      const dots = dotsContainer.querySelectorAll('.carousel__dot');
+<script>
+const SLIDE_PATHS = [
+  "../images/dzl4-slide-1.jpg",
+  "../images/dzl4-slide-2.jpg",
+  "../images/dzl4-slide-3.jpg",
+  "../images/dzl4-slide-4.jpg",
+  "../images/dzl4-slide-5.jpg",
+  "../images/dzl4-slide-6.jpg",
+  "../images/dzl4-slide-7.jpg",
+  "../images/dzl4-slide-8.jpg",
+  "../images/dzl4-slide-9.jpg",
+  "../images/dzl4-slide-10.jpg"
+];
 
-      function goTo(index) {
-        slides[current].classList.remove('carousel__slide--active');
-        dots[current].classList.remove('carousel__dot--active');
-        current = index;
-        slides[current].classList.add('carousel__slide--active');
-        dots[current].classList.add('carousel__dot--active');
-      }
+const SLIDE_TITLES = [
+  "Living Room","Kitchen","Kitchen Detail","Dining Room","Mantel Vignette",
+  "Library","Foyer","Bedroom","Bedroom Detail","Outdoor Patio"
+];
 
-      function next() { goTo((current + 1) % total); }
-      function startAuto() { interval = setInterval(next, 3500); }
-      function stopAuto() { clearInterval(interval); }
+const gallery = document.getElementById("gallery");
+for (let pass = 0; pass < 2; pass++) {
+  SLIDE_PATHS.forEach((src, i) => {
+    const img = document.createElement("img");
+    img.className = "strip__img";
+    img.src = src;
+    img.alt = pass === 0 ? SLIDE_TITLES[i] : "";
+    if (pass === 1) img.setAttribute("aria-hidden", "true");
+    img.setAttribute("data-slot", i);
+    gallery.appendChild(img);
+  });
+}
 
-      carousel.addEventListener('mouseenter', stopAuto);
-      carousel.addEventListener('mouseleave', startAuto);
-      carousel.addEventListener('touchstart', stopAuto, { passive: true });
-      carousel.addEventListener('touchend', () => { setTimeout(startAuto, 3000); }, { passive: true });
+document.querySelectorAll("img[data-slot]").forEach(img => {
+  const slot = parseInt(img.getAttribute("data-slot"));
+  if (!img.closest("#gallery") && SLIDE_PATHS[slot]) {
+    img.src = SLIDE_PATHS[slot];
+  }
+});
 
-      startAuto();
-    })();
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lightboxImg");
+document.body.addEventListener("click", (e) => {
+  const img = e.target.closest(".strip__img");
+  if (img) { lbImg.src = img.src; lb.classList.add("show"); }
+});
+lb.addEventListener("click", () => lb.classList.remove("show"));
+document.getElementById("lightboxClose").addEventListener("click", (e) => { e.stopPropagation(); lb.classList.remove("show"); });
 
-    // ============ MOBILE CAROUSEL ============
-    (function() {
-      const carousel = document.getElementById('heroCarouselMobile');
-      if (!carousel) return;
+const editBtn = document.getElementById("editBtn");
+editBtn.addEventListener("click", () => {
+  const on = document.body.classList.toggle("edit-mode");
+  editBtn.textContent = on ? "✓ Done Editing" : "✏️ Edit Mode";
+});
 
-      const slides = carousel.querySelectorAll('.carousel__slide');
-      const dotsContainer = document.getElementById('carouselDotsMobile');
-      const total = slides.length;
-      let current = 0;
-      let interval;
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      for (let i = 0; i < total; i++) {
-        const dot = document.createElement('button');
-        dot.className = 'carousel__dot' + (i === 0 ? ' carousel__dot--active' : '');
-        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
-        dotsContainer.appendChild(dot);
-      }
-
-      const dots = dotsContainer.querySelectorAll('.carousel__dot');
-
-      function goTo(index) {
-        slides[current].classList.remove('carousel__slide--active');
-        dots[current].classList.remove('carousel__dot--active');
-        current = index;
-        slides[current].classList.add('carousel__slide--active');
-        dots[current].classList.add('carousel__dot--active');
-      }
-
-      function next() { goTo((current + 1) % total); }
-      function prev() { goTo((current - 1 + total) % total); }
-      function startAuto() { interval = setInterval(next, 3500); }
-      function stopAuto() { clearInterval(interval); }
-
-      carousel.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-        stopAuto();
-      }, { passive: true });
-
-      carousel.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        const diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 40) {
-          if (diff > 0) next(); else prev();
-        }
-        setTimeout(startAuto, 3000);
-      }, { passive: true });
-
-      startAuto();
-    })();
-  </script>
-
+document.getElementById("saveBtn").addEventListener("click", () => {
+  document.body.classList.remove("edit-mode");
+  editBtn.textContent = "✏️ Edit Mode";
+  const clone = document.documentElement.cloneNode(true);
+  clone.querySelectorAll("[contenteditable]").forEach(el => el.removeAttribute("contenteditable"));
+  const html = "<!DOCTYPE html>\n" + clone.outerHTML;
+  const blob = new Blob([html], { type: "text/html" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "housinginfo_french_blue_white_home.html";
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 1000);
+});
+</script>
 </body>
 </html>

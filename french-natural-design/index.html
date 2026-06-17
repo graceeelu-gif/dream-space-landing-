@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Shop the Look — French Blue Country Home | @housinginfo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Shop every piece from this French blue country home — patterned toile, blue painted furniture, warm wood, ginger jars, and that soft romantic look that never goes out of style. Curated by @housinginfo.">
+<meta property="og:title" content="Shop the Look – French Blue Country Home">
+<meta property="og:description" content="Shop every piece from this French blue and white country home — curated by @housinginfo.">
+<meta property="og:image" content="https://dream-space-landing.vercel.app/images/fbc-slide-1.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f5f7fa;
+    --paper: #ffffff;
+    --ink: #1e2a3a;
+    --ink-soft: #5a6a7e;
+    --line: #dde4ed;
+    --accent: #3a6fa8;
+    --accent-soft: #e8eef7;
+    --warm: #b85c38;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; }
+  body { padding: 0 0 80px; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+  /* Top utility bar */
+  .toolbar {
+    background: var(--ink); color: #f5f7fa; padding: 12px 24px;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 30;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .toolbar .brand { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; }
+  .toolbar .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tbtn {
+    background: transparent; color: #f5f7fa; border: 1px solid rgba(245,247,250,0.4);
+    padding: 7px 14px; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase;
+    cursor: pointer; border-radius: 4px; font-family: 'Inter', sans-serif; font-weight: 500;
+  }
+  .tbtn:hover { background: rgba(245,247,250,0.12); }
+  .tbtn.primary { background: #f5f7fa; color: var(--ink); border-color: #f5f7fa; }
+  .tbtn.primary:hover { background: #fff; }
+
+  /* Hero */
+  .hero { padding: 80px 0 60px; text-align: center; }
+  .hero .acct { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 8px; }
+  .hero .follow {
+    display: inline-block; margin-bottom: 36px; font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink); border: 1px solid var(--ink); padding: 7px 16px; border-radius: 999px; text-decoration: none;
+  }
+  .hero .follow:hover { background: var(--ink); color: var(--bg); }
+  .hero .eyebrow { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--ink-soft); margin-bottom: 8px; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 64px; line-height: 1.05; margin: 0 0 20px; letter-spacing: -0.01em; }
+  .hero p { max-width: 560px; margin: 0 auto; font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
+
+  /* Strip carousel */
+  .strip { position: relative; overflow: hidden; width: 100%; margin: 40px 0 80px; }
+  .strip__track {
+    display: flex; gap: 12px; width: max-content;
+    animation: scroll-strip 48s linear infinite; padding: 0 6px;
+  }
+  .strip:hover .strip__track { animation-play-state: paused; }
+  .strip__img { width: 220px; height: 280px; object-fit: cover; border-radius: 14px; flex-shrink: 0; background: #dde4ed; cursor: zoom-in; }
+  @keyframes scroll-strip {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @media (max-width: 560px) { .strip__img { width: 160px; height: 210px; } }
+
+  /* Source line */
+  .source-line {
+    text-align: center; font-size: 14px; color: var(--ink-soft); margin: 24px 0 80px; line-height: 1.7;
+  }
+  .source-line a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* Shop by Room */
+  .shop-header { text-align: center; margin: 60px 0 40px; }
+  .shop-header .eyebrow { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
+  .shop-header h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 48px; margin: 0 0 12px; }
+  .shop-header p { color: var(--ink-soft); font-size: 14px; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+  .room {
+    margin-bottom: 80px;
+    display: grid; grid-template-columns: 1fr 2fr; gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 880px) { .room { grid-template-columns: 1fr; gap: 24px; } }
+  .room-anchor { position: sticky; top: 80px; }
+  @media (max-width: 880px) { .room-anchor { position: static; } }
+  .room-anchor .anchor-img {
+    aspect-ratio: 4 / 5; background: #dde4ed; border-radius: 4px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .room-anchor .anchor-img img { width: 100%; height: 100%; object-fit: cover; }
+  .room-anchor h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; margin: 16px 0 4px; }
+  .room-anchor .slides { font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; }
+
+  .products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 600px) { .products { grid-template-columns: 1fr; } }
+
+  .product {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 6px; padding: 18px 18px 16px;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    text-decoration: none; color: inherit;
+  }
+  .product:hover { box-shadow: 0 6px 20px rgba(30, 42, 58, 0.08); transform: translateY(-1px); }
+  .product .tags { display: flex; justify-content: space-between; align-items: center; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .product .tags .retailer { font-weight: 600; color: var(--accent); }
+  .product .name { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 19px; line-height: 1.2; color: var(--ink); }
+  .product .desc { font-size: 12.5px; line-height: 1.55; color: var(--ink-soft); flex: 1; }
+  .product .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; }
+  .product .price { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: var(--ink); }
+  .product .shop-btn {
+    background: var(--ink); color: var(--bg); text-decoration: none;
+    padding: 7px 14px; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    border-radius: 4px;
+  }
+  .product .shop-btn:hover { background: var(--accent); }
+
+  /* Edit mode */
+  body.edit-mode [contenteditable] {
+    outline: 1px dashed var(--warm);
+    outline-offset: 2px;
+    background: rgba(184, 92, 56, 0.06);
+  }
+  body.edit-mode .product { border-color: var(--warm); }
+  body.edit-mode .shop-btn { pointer-events: none; opacity: 0.6; }
+
+  /* Lightbox */
+  .lightbox {
+    position: fixed; inset: 0; background: rgba(18, 26, 38, 0.94);
+    display: none; align-items: center; justify-content: center; z-index: 200;
+    padding: 30px; cursor: zoom-out;
+  }
+  .lightbox.show { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+  .lightbox .close { position: absolute; top: 20px; right: 24px; color: #f5f7fa; font-size: 28px; cursor: pointer; background: none; border: 0; }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line); margin-top: 60px; padding: 40px 0; text-align: center;
+    background: var(--paper);
+  }
+  footer h4 { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 24px; margin: 0 0 8px; }
+  footer p { color: var(--ink-soft); font-size: 13px; margin: 0 0 14px; }
+  footer a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="brand">housinginfo · Shop the Look</div>
+  <div class="actions">
+    <button class="tbtn" id="editBtn" type="button">✏️ Edit Mode</button>
+    <button class="tbtn" id="saveBtn" type="button">💾 Save Standalone HTML</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="acct">housinginfo</div>
+    <a class="follow" href="https://www.instagram.com/housinginfo/" target="_blank" rel="noopener">Follow @housinginfo</a>
+    <div class="eyebrow">Shop the Look</div>
+    <h1>French Blue Country Home</h1>
+    <p>Patterned toile, blue painted furniture, warm wood, ginger jars, and white plaster walls — the collected French country look that feels soft, romantic, and timeless. Every key piece sourced so you can bring this feeling home.</p>
+  </div>
+
+  <!-- Strip carousel -->
+  <div class="strip">
+    <div class="strip__track" id="gallery">
+      <!-- images injected by JS -->
+    </div>
+  </div>
+
+  <div class="source-line">
+    From <a href="https://www.instagram.com/p/DZq3chllNXZ/" target="_blank" rel="noopener">this post</a> by @housinginfo — every key piece sourced across Pottery Barn, Wayfair, Amazon &amp; more. All prices shown are approximate.
+  </div>
+
+  <!-- Shop by Room -->
+  <div class="shop-header">
+    <div class="eyebrow">From the post</div>
+    <h2>Shop by Room</h2>
+    <p>Click any card to shop the piece directly on the retailer's site.</p>
+  </div>
+
+  <!-- LIVING ROOM -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="0" alt="Living room" /></div>
+      <h3 contenteditable="true">Living Room</h3>
+      <div class="slides" contenteditable="true">Slide 1</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.potterybarn.com/products/pb-comfort-english-roll-arm-slipcovered-sofa/?sku=9498289" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Sofa</span><span class="retailer" contenteditable="true">Pottery Barn</span></div>
+        <div class="name" contenteditable="true">Roll Arm Slipcovered Sofa, White Linen</div>
+        <div class="desc" contenteditable="true">Classic rolled arm silhouette with a relaxed white linen slipcover — the soft cream sofa layered with blue and white toile cushions in slide 1.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $1,799</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/rugs/pdp/lark-manor-handmade-blue-area-rug-lrkm8452.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Area Rug</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">French Country Floral Rug, Blue &amp; Cream</div>
+        <div class="desc" contenteditable="true">Soft blue ground with a cream floral medallion and scrolling border — the patterned rug grounding the living room seating area in slide 1.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $249</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Ginger-Jar-Vase/dp/B08C3QTGWL?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Accessories</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue &amp; White Ginger Jar Set, Porcelain</div>
+        <div class="desc" contenteditable="true">Hand-painted blue and white chinoiserie ginger jars in assorted sizes — the classic porcelain vessels clustered on the mantel and shelves throughout the post.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$79 / set</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/birch-lane-heritage-french-country-coffee-table-bln10043.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Coffee Table</span><span class="retailer" contenteditable="true">Birch Lane</span></div>
+        <div class="name" contenteditable="true">French Country Coffee Table, Warm Oak</div>
+        <div class="desc" contenteditable="true">Warm oak coffee table with turned legs and a lower display shelf — the rustic wood centerpiece table in front of the linen sofa in slide 1.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$449</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- SITTING ROOM -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="1" alt="Sitting room" /></div>
+      <h3 contenteditable="true">Sitting Room</h3>
+      <div class="slides" contenteditable="true">Slide 2</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.ballarddesigns.com/louis-accent-chair" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Accent Chair</span><span class="retailer" contenteditable="true">Ballard Designs</span></div>
+        <div class="name" contenteditable="true">Louis XVI Bergère Chair, Blue Toile</div>
+        <div class="desc" contenteditable="true">Classic French bergère with carved wood frame and blue toile upholstery — the elegant accent chair that defines the French country sitting room in slide 2.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $799</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Toile-Throw-Pillow-Covers-Blue/dp/B08VJT9P2Q?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Pillows</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue &amp; White Toile Throw Pillow Covers, Set of 4</div>
+        <div class="desc" contenteditable="true">French toile pattern in navy blue on cream — the layered accent pillows adding the signature blue and white print to every seating area in the post.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$49 / set</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/decor-pillows/pdp/lark-manor-ornate-gold-wall-mirror-lrkm7892.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Mirror</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Ornate Gold Leaf Wall Mirror, 36"</div>
+        <div class="desc" contenteditable="true">Deeply carved frame with gilded scrollwork — the statement mirror hung above the console or fireplace mantel in slide 2.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$249</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Wicker-Basket-Seagrass-Storage-Natural/dp/B07XKFN4LM?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Storage</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Woven Seagrass Basket Set, Natural</div>
+        <div class="desc" contenteditable="true">Handwoven seagrass baskets in nesting sizes — the natural wicker texture woven throughout the French country home for warmth against the blue and white palette.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$45 / set</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- DINING ROOM -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="2" alt="Dining room" /></div>
+      <h3 contenteditable="true">Dining Room</h3>
+      <div class="slides" contenteditable="true">Slide 3</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.potterybarn.com/products/benchwright-dining-table/" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Dining Table</span><span class="retailer" contenteditable="true">Pottery Barn</span></div>
+        <div class="name" contenteditable="true">Benchwright Dining Table, Warm Oak</div>
+        <div class="desc" contenteditable="true">Solid pine dining table with turned legs and a warm oak finish — the rustic wood table anchoring the blue and white dining room in slide 3.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $999</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/lark-manor-blue-upholstered-dining-chair-lrkm4521.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Dining Chairs</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">French Country Dining Chair, Blue Linen</div>
+        <div class="desc" contenteditable="true">Solid wood frame with a dusty blue linen seat — the soft blue upholstered dining chairs ringing the warm wood table in slide 3.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$179 each</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Porcelain-Pitcher-Vase/dp/B08WNMD3PK?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Table Decor</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue &amp; White Ceramic Pitcher, French Country</div>
+        <div class="desc" contenteditable="true">Hand-painted blue floral pitcher in the classic French faïence style — the ceramic vessel used as a centerpiece with fresh flowers in slide 3.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$39</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/lighting/pdp/house-of-hampton-iron-lantern-chandelier-hoho6712.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Chandelier</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Iron Lantern Chandelier, Matte Black</div>
+        <div class="desc" contenteditable="true">Aged iron lantern pendant with exposed candelabra bulbs — the French-inspired ceiling fixture over the dining table in slide 3.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$229</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- BEDROOM -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="3" alt="Bedroom" /></div>
+      <h3 contenteditable="true">Bedroom</h3>
+      <div class="slides" contenteditable="true">Slide 4</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.potterybarn.com/products/toulouse-upholstered-bed/" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Bed Frame</span><span class="retailer" contenteditable="true">Pottery Barn</span></div>
+        <div class="name" contenteditable="true">Toulouse Upholstered Bed, White</div>
+        <div class="desc" contenteditable="true">French provincial upholstered bed with a carved white headboard — the romantic centrepiece of the blue and white bedroom in slide 4.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $1,199</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Toile-Duvet-Cover/dp/B094Y3VZLP?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Bedding</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue &amp; White Toile Duvet Cover Set</div>
+        <div class="desc" contenteditable="true">French toile pattern in soft navy on white — the signature blue and white bedding layered with linen shams for the classic country bedroom look in slide 4.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$89</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://riflepaperco.com/wallpaper/garden-party" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Wallpaper</span><span class="retailer" contenteditable="true">Rifle Paper Co.</span></div>
+        <div class="name" contenteditable="true">Garden Party Wallpaper, Blue on Cream</div>
+        <div class="desc" contenteditable="true">Delicate climbing florals in cornflower blue on a soft cream ground — the romantic wallpaper covering the accent wall behind the bed in slide 4.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $198 / roll</span><span class="shop-btn">Browse</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/birch-lane-heritage-french-provincial-nightstand-bln10056.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Nightstand</span><span class="retailer" contenteditable="true">Birch Lane</span></div>
+        <div class="name" contenteditable="true">French Provincial Nightstand, Antique White</div>
+        <div class="desc" contenteditable="true">Carved antique white nightstand with two drawers and turned legs — the classic bedside tables holding a brass lamp and a small ginger jar in slide 4.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$349</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- KITCHEN -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="5" alt="Kitchen" /></div>
+      <h3 contenteditable="true">Kitchen</h3>
+      <div class="slides" contenteditable="true">Slide 6</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.wayfair.com/home-improvement/pdp/rohl-farmhouse-apron-front-kitchen-sink-rohl1234.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Sink</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Farmhouse Apron-Front Kitchen Sink, White</div>
+        <div class="desc" contenteditable="true">Classic white porcelain apron-front sink — the deep farmhouse sink that anchors the French country kitchen in slide 6.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $499</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Kingston-Brass-KB1462AXBS-Widespread-Brushed/dp/B00P2IYWXI?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Faucet</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Bridge Kitchen Faucet, Antique Brass</div>
+        <div class="desc" contenteditable="true">Two-handle bridge faucet in warm antique brass — the aged brass hardware that ties the warm wood and white palette together in the kitchen in slide 6.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$280</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Delft-Canister-Set/dp/B085X8CKLM?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Canisters</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Delft Blue &amp; White Ceramic Canister Set</div>
+        <div class="desc" contenteditable="true">Hand-painted Delft-style blue and white ceramic canisters in three sizes — the counter accessories that bring the blue and white palette into the kitchen in slide 6.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$65 / set</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/home-improvement/pdp/latitude-run-solid-wood-floating-shelf-w002523497.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Open Shelves</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Solid Oak Floating Wall Shelf</div>
+        <div class="desc" contenteditable="true">Live-edge oak floating shelf with hidden hardware — the warm wood open shelves displaying blue and white ceramics and fresh herbs in slide 6.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$89 each</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- BATHROOM -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="7" alt="Bathroom" /></div>
+      <h3 contenteditable="true">Bathroom</h3>
+      <div class="slides" contenteditable="true">Slide 8</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.wayfair.com/home-improvement/pdp/woodbridge-67-x-32-freestanding-soaking-tub-with-floor-mount-tub-filler-wdbr1290.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Freestanding Tub</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">67" Clawfoot Soaking Tub, Matte White</div>
+        <div class="desc" contenteditable="true">Freestanding oval soaking tub with ornate brass claw feet — the sculptural bath centerpiece in the blue and white tiled bathroom in slide 8.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$1,299</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Blue-White-Moroccan-Tile-Stickers/dp/B08XNYNWBK?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Tile / Backsplash</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue &amp; White Patterned Tile Stickers, 24-Pack</div>
+        <div class="desc" contenteditable="true">Peel-and-stick blue and white geometric tile stickers — an easy way to recreate the patterned blue tile accent wall visible in the bathroom in slide 8.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$39</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/home-improvement/pdp/kingston-brass-widespread-bathroom-faucet-kgb3412.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Faucet</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Widespread Bathroom Faucet, Antique Brass</div>
+        <div class="desc" contenteditable="true">3-hole widespread faucet in warm antique brass — the warm fixtures against the white marble vanity top in slide 8.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$180</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/decor-pillows/pdp/lark-manor-ornate-carved-traditional-wall-mirror-lrkm8462.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Mirror</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">Ornate Carved Bathroom Mirror, Antique Gold</div>
+        <div class="desc" contenteditable="true">Ornate gilded frame with carved scrollwork, moisture-rated — the dramatic mirror hung above the vanity in slide 8.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$249</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- GARDEN / OUTDOOR -->
+  <div class="room">
+    <div class="room-anchor">
+      <div class="anchor-img"><img data-slot="9" alt="Outdoor garden" /></div>
+      <h3 contenteditable="true">Outdoor &amp; Garden</h3>
+      <div class="slides" contenteditable="true">Slide 10</div>
+    </div>
+    <div class="products">
+      <a class="product" href="https://www.amazon.com/Vintage-Iron-Lantern-Outdoor-Hanging/dp/B08LKF8DQP?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Lanterns</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Vintage Iron Lantern, Black — Set of 2</div>
+        <div class="desc" contenteditable="true">Aged black iron lanterns with clear glass panes — the classic French country lanterns flanking the doorway or garden path in slide 10.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$59 / pair</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.wayfair.com/furniture/pdp/lark-manor-french-bistro-chair-set-of-2-lrkm9201.html" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Garden Chairs</span><span class="retailer" contenteditable="true">Wayfair</span></div>
+        <div class="name" contenteditable="true">French Bistro Chair, Blue — Set of 2</div>
+        <div class="desc" contenteditable="true">Classic rattan-woven bistro chairs in cobalt blue with metal legs — the outdoor seating that brings the blue and white palette to the garden terrace in slide 10.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$199 / pair</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.amazon.com/Large-Blue-Painted-Terra-Cotta-Planter/dp/B09FH4V9KM?tag=housinginfo05-20" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Planters</span><span class="retailer" contenteditable="true">Amazon</span></div>
+        <div class="name" contenteditable="true">Blue Painted Terra Cotta Planter, Large</div>
+        <div class="desc" contenteditable="true">Hand-painted blue terra cotta pot with a distressed finish — the painted garden planter overflowing with lavender or roses in slide 10.</div>
+        <div class="footer"><span class="price" contenteditable="true">~$49</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+      <a class="product" href="https://www.potterybarn.com/products/blue-white-outdoor-rug/" target="_blank" rel="noopener">
+        <div class="tags"><span contenteditable="true">Outdoor Rug</span><span class="retailer" contenteditable="true">Pottery Barn</span></div>
+        <div class="name" contenteditable="true">Blue &amp; White Striped Outdoor Rug</div>
+        <div class="desc" contenteditable="true">Classic navy and white stripe in a weather-resistant weave — the outdoor rug that ties the terrace together and carries the blue and white theme outside in slide 10.</div>
+        <div class="footer"><span class="price" contenteditable="true">from $149</span><span class="shop-btn">Shop Now</span></div>
+      </a>
+    </div>
+  </div>
+
+</div><!-- /.container -->
+
+<footer>
+  <h4>housinginfo</h4>
+  <p>Curated interiors, sourced for real homes.</p>
+  <a href="https://www.instagram.com/housinginfo/" target="_blank" rel="noopener">@housinginfo on Instagram</a>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" id="lightboxClose" type="button">×</button>
+  <img id="lightboxImg" alt="" />
+</div>
+
+<script>
+const SLIDE_PATHS = [
+  "../images/fbc-slide-1.jpg",
+  "../images/fbc-slide-2.jpg",
+  "../images/fbc-slide-3.jpg",
+  "../images/fbc-slide-4.jpg",
+  "../images/fbc-slide-5.jpg",
+  "../images/fbc-slide-6.jpg",
+  "../images/fbc-slide-7.jpg",
+  "../images/fbc-slide-8.jpg",
+  "../images/fbc-slide-9.jpg",
+  "../images/fbc-slide-10.jpg"
+];
+
+const SLIDE_TITLES = [
+  "Living Room", "Sitting Room", "Dining Room", "Bedroom", "Bedroom Detail",
+  "Kitchen", "Kitchen Detail", "Bathroom", "Bathroom Detail", "Outdoor & Garden"
+];
+
+const NUM_SLIDES = SLIDE_PATHS.length;
+
+// Build strip (first set + duplicate for seamless loop)
+const gallery = document.getElementById("gallery");
+for (let pass = 0; pass < 2; pass++) {
+  SLIDE_PATHS.forEach((src, i) => {
+    const img = document.createElement("img");
+    img.className = "strip__img";
+    img.src = src;
+    img.alt = pass === 0 ? SLIDE_TITLES[i] : "";
+    if (pass === 1) img.setAttribute("aria-hidden", "true");
+    img.setAttribute("data-slot", i);
+    gallery.appendChild(img);
+  });
+}
+
+// Set room anchor images
+document.querySelectorAll("img[data-slot]").forEach(img => {
+  const slot = parseInt(img.getAttribute("data-slot"));
+  if (!img.closest("#gallery") && SLIDE_PATHS[slot]) {
+    img.src = SLIDE_PATHS[slot];
+  }
+});
+
+// Lightbox
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lightboxImg");
+document.body.addEventListener("click", (e) => {
+  const img = e.target.closest(".strip__img");
+  if (img) { lbImg.src = img.src; lb.classList.add("show"); }
+});
+lb.addEventListener("click", () => lb.classList.remove("show"));
+document.getElementById("lightboxClose").addEventListener("click", (e) => { e.stopPropagation(); lb.classList.remove("show"); });
+
+// Edit mode
+const editBtn = document.getElementById("editBtn");
+editBtn.addEventListener("click", () => {
+  const on = document.body.classList.toggle("edit-mode");
+  editBtn.textContent = on ? "✓ Done Editing" : "✏️ Edit Mode";
+});
+
+// Save standalone HTML
+document.getElementById("saveBtn").addEventListener("click", () => {
+  document.body.classList.remove("edit-mode");
+  editBtn.textContent = "✏️ Edit Mode";
+  const clone = document.documentElement.cloneNode(true);
+  clone.querySelectorAll("[contenteditable]").forEach(el => el.removeAttribute("contenteditable"));
+  const html = "<!DOCTYPE html>\n" + clone.outerHTML;
+  const blob = new Blob([html], { type: "text/html" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "housinginfo_french_blue_country_shop.html";
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 1000);
+});
+</script>
+</body>
+</html>

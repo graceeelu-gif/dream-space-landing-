@@ -150,11 +150,6 @@
     .offer__price { text-align: center; font-family: var(--serif); font-size: 56px; font-weight: 600; line-height: 1.1; margin: 8px 0 4px; }
     .offer__sub { text-align: center; color: var(--muted); font-size: 14px; margin-bottom: 22px; }
 
-    /* Tool tie-in */
-    .tool { background: var(--cream); }
-    .tool__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-    .tool__img { aspect-ratio: 4/5; max-width: 480px; border-radius: 6px; overflow: hidden; }
-    .tool__img img { width: 100%; height: 100%; object-fit: cover; }
 
     /* FAQ */
     .faq__list { max-width: 760px; margin: 40px auto 0; border-top: 1px solid var(--hairline); }
@@ -180,7 +175,7 @@
     .sticky .btn { padding: 13px 22px; font-size: 15px; }
 
     @media (max-width: 960px) {
-      .hero__grid, .detail, .tool__grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero__grid, .detail { grid-template-columns: 1fr; gap: 32px; }
       .detail:nth-child(even) .detail__img { order: 0; }
       .product { position: static; }
       .palette__grid { grid-template-columns: repeat(3, 1fr); }
@@ -370,22 +365,7 @@
     </div>
   </section>
 
-  <!-- ============ 8. SEE IT IN YOUR ROOM (Dream Space tool) ============ -->
-  <section class="tool">
-    <div class="container tool__grid">
-      <div class="tool__img">
-        <img src="../images/mcg-slide-9.jpg" alt="Walnut nightstand with a brass dome lamp and olive bedding" loading="lazy">
-      </div>
-      <div>
-        <p class="eyebrow">Bonus</p>
-        <h2 class="h2" style="margin:10px 0 14px">Want to see your own room in this style?</h2>
-        <p class="lede" style="margin-bottom:26px">Upload a photo of your room and our Dream Space tool will restyle it in Modern Classic, keeping your layout, windows and furniture in place. Try a free preview before you change a thing.</p>
-        <a href="https://housing-info.vercel.app/try/choose?style=Modern+Classic&ref=ig-DdptvaomoVD" class="btn btn--ghost" onclick="posthog.capture('tool_click', {style: 'Modern Classic', page: 'modernclassicstyleguide'})">Try a free preview</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 9. FAQ ============ -->
+  <!-- ============ 8. FAQ ============ -->
   <section class="faq">
     <div class="container">
       <h2 class="h2" style="text-align:center">Questions</h2>
@@ -414,7 +394,7 @@
     </div>
   </section>
 
-  <!-- ============ 10. FINAL CTA ============ -->
+  <!-- ============ 9. FINAL CTA ============ -->
   <section class="final">
     <div class="container">
       <p class="eyebrow">The Modern Classic Style Guide</p>

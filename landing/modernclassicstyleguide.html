@@ -70,11 +70,12 @@
     /* Hero / product */
     .hero { padding: 40px 0 72px; }
     .hero__grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
+    .hero__grid > * { min-width: 0; }
     .gallery__main { position: relative; aspect-ratio: 4/5; border-radius: 6px; overflow: hidden; background: var(--cream); }
     .gallery__main img { width: 100%; height: 100%; object-fit: cover; transition: opacity .25s; }
     .gallery__arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.88); color: var(--ink); font-size: 20px; cursor: pointer; display: grid; place-items: center; }
     .gallery__arrow--prev { left: 12px; } .gallery__arrow--next { right: 12px; }
-    .gallery__thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 10px; }
+    .gallery__thumbs { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; margin-top: 10px; }
     .gallery__thumb { aspect-ratio: 1; border-radius: 4px; overflow: hidden; cursor: pointer; border: 2px solid transparent; padding: 0; background: var(--cream); opacity: .7; transition: opacity .2s, border-color .2s; }
     .gallery__thumb img { width: 100%; height: 100%; object-fit: cover; }
     .gallery__thumb.is-active, .gallery__thumb:hover { opacity: 1; border-color: var(--brass); }
@@ -152,7 +153,7 @@
     /* Tool tie-in */
     .tool { background: var(--cream); }
     .tool__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-    .tool__img { aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; }
+    .tool__img { aspect-ratio: 4/5; max-width: 480px; border-radius: 6px; overflow: hidden; }
     .tool__img img { width: 100%; height: 100%; object-fit: cover; }
 
     /* FAQ */
@@ -189,7 +190,8 @@
       section { padding: 64px 0; }
       .container { padding: 0 16px; }
       .hero { padding-top: 16px; }
-      .gallery__thumbs { grid-template-columns: repeat(5, 1fr); }
+      .gallery__thumbs { display: flex; overflow-x: auto; scrollbar-width: none; }
+      .gallery__thumb { flex: 0 0 56px; }
       .palette__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
       .inside__grid, .why__grid { grid-template-columns: 1fr; }
       .details__list { gap: 56px; }
@@ -216,7 +218,7 @@
     <div class="container hero__grid">
       <div class="gallery">
         <div class="gallery__main">
-          <img id="galleryMain" src="../images/mcg-slide-1.jpg" alt="Inside a Modern Classic home — arched doorway, brass pendants and crown moulding">
+          <img id="galleryMain" src="../images/mcg-slide-1.jpg" alt="Modern Classic kitchen with brass dome pendants, walnut island and arched doorway">
           <button class="gallery__arrow gallery__arrow--prev" aria-label="Previous photo" data-dir="-1">‹</button>
           <button class="gallery__arrow gallery__arrow--next" aria-label="Next photo" data-dir="1">›</button>
         </div>
@@ -231,7 +233,7 @@
           <span class="product__amount">$19</span>
           <span class="product__note">One-time · Instant download</span>
         </div>
-        <p class="product__desc">Arched doorways, crown moulding, aged brass and warm white walls. Everything that makes a Modern Classic home feel timeless, broken down into paint colors, materials and simple formulas you can follow room by room.</p>
+        <p class="product__desc">Warm walnut, the soft glow of brass, layered vintage rugs and art that feels collected over time. Everything that makes a Modern Classic home feel timeless, broken down into paint colors, materials and simple formulas you can follow room by room.</p>
 
         <div class="swatches">
           <p class="swatches__label">The palette <span id="swatchName">Warm White</span></p>
@@ -241,7 +243,7 @@
         <a href="#offer" class="btn btn--buy btn--full" data-checkout data-loc="hero">Get instant access – $19</a>
 
         <ul class="checks">
-          <li>6-color palette with paint matches from Benjamin Moore, Sherwin-Williams &amp; Farrow &amp; Ball</li>
+          <li>6-color palette with paint matches from Benjamin Moore, Sherwin-Williams &amp; Farrow &amp; Ball, plus wood &amp; metal finishes</li>
           <li>Moulding, arch &amp; trim guide for adding architecture to a plain room</li>
           <li>Lighting, furniture &amp; drapery formulas with a room-by-room checklist</li>
         </ul>
@@ -257,7 +259,7 @@
   <!-- ============ 2. QUOTE ============ -->
   <div class="quote">
     <div class="container">
-      <p>“A Modern Classic home isn't about expensive furniture. It's the architecture, the warm whites and the quiet brass that make it feel like it's always been there.”</p>
+      <p>“From the warmth of the wood and the soft glow of brass to the layered rugs, graceful lighting and art that feels collected over time, every detail gives these rooms depth and character.”</p>
       <cite>@housinginfo</cite>
     </div>
   </div>
@@ -267,7 +269,7 @@
     <div class="container">
       <p class="eyebrow center" style="text-align:center">Inside the guide</p>
       <h2 class="h2 center" style="text-align:center;max-width:720px;margin-top:10px">The Modern Classic palette</h2>
-      <p class="lede center" style="text-align:center;margin-top:14px">Six colors that do all the work: warm whites that glow instead of going grey, soft greige for depth, and deep bronze to ground it all.</p>
+      <p class="lede center" style="text-align:center;margin-top:14px">Six colors and finishes that do all the work: warm whites that glow instead of going grey, a soft olive accent, rich walnut and aged brass.</p>
       <div class="palette__grid" id="paletteGrid"></div>
       <p class="palette__foot">Colors shown are screen previews. The guide includes exact paint names and codes, plus where to use each one.</p>
     </div>
@@ -352,7 +354,7 @@
         <p class="offer__price">$19</p>
         <p class="offer__sub">One-time payment · Instant PDF download</p>
         <ul class="checks">
-          <li>6-color palette with paint matches from 3 major brands</li>
+          <li>6-color palette with paint &amp; finish matches</li>
           <li>Architecture guide: arches, moulding, panelling &amp; medallions</li>
           <li>Lighting formula with sizes, hanging heights &amp; bulb temperature</li>
           <li>Furniture, fabric &amp; drapery rules</li>
@@ -372,7 +374,7 @@
   <section class="tool">
     <div class="container tool__grid">
       <div class="tool__img">
-        <img src="../images/mcg-slide-2.jpg" alt="Modern Classic living room" loading="lazy">
+        <img src="../images/mcg-slide-9.jpg" alt="Walnut nightstand with a brass dome lamp and olive bedding" loading="lazy">
       </div>
       <div>
         <p class="eyebrow">Bonus</p>
@@ -402,7 +404,7 @@
         </details>
         <details class="faq__item">
           <summary>What paint brands are included?</summary>
-          <p>Every color comes with matches from Benjamin Moore, Sherwin-Williams and Farrow &amp; Ball. Any paint store can also color-match from these codes.</p>
+          <p>Paint colors come with matches from Benjamin Moore, Sherwin-Williams and Farrow &amp; Ball, and any paint store can color-match from these codes. The wood stain and brass finish are named too, so you know what to look for when shopping.</p>
         </details>
         <details class="faq__item">
           <summary>Is this a one-time payment?</summary>
@@ -439,36 +441,45 @@
     var CHECKOUT_URL = '';
 
     var SLIDES = [
-      { src: '../images/mcg-slide-1.jpg', alt: 'Inside a Modern Classic home' },
-      { src: '../images/mcg-slide-2.jpg', alt: 'Modern Classic room' },
-      { src: '../images/mcg-slide-3.jpg', alt: 'Modern Classic room' },
-      { src: '../images/mcg-slide-4.jpg', alt: 'Modern Classic room' },
-      { src: '../images/mcg-slide-5.jpg', alt: 'Modern Classic room' },
-      { src: '../images/mcg-slide-6.jpg', alt: 'Modern Classic room' }
-    ];
+      { alt: 'Modern Classic kitchen with brass dome pendants, walnut island and arched doorway' },
+      { alt: 'Entry hall with arched doorways, panelled walls, brass lantern and walnut console' },
+      { alt: 'Living room vignette with brass lamp, olive and floral pillows and a walnut coffee table' },
+      { alt: 'Living room with marble fireplace, cream sofa, olive velvet chairs and a vintage rug' },
+      { alt: 'Dining room with linen-shaded brass chandelier and round pedestal table' },
+      { alt: 'Home office with walnut built-ins, picture lights and a vintage rug' },
+      { alt: 'Bedroom with upholstered bed, landscape art and a walnut bench' },
+      { alt: 'Bathroom with walnut vanity, brass sconces and a freestanding tub' },
+      { alt: 'Walnut nightstand with a brass dome lamp and olive bedding' }
+    ].map(function (s, i) { s.src = '../images/mcg-slide-' + (i + 1) + '.jpg'; s.thumb = '../images/mcg-thumb-' + (i + 1) + '.jpg'; return s; });
 
     var PALETTE = [
-      { role: 'Walls',     name: 'White Dove',     code: 'Benjamin Moore OC-17',   hex: '#EEEBE0' },
-      { role: 'Trim',      name: 'Alabaster',      code: 'Sherwin-Williams SW 7008', hex: '#EDE8DA' },
-      { role: 'Warm neutral', name: 'Pointing',    code: 'Farrow & Ball No. 2003', hex: '#E9E2D1' },
-      { role: 'Depth',     name: 'Edgecomb Gray',  code: 'Benjamin Moore HC-173',  hex: '#D6CFBF' },
-      { role: 'Accent',    name: 'Aged Brass',     code: 'Metal finish',           hex: '#A8844B' },
-      { role: 'Anchor',    name: 'Urbane Bronze',  code: 'Sherwin-Williams SW 7048', hex: '#54504A' }
+      { role: 'Walls',       name: 'White Dove',     code: 'Benjamin Moore OC-17',     hex: '#EEEBE0' },
+      { role: 'Trim',        name: 'Alabaster',      code: 'Sherwin-Williams SW 7008', hex: '#EDE8DA' },
+      { role: 'Upholstery',  name: 'Pointing',       code: 'Farrow & Ball No. 2003',   hex: '#E6DDCB' },
+      { role: 'Accent',      name: 'Bancha',         code: 'Farrow & Ball No. 298',    hex: '#6C6A4C' },
+      { role: 'Wood',        name: 'Special Walnut', code: 'Minwax stain 224',         hex: '#5B3B27' },
+      { role: 'Metal',       name: 'Aged Brass',     code: 'Unlacquered finish',       hex: '#A8844B' }
     ];
 
     var DETAILS = [
-      { img: 3, title: 'Arches & moulding',
-        body: 'Arched doorways, crown moulding and panelled walls give a room the "it\'s always been here" feeling. They\'re the backbone of the look.',
-        tip: 'Paint walls and trim in two whites from the same family so the moulding reads as texture, not contrast.' },
-      { img: 4, title: 'Aged brass lighting',
-        body: 'Oversized brass dome pendants over the kitchen, a candle-style chandelier in the dining room. Warm metal adds glow and a sense of history.',
-        tip: 'Pick unlacquered or "aged" brass over shiny gold, and use 2700K bulbs for that warm evening glow.' },
-      { img: 5, title: 'Floor-length drapery',
-        body: 'Heavy linen curtains in a warm brown or taupe, hung just below the ceiling and puddling slightly at the floor, frame windows like artwork.',
-        tip: 'Mount the rod 4–6 inches below the ceiling and 8–12 inches past each side of the window.' },
-      { img: 6, title: 'A restrained, warm palette',
-        body: 'Warm whites, soft greige and natural wood, with one or two deep accents. Nothing shouts, so the architecture and light do the talking.',
-        tip: 'Keep every color in the room on the warm side. Even your whites should lean creamy, not blue.' }
+      { img: 2, title: 'A warm welcome',
+        body: 'Arched doorways, panelled walls and a brass lantern set the tone the moment you walk in. A walnut console and a long vintage runner make the hallway feel collected, not builder-grade.',
+        tip: 'Paint walls and trim in two whites from the same warm family so the panelling reads as soft texture, not contrast.' },
+      { img: 4, title: 'A place to linger',
+        body: 'A marble fireplace as the anchor, a cream sofa, olive velvet chairs and a large vintage rug. Wood, brass and landscape art add warmth and a sense of history.',
+        tip: 'Go bigger on the rug than feels natural. Every front furniture leg should sit on it.' },
+      { img: 5, title: 'Made for gathering',
+        body: 'A brass chandelier with linen shades over a round pedestal table, upholstered chairs and a long sideboard. Elegant, but easy enough for every day.',
+        tip: 'Hang the chandelier 30–34 inches above the table, and pick one roughly half the table\'s width.' },
+      { img: 6, title: 'Room for new ideas',
+        body: 'Walnut built-ins with picture lights, a classic partner desk and an olive armchair by the window turn a spare room into a study that feels like it\'s always been there.',
+        tip: 'Style shelves in thirds: books, one ceramic or brass object, then a little breathing room.' },
+      { img: 7, title: 'A sanctuary to come home to',
+        body: 'An upholstered headboard, layered white and olive bedding, a walnut bench and one large, soft landscape painting. Calm, warm and grown-up.',
+        tip: 'Hang art 8–10 inches above the headboard and about two-thirds its width.' },
+      { img: 8, title: 'A moment to yourself',
+        body: 'A furniture-style walnut vanity, brass sconces beside arched mirrors, a freestanding tub and a vintage runner bring the rest of the home\'s warmth into the bathroom.',
+        tip: 'Mount sconces on either side of the mirror at about eye level (roughly 66 inches) for the most flattering light.' }
     ];
 
     // Gallery
@@ -479,13 +490,14 @@
       var b = document.createElement('button');
       b.className = 'gallery__thumb' + (i === 0 ? ' is-active' : '');
       b.setAttribute('aria-label', 'Show photo ' + (i + 1));
-      b.innerHTML = '<img src="' + s.src + '" alt="" loading="lazy">';
+      b.innerHTML = '<img src="' + s.thumb + '" alt="" loading="lazy">';
       b.onclick = function () { show(i); };
       thumbs.appendChild(b);
     });
     function show(i) {
       current = (i + SLIDES.length) % SLIDES.length;
       main.src = SLIDES[current].src;
+      new Image().src = SLIDES[(current + 1) % SLIDES.length].src;
       main.alt = SLIDES[current].alt;
       [].forEach.call(thumbs.children, function (t, j) { t.classList.toggle('is-active', j === current); });
     }

@@ -1,6 +1,16 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/api/trending", "destination": "/api/trending" }
+    {
+      "source": "/api/trending",
+      "destination": "/api/trending"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/guide-k7q2vx",
+      "destination": "/landing/modernclassicstyleguide-thankyou-k7q2vx",
+      "permanent": false
+    }
   ]
 }

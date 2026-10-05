@@ -231,20 +231,80 @@
   </footer>
 
   <script>
-    // ---- GUIDE SETUP ----
-    // When the PDF is ready: save it as downloads/The_Mid_Century_Modern_Style_Guide-79kb5e.pdf,
-    // save each page as images/mcm-79kb5e/page-01.jpg, page-02.jpg ...,
-    // set PAGE_COUNT to the number of pages and fill in SECTIONS (and LINKS for shop pages).
-    // While PAGE_COUNT is 0 the page shows a "your guide is on its way" message instead.
-    var PAGE_COUNT = 0;
+    var PAGE_COUNT = 24;
     var IMG_DIR = '../images/mcm-79kb5e/';
 
     var SECTIONS = [
-      // { p: 1, label: 'Cover' },
+      { p: 1,  label: 'Cover' },
+      { p: 2,  label: 'Welcome' },
+      { p: 3,  label: 'The Look' },
+      { p: 4,  label: 'Palette' },
+      { p: 6,  label: 'Materials' },
+      { p: 7,  label: 'Wood & Built-ins' },
+      { p: 9,  label: 'Lighting' },
+      { p: 10, label: 'Furniture' },
+      { p: 11, label: 'Rugs & Windows' },
+      { p: 12, label: 'Room Checklists' },
+      { p: 19, label: 'Where to Shop' },
+      { p: 20, label: 'Shopping List' },
+      { p: 22, label: 'Mistakes' },
+      { p: 23, label: 'Cheat Sheet' }
     ];
 
     // Clickable product links from the PDF (positions are % of the page)
     var LINKS = [
+    { p: 20, url: "https://shop.noguchi.org/products/akari-45a", x: 9.44, y: 24.53, w: 12.50, h: 1.33 },
+    { p: 20, url: "https://shop.noguchi.org/products/akari-45a", x: 86.76, y: 24.72, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.dwr.com/lighting-ceiling/ph5-pendant-lamp/6013.html?lang=en_US", x: 9.44, y: 29.36, w: 12.62, h: 1.33 },
+    { p: 20, url: "https://www.dwr.com/lighting-ceiling/ph5-pendant-lamp/6013.html?lang=en_US", x: 86.76, y: 29.55, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.finnishdesignshop.com/en-us/product/flowerpot-vp9-portable-table-lamp-zesty-orange", x: 9.44, y: 34.28, w: 29.53, h: 1.33 },
+    { p: 20, url: "https://www.finnishdesignshop.com/en-us/product/flowerpot-vp9-portable-table-lamp-zesty-orange", x: 86.76, y: 34.47, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://shop.noguchi.org/products/akari-10a", x: 9.44, y: 39.11, w: 14.09, h: 1.33 },
+    { p: 20, url: "https://shop.noguchi.org/products/akari-10a", x: 86.76, y: 39.30, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.rejuvenation.com/products/allenglade-single-sconce/", x: 9.44, y: 44.03, w: 16.91, h: 1.33 },
+    { p: 20, url: "https://www.rejuvenation.com/products/allenglade-single-sconce/", x: 86.76, y: 44.22, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.rejuvenation.com/products/cabinet-maker-s-picture-light-03/", x: 9.44, y: 48.86, w: 19.61, h: 1.33 },
+    { p: 20, url: "https://www.rejuvenation.com/products/cabinet-maker-s-picture-light-03/", x: 86.76, y: 49.05, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.rejuvenation.com/products/dekum-16-metal-dome-pendant/", x: 9.44, y: 53.79, w: 21.32, h: 1.33 },
+    { p: 20, url: "https://www.rejuvenation.com/products/dekum-16-metal-dome-pendant/", x: 86.76, y: 53.98, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.luluandgeorgia.com/products/luis-table-lamp", x: 9.44, y: 58.62, w: 10.78, h: 1.33 },
+    { p: 20, url: "https://www.luluandgeorgia.com/products/luis-table-lamp", x: 86.76, y: 58.81, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.cb2.com/curvo-96.5-sofa-bloce-cream/s339607", x: 9.44, y: 67.05, w: 20.71, h: 1.33 },
+    { p: 20, url: "https://www.cb2.com/curvo-96.5-sofa-bloce-cream/s339607", x: 86.76, y: 67.23, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.westelm.com/products/mid-century-show-wood-upholstered-chair-h1422/", x: 9.44, y: 71.97, w: 20.59, h: 1.33 },
+    { p: 20, url: "https://www.westelm.com/products/mid-century-show-wood-upholstered-chair-h1422/", x: 86.76, y: 72.16, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.westelm.com/products/mid-century-art-display-round-coffee-table-cloud-h4475/", x: 9.44, y: 76.80, w: 21.81, h: 1.33 },
+    { p: 20, url: "https://www.westelm.com/products/mid-century-art-display-round-coffee-table-cloud-h4475/", x: 86.76, y: 76.99, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.article.com/product/22359/seno-71-sideboard-walnut", x: 9.44, y: 81.72, w: 18.38, h: 1.33 },
+    { p: 20, url: "https://www.article.com/product/22359/seno-71-sideboard-walnut", x: 86.76, y: 81.91, w: 3.80, h: 1.14 },
+    { p: 20, url: "https://www.article.com/product/28732/conan-54-round-dining-table-walnut", x: 9.44, y: 86.55, w: 25.74, h: 1.33 },
+    { p: 20, url: "https://www.article.com/product/28732/conan-54-round-dining-table-walnut", x: 86.76, y: 86.74, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.article.com/product/22619/sede-leather-dining-chair-walnut-and-toscana-tan", x: 9.44, y: 22.44, w: 17.28, h: 1.33 },
+    { p: 21, url: "https://www.article.com/product/22619/sede-leather-dining-chair-walnut-and-toscana-tan", x: 86.76, y: 22.63, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.westelm.com/products/mid-century-upholstered-swivel-counter-stool-metal-legs-h11816/", x: 9.44, y: 26.99, w: 22.67, h: 1.33 },
+    { p: 21, url: "https://www.westelm.com/products/mid-century-upholstered-swivel-counter-stool-metal-legs-h11816/", x: 86.76, y: 27.18, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.article.com/product/24991/calabri-queen-bed-ivory-wool-boucle", x: 9.44, y: 31.63, w: 25.12, h: 1.33 },
+    { p: 21, url: "https://www.article.com/product/24991/calabri-queen-bed-ivory-wool-boucle", x: 86.76, y: 31.82, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.article.com/product/25746/liv-1-drawer-nightstand-walnut", x: 9.44, y: 36.27, w: 21.32, h: 1.33 },
+    { p: 21, url: "https://www.article.com/product/25746/liv-1-drawer-nightstand-walnut", x: 86.76, y: 36.46, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.luluandgeorgia.com/products/lyons-moroccan-style-hand-knotted-wool-rug", x: 9.44, y: 44.51, w: 21.57, h: 1.33 },
+    { p: 21, url: "https://www.luluandgeorgia.com/products/lyons-moroccan-style-hand-knotted-wool-rug", x: 86.76, y: 44.70, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.loloirugs.com/products/lay-08-red-navy", x: 9.44, y: 49.05, w: 21.81, h: 1.33 },
+    { p: 21, url: "https://www.loloirugs.com/products/lay-08-red-navy", x: 86.76, y: 49.24, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.target.com/p/solid-chenille-knit-throw-blanket-gold-threshold-8482/-/A-82254863", x: 9.44, y: 53.69, w: 16.67, h: 1.33 },
+    { p: 21, url: "https://www.target.com/p/solid-chenille-knit-throw-blanket-gold-threshold-8482/-/A-82254863", x: 86.76, y: 53.88, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.westelm.com/products/sheer-linen-curtain-ivory-t5936/", x: 9.44, y: 58.33, w: 22.92, h: 1.33 },
+    { p: 21, url: "https://www.westelm.com/products/sheer-linen-curtain-ivory-t5936/", x: 86.76, y: 58.52, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.westelm.com/products/foundations-vases-d5978/", x: 9.44, y: 66.57, w: 16.67, h: 1.33 },
+    { p: 21, url: "https://www.westelm.com/products/foundations-vases-d5978/", x: 86.76, y: 66.76, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://juniperprintshop.com/products/sienna", x: 9.44, y: 71.12, w: 16.42, h: 1.33 },
+    { p: 21, url: "https://juniperprintshop.com/products/sienna", x: 86.76, y: 71.31, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.rejuvenation.com/products/mid-century-peg-cabinet-knob/", x: 9.44, y: 75.76, w: 20.71, h: 1.33 },
+    { p: 21, url: "https://www.rejuvenation.com/products/mid-century-peg-cabinet-knob/", x: 86.76, y: 75.95, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.article.com/product/25506/williams-wall-mirror-walnut", x: 9.44, y: 80.40, w: 18.50, h: 1.33 },
+    { p: 21, url: "https://www.article.com/product/25506/williams-wall-mirror-walnut", x: 86.76, y: 80.59, w: 3.80, h: 1.14 },
+    { p: 21, url: "https://www.dwr.com/dinnerware/barro-salad-bowl/2553725.html?lang=en_US", x: 9.44, y: 85.04, w: 11.27, h: 1.33 },
+    { p: 21, url: "https://www.dwr.com/dinnerware/barro-salad-bowl/2553725.html?lang=en_US", x: 86.76, y: 85.23, w: 3.80, h: 1.14 }
     ];
 
     var GUIDE_READY = PAGE_COUNT > 0;
